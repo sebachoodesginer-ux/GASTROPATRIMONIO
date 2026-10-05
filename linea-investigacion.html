@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Línea de investigación - Gastropatrimonio - Fundación Universitaria San Mateo"
+    >
+
+    <title>Línea de investigación | Gastropatrimonio</title>
+
+    
+<!-- =====================================================
+     FAVICON
+====================================================== -->
+
+<link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="assets/logos/logo-seminario.png?v=20261005"
+>
+
+<link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="assets/logos/logo-seminario.png?v=20261005"
+>
+
+<link
+    rel="shortcut icon"
+    type="image/png"
+    href="assets/logos/logo-seminario.png?v=20261005"
+>
+
+<link
+    rel="apple-touch-icon"
+    href="assets/logos/logo-seminario.png?v=20261005"
+>
+
+<meta
+    name="theme-color"
+    content="#faf5ec"
+>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/logos/logo-seminario.png"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/linea-investigacion.css">
+</head>
+
+
+<body class="linea-page">
+
+    <!-- PARTÍCULAS -->
+    <div
+        class="particles"
+        id="particles"
+        aria-hidden="true"
+    ></div>
+
+
+    <!-- ============================================
+         HEADER
+    ============================================= -->
+
+    <header class="header" id="header">
+
+        <div class="container header__container">
+
+            <a
+                href="index.html"
+                class="brand"
+                aria-label="Ir al inicio"
+            >
+
+                <img
+                    src="assets/logos/logo-seminario.png"
+                    alt="Fundación Universitaria San Mateo"
+                    class="brand__logo"
+                >
+
+                <div class="brand__text">
+                    <span>Fundación Universitaria</span>
+                    <strong>SAN MATEO</strong>
+                </div>
+
+            </a>
+
+
+            <nav
+                class="navigation"
+                id="navigation"
+            >
+
+                <a
+                    href="el-seminario.html"
+                    class="navigation__link"
+                >
+                    <span>El Seminario</span>
+                </a>
+
+                <a
+                    href="linea-investigacion.html"
+                    class="navigation__link active"
+                >
+                    <span>Línea de investigación</span>
+                </a>
+
+                <a
+                    href="sublinea-investigacion.html"
+                    class="navigation__link"
+                >
+                    <span>Sub-línea de investigación</span>
+                </a>
+
+                <a
+                    href="publicaciones.html"
+                    class="navigation__link"
+                >
+                    <span>Publicaciones</span>
+                </a>
+
+                <a
+                    href="investigadores.html"
+                    class="navigation__link"
+                >
+                    <span>Investigadores</span>
+                </a>
+
+            </nav>
+
+
+            <div class="header__actions">
+
+                <button
+                    class="search-button"
+                    id="searchButton"
+                    type="button"
+                    aria-label="Buscar"
+                >
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="10.5" cy="10.5" r="6.4"></circle>
+                        <path d="M15.4 15.4L20.5 20.5"></path>
+                    </svg>
+                </button>
+
+
+                <button
+                    class="menu-button"
+                    id="menuButton"
+                    type="button"
+                    aria-label="Abrir menú"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ============================================
+         BUSCADOR
+    ============================================= -->
+
+    <div
+        class="search-overlay"
+        id="searchOverlay"
+    >
+
+        <div class="search-box">
+
+            <button
+                class="search-box__close"
+                id="closeSearch"
+                type="button"
+                aria-label="Cerrar buscador"
+            >
+                ×
+            </button>
+
+            <span class="search-box__eyebrow">
+                GASTROPATRIMONIO
+            </span>
+
+            <h2>¿Qué deseas encontrar?</h2>
+
+            <div class="search-box__field">
+
+                <svg viewBox="0 0 24 24">
+                    <circle cx="10.5" cy="10.5" r="6.4"></circle>
+                    <path d="M15.4 15.4L20.5 20.5"></path>
+                </svg>
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Buscar..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <div
+                class="search-results"
+                id="searchResults"
+            >
+
+                <a
+                    href="el-seminario.html"
+                    data-search="seminario gastronomía gastropatrimonio"
+                >
+                    El Seminario
+                </a>
+
+                <a
+                    href="linea-investigacion.html"
+                    data-search="línea investigación gastronomía patrimonio"
+                >
+                    Línea de investigación
+                </a>
+
+                <a
+                    href="sublinea-investigacion.html"
+                    data-search="sub línea investigación"
+                >
+                    Sub-línea de investigación
+                </a>
+
+                <a
+                    href="publicaciones.html"
+                    data-search="publicaciones artículos libros documentos"
+                >
+                    Publicaciones
+                </a>
+
+                <a
+                    href="investigadores.html"
+                    data-search="investigadores docentes profesores"
+                >
+                    Investigadores
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================================
+         CONTENIDO
+    ============================================= -->
+
+    <main class="linea-main">
+
+
+        <!-- HERO -->
+
+        <section class="linea-hero">
+
+            <img
+                class="linea-hero__background"
+                src="assets/images/Linea_Investigacion/Banner.png"
+                alt=""
+            >
+
+            <div class="container linea-hero__container">
+
+                <div class="linea-hero__content">
+
+                    <span class="linea-hero__eyebrow">
+                        NUESTRA LÍNEA DE INVESTIGACIÓN
+                    </span>
+
+                    <h1 class="linea-hero__title">
+                        LÍNEA DE
+                        <span>INVESTIGACIÓN</span>
+                    </h1>
+
+                    <h2 class="linea-hero__subtitle">
+                        Rescate del Patrimonio Cultural
+                        <br>
+                        Gastronómico Colombiano
+                    </h2>
+
+                    <p class="linea-hero__description">
+                        Exploramos, documentamos y valoramos el patrimonio
+                        gastronómico de Colombia como una expresión viva de
+                        nuestra identidad cultural, territorio y biodiversidad.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PILARES -->
+
+        <section class="linea-pillars">
+
+            <div class="container linea-pillars__grid">
+
+                <article
+                    class="linea-pillar linea-reveal"
+                    data-linea-reveal="drop"
+                >
+
+                    <div class="linea-pillar__icon floating-icon">
+                        <svg viewBox="0 0 64 64">
+                            <path d="M32 54V22"></path>
+                            <path d="M32 29C21 28 15 20 16 11C27 11 33 18 32 29Z"></path>
+                            <path d="M32 38C43 37 49 29 48 20C37 20 31 27 32 38Z"></path>
+                            <path d="M32 47C22 46 17 40 18 32"></path>
+                        </svg>
+                    </div>
+
+                    <h3>
+                        Patrimonio
+                        <br>
+                        cultural
+                    </h3>
+
+                </article>
+
+
+                <article
+                    class="linea-pillar linea-reveal"
+                    data-linea-reveal="drop"
+                    data-linea-delay="1"
+                >
+
+                    <div class="linea-pillar__icon floating-icon">
+                        <svg viewBox="0 0 64 64">
+                            <path d="M8 15C18 12 25 13 32 18V53C25 48 18 47 8 50Z"></path>
+                            <path d="M56 15C46 12 39 13 32 18V53C39 48 46 47 56 50Z"></path>
+                            <path d="M32 18V53"></path>
+                        </svg>
+                    </div>
+
+                    <h3>
+                        Etnografía
+                        <br>
+                        y tradición
+                    </h3>
+
+                </article>
+
+
+                <article
+                    class="linea-pillar linea-reveal"
+                    data-linea-reveal="drop"
+                    data-linea-delay="2"
+                >
+
+                    <div class="linea-pillar__icon floating-icon">
+                        <svg viewBox="0 0 64 64">
+                            <path d="M14 29H50"></path>
+                            <path d="M17 29C18 43 24 51 32 51C40 51 46 43 47 29"></path>
+                            <path d="M21 21V13"></path>
+                            <path d="M32 21V10"></path>
+                            <path d="M43 21V13"></path>
+                        </svg>
+                    </div>
+
+                    <h3>
+                        Memoria
+                        <br>
+                        culinaria
+                    </h3>
+
+                </article>
+
+
+                <article
+                    class="linea-pillar linea-reveal"
+                    data-linea-reveal="drop"
+                    data-linea-delay="3"
+                >
+
+                    <div class="linea-pillar__icon floating-icon">
+                        <svg viewBox="0 0 64 64">
+                            <path d="M10 51H54"></path>
+                            <path d="M16 46V35"></path>
+                            <path d="M28 46V27"></path>
+                            <path d="M40 46V19"></path>
+                            <path d="M52 46V10"></path>
+                            <path d="M12 29L26 20L38 23L52 10"></path>
+                        </svg>
+                    </div>
+
+                    <h3>
+                        Territorio
+                        <br>
+                        y futuro
+                    </h3>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOBRE LA LÍNEA -->
+
+        <section class="linea-about">
+
+            <img
+                class="linea-about__background"
+                src="assets/images/Linea_Investigacion/Fondo_seccion_3.png"
+                alt=""
+            >
+
+            <div class="container linea-about__grid">
+
+                <div
+                    class="linea-about__content linea-reveal"
+                    data-linea-reveal="sweep-left"
+                >
+
+                    <div class="linea-label">
+                        <i></i>
+                        <span>SOBRE LA LÍNEA</span>
+                    </div>
+
+                    <h2>
+                        Una línea para investigar
+                        <br>
+                        nuestra identidad gastronómica
+                    </h2>
+
+                    <p>
+                        La línea de investigación
+                        <strong>
+                            “Rescate del Patrimonio Cultural Gastronómico Colombiano”
+                        </strong>
+                        se centra en el estudio, la documentación, la innovación
+                        y la difusión de las prácticas alimentarias, saberes,
+                        ingredientes y tradiciones que conforman la gastronomía
+                        del país, como expresión de su diversidad cultural,
+                        territorial y biológica.
+                    </p>
+
+                    <a
+                        href="#que-buscamos"
+                        class="main-button main-button--small floating-button"
+                    >
+                        <span>Conocer más</span>
+
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 12H19"></path>
+                            <path d="M14 7L19 12L14 17"></path>
+                        </svg>
+                    </a>
+
+                </div>
+
+
+                <div
+                    class="linea-about__visual linea-reveal"
+                    data-linea-reveal="sweep-right"
+                >
+
+                    <div class="linea-about__note">
+                        <span>Sabores</span>
+                        <span>Territorios</span>
+                        <span>Personas</span>
+                        <span>Conocimiento</span>
+                        <span>Futuro</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUÉ BUSCAMOS -->
+
+        <section
+            class="linea-goals"
+            id="que-buscamos"
+        >
+
+            <div class="container">
+
+                <div
+                    class="linea-section-title linea-reveal"
+                    data-linea-reveal="scale"
+                >
+                    <h2>¿Qué buscamos?</h2>
+                </div>
+
+
+                <div class="linea-goals__grid">
+
+                    <article
+                        class="goal-card linea-reveal"
+                        data-linea-reveal="fan-left"
+                    >
+
+                        <div class="goal-card__content">
+
+                            <div class="goal-card__icon floating-icon">
+                                <svg viewBox="0 0 64 64">
+                                    <circle cx="27" cy="27" r="14"></circle>
+                                    <path d="M38 38L53 53"></path>
+                                </svg>
+                            </div>
+
+                            <div>
+                                <h3>
+                                    Identificar
+                                    <br>
+                                    potencial existente
+                                </h3>
+
+                                <p>
+                                    Reconocer y documentar los saberes,
+                                    prácticas e ingredientes de valor
+                                    patrimonial en los diversos territorios
+                                    de Colombia.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="goal-card__image zoom-image">
+
+                            <img
+                                src="assets/images/Linea_Investigacion/Que_buscamos_identificar.png"
+                                alt="Identificar potencial existente"
+                                class="zoomable"
+                            >
+
+                            <span class="zoom-image__indicator">⤢</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="goal-card linea-reveal"
+                        data-linea-reveal="rise"
+                        data-linea-delay="1"
+                    >
+
+                        <div class="goal-card__content">
+
+                            <div class="goal-card__icon floating-icon">
+                                <svg viewBox="0 0 64 64">
+                                    <rect x="17" y="9" width="30" height="45" rx="2"></rect>
+                                    <path d="M24 20H40"></path>
+                                    <path d="M24 28H40"></path>
+                                    <path d="M24 36H40"></path>
+                                    <path d="M24 44H35"></path>
+                                </svg>
+                            </div>
+
+                            <div>
+                                <h3>
+                                    Construir
+                                    <br>
+                                    conocimiento
+                                </h3>
+
+                                <p>
+                                    Generar y sistematizar saberes a
+                                    través de la investigación, el diálogo
+                                    de saberes y la articulación
+                                    interdisciplinaria.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="goal-card__image zoom-image">
+
+                            <img
+                                src="assets/images/Linea_Investigacion/Construir_conocimiento.png"
+                                alt="Construir conocimiento"
+                                class="zoomable"
+                            >
+
+                            <span class="zoom-image__indicator">⤢</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="goal-card linea-reveal"
+                        data-linea-reveal="fan-right"
+                        data-linea-delay="2"
+                    >
+
+                        <div class="goal-card__content">
+
+                            <div class="goal-card__icon floating-icon">
+                                <svg viewBox="0 0 64 64">
+                                    <circle cx="32" cy="18" r="7"></circle>
+                                    <circle cx="15" cy="25" r="5"></circle>
+                                    <circle cx="49" cy="25" r="5"></circle>
+                                    <path d="M19 52C19 40 24 33 32 33C40 33 45 40 45 52"></path>
+                                    <path d="M4 52C4 42 8 36 15 36C18 36 21 37 23 40"></path>
+                                    <path d="M60 52C60 42 56 36 49 36C46 36 43 37 41 40"></path>
+                                </svg>
+                            </div>
+
+                            <div>
+                                <h3>
+                                    Valorar los saberes
+                                    <br>
+                                    tradicionales
+                                </h3>
+
+                                <p>
+                                    Reconocer el papel de las comunidades,
+                                    actores tradicionales y portadores de
+                                    saberes como actores fundamentales del
+                                    patrimonio gastronómico.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="goal-card__image zoom-image">
+
+                            <img
+                                src="assets/images/Linea_Investigacion/Valorar_sabores.png"
+                                alt="Valorar los saberes tradicionales"
+                                class="zoomable"
+                            >
+
+                            <span class="zoom-image__indicator">⤢</span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CÓMO INVESTIGAMOS -->
+
+        <section class="linea-method">
+
+            <div class="container">
+
+                <div
+                    class="linea-heading linea-reveal"
+                    data-linea-reveal="sweep-left"
+                >
+                    <i></i>
+                    <h2>¿CÓMO INVESTIGAMOS?</h2>
+                </div>
+
+
+                <div class="linea-method__grid">
+
+                    <article
+                        class="method-card linea-reveal"
+                        data-linea-reveal="rotate-left"
+                    >
+
+                        <div class="method-card__header">
+
+                            <span class="method-card__number">01</span>
+
+                            <div class="method-card__icon floating-icon">
+                                <svg viewBox="0 0 64 64">
+                                    <circle cx="22" cy="31" r="10"></circle>
+                                    <circle cx="42" cy="31" r="10"></circle>
+                                    <path d="M28 31H36"></path>
+                                    <path d="M16 22L21 11"></path>
+                                    <path d="M48 22L43 11"></path>
+                                </svg>
+                            </div>
+
+                        </div>
+
+                        <h3>
+                            Observación
+                            <br>
+                            y documentación
+                        </h3>
+
+                        <p>
+                            Trabajo de campo en territorios,
+                            registro de prácticas, ingredientes
+                            y contextos culturales.
+                        </p>
+
+                        <div class="method-card__image zoom-image">
+
+                            <img
+                                src="assets/images/Linea_Investigacion/Observacion.png"
+                                alt="Observación y documentación"
+                                class="zoomable"
+                            >
+
+                            <span class="zoom-image__indicator">⤢</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="method-card linea-reveal"
+                        data-linea-reveal="rise"
+                        data-linea-delay="1"
+                    >
+
+                        <div class="method-card__header">
+
+                            <span class="method-card__number">02</span>
+
+                            <div class="method-card__icon floating-icon">
+                                <svg viewBox="0 0 64 64">
+                                    <path d="M8 15C18 12 25 13 32 18V53C25 48 18 47 8 50Z"></path>
+                                    <path d="M56 15C46 12 39 13 32 18V53C39 48 46 47 56 50Z"></path>
+                                    <path d="M32 18V53"></path>
+                                </svg>
+                            </div>
+
+                        </div>
+
+                        <h3>
+                            Análisis y contraste
+                            <br>
+                            de información
+                        </h3>
+
+                        <p>
+                            Estudio de fuentes, diálogo de
+                            saberes y análisis interdisciplinario.
+                        </p>
+
+                        <div class="method-card__image zoom-image">
+
+                            <img
+                                src="assets/images/Linea_Investigacion/Analisi.png"
+                                alt="Análisis y contraste de información"
+                                class="zoomable"
+                            >
+
+                            <span class="zoom-image__indicator">⤢</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="method-card linea-reveal"
+                        data-linea-reveal="rise"
+                        data-linea-delay="2"
+                    >
+
+                        <div class="method-card__header">
+
+                            <span class="method-card__number">03</span>
+
+                            <div class="method-card__icon floating-icon">
+                                <svg viewBox="0 0 64 64">
+                                    <path d="M14 29H50"></path>
+                                    <path d="M17 29C18 43 24 51 32 51C40 51 46 43 47 29"></path>
+                                    <path d="M21 21V13"></path>
+                                    <path d="M32 21V10"></path>
+                                    <path d="M43 21V13"></path>
+                                </svg>
+                            </div>
+
+                        </div>
+
+                        <h3>
+                            Experimentación
+                            <br>
+                            y creación aplicada
+                        </h3>
+
+                        <p>
+                            Desarrollo de propuestas gastronómicas
+                            desde el rescate y la innovación.
+                        </p>
+
+                        <div class="method-card__image zoom-image">
+
+                            <img
+                                src="assets/images/Linea_Investigacion/Experimentacion.png"
+                                alt="Experimentación y creación aplicada"
+                                class="zoomable"
+                            >
+
+                            <span class="zoom-image__indicator">⤢</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="method-card linea-reveal"
+                        data-linea-reveal="rotate-right"
+                        data-linea-delay="3"
+                    >
+
+                        <div class="method-card__header">
+
+                            <span class="method-card__number">04</span>
+
+                            <div class="method-card__icon floating-icon">
+                                <svg viewBox="0 0 64 64">
+                                    <path d="M13 27H23L43 16V48L23 37H13Z"></path>
+                                    <path d="M23 37L27 51H18L15 37"></path>
+                                    <path d="M48 24L56 20"></path>
+                                    <path d="M48 32H58"></path>
+                                    <path d="M48 40L56 44"></path>
+                                </svg>
+                            </div>
+
+                        </div>
+
+                        <h3>
+                            Divulgación
+                            <br>
+                            y transferencia
+                        </h3>
+
+                        <p>
+                            Socialización de resultados,
+                            publicaciones, eventos y acciones
+                            con impacto territorial.
+                        </p>
+
+                        <div class="method-card__image zoom-image">
+
+                            <img
+                                src="assets/images/Linea_Investigacion/Divulgacion.png"
+                                alt="Divulgación y transferencia"
+                                class="zoomable"
+                            >
+
+                            <span class="zoom-image__indicator">⤢</span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RETOS Y PROYECCIÓN -->
+
+        <section class="linea-projection">
+
+            <div class="container">
+
+                <div
+                    class="linea-heading linea-reveal"
+                    data-linea-reveal="sweep-right"
+                >
+                    <i></i>
+                    <h2>RETOS Y PROYECCIÓN</h2>
+                </div>
+
+
+                <div class="linea-projection__grid">
+
+                    <article
+                        class="projection-card projection-card--challenge linea-reveal"
+                        data-linea-reveal="sweep-left"
+                    >
+
+                        <div class="projection-card__icon floating-icon">
+                            <svg viewBox="0 0 64 64">
+                                <circle cx="32" cy="32" r="20"></circle>
+                                <circle cx="32" cy="32" r="12"></circle>
+                                <circle cx="32" cy="32" r="4"></circle>
+                                <path d="M36 28L54 10"></path>
+                                <path d="M45 10H54V19"></path>
+                            </svg>
+                        </div>
+
+                        <div class="projection-card__content">
+
+                            <span>RETOS</span>
+
+                            <h3>
+                                Contextualizar nuestro
+                                <br>
+                                patrimonio gastronómico
+                            </h3>
+
+                            <p>
+                                Generar conocimiento situado que contribuya
+                                al reconocimiento, la sostenibilidad y la
+                                preservación de la diversidad gastronómica
+                                colombiana frente a los desafíos contemporáneos.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="projection-card linea-reveal"
+                        data-linea-reveal="sweep-right"
+                    >
+
+                        <div class="projection-card__icon floating-icon">
+                            <svg viewBox="0 0 64 64">
+                                <path d="M7 32C14 20 22 15 32 15C42 15 50 20 57 32C50 44 42 49 32 49C22 49 14 44 7 32Z"></path>
+                                <circle cx="32" cy="32" r="8"></circle>
+                            </svg>
+                        </div>
+
+                        <div class="projection-card__content">
+
+                            <span>VISIÓN</span>
+
+                            <h3>
+                                Ser un referente en
+                                <br>
+                                gastronomía y territorio
+                            </h3>
+
+                            <p>
+                                Posicionarnos como una línea de investigación
+                                reconocida por su aporte a la salvaguardia del
+                                patrimonio gastronómico, la innovación con
+                                identidad y el desarrollo territorial sostenible.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SUBLÍNEAS -->
+
+        <section class="linea-sublines">
+
+            <div class="container">
+
+                <div
+                    class="linea-heading linea-reveal"
+                    data-linea-reveal="sweep-left"
+                >
+                    <i></i>
+
+                    <h2>
+                        CONOCE NUESTRAS SUB-LÍNEAS DE INVESTIGACIÓN
+                    </h2>
+                </div>
+
+
+                <div class="linea-sublines__grid">
+
+                    <article
+                        class="subline-card linea-reveal"
+                        data-linea-reveal="fan-left"
+                    >
+
+                        <div class="subline-card__image zoom-image">
+
+                            <img
+                                src="assets/images/Linea_Investigacion/Cluster.png"
+                                alt="Cluster"
+                                class="zoomable"
+                            >
+
+                            <span class="zoom-image__indicator">⤢</span>
+
+                        </div>
+
+                        <a
+                            href="sublinea-investigacion.html"
+                            class="subline-card__body"
+                        >
+
+                            <div class="subline-card__icon floating-icon">
+                                <svg viewBox="0 0 64 64">
+                                    <circle cx="32" cy="18" r="7"></circle>
+                                    <circle cx="15" cy="26" r="5"></circle>
+                                    <circle cx="49" cy="26" r="5"></circle>
+                                    <path d="M19 52C19 40 24 33 32 33C40 33 45 40 45 52"></path>
+                                </svg>
+                            </div>
+
+                            <h3>Cluster</h3>
+
+                            <span class="subline-card__arrow">→</span>
+
+                        </a>
+
+                    </article>
+
+
+                    <article
+                        class="subline-card linea-reveal"
+                        data-linea-reveal="rise"
+                        data-linea-delay="1"
+                    >
+
+                        <div class="subline-card__image zoom-image">
+
+                            <img
+                                src="assets/images/Linea_Investigacion/Desarrollo_Productos.png"
+                                alt="Desarrollo de Productos"
+                                class="zoomable"
+                            >
+
+                            <span class="zoom-image__indicator">⤢</span>
+
+                        </div>
+
+                        <a
+                            href="sublinea-investigacion.html"
+                            class="subline-card__body"
+                        >
+
+                            <div class="subline-card__icon floating-icon">
+                                <svg viewBox="0 0 64 64">
+                                    <path d="M32 8L38 16L48 15L49 25L57 32L49 39L48 49L38 48L32 56L26 48L16 49L15 39L7 32L15 25L16 15L26 16Z"></path>
+                                    <path d="M23 33L29 39L42 25"></path>
+                                </svg>
+                            </div>
+
+                            <h3>
+                                Desarrollo de Productos
+                                <small>(Rescate - Innovación)</small>
+                            </h3>
+
+                            <span class="subline-card__arrow">→</span>
+
+                        </a>
+
+                    </article>
+
+
+                    <article
+                        class="subline-card linea-reveal"
+                        data-linea-reveal="rise"
+                        data-linea-delay="2"
+                    >
+
+                        <div class="subline-card__image zoom-image">
+
+                            <img
+                                src="assets/images/Linea_Investigacion/Emprendimiento.png"
+                                alt="Emprendimiento Gastronómico"
+                                class="zoomable"
+                            >
+
+                            <span class="zoom-image__indicator">⤢</span>
+
+                        </div>
+
+                        <a
+                            href="sublinea-investigacion.html"
+                            class="subline-card__body"
+                        >
+
+                            <div class="subline-card__icon floating-icon">
+                                <svg viewBox="0 0 64 64">
+                                    <path d="M10 51H54"></path>
+                                    <path d="M16 46V35"></path>
+                                    <path d="M28 46V27"></path>
+                                    <path d="M40 46V19"></path>
+                                    <path d="M52 46V10"></path>
+                                </svg>
+                            </div>
+
+                            <h3>
+                                Emprendimiento
+                                <br>
+                                Gastronómico
+                            </h3>
+
+                            <span class="subline-card__arrow">→</span>
+
+                        </a>
+
+                    </article>
+
+
+                    <article
+                        class="subline-card linea-reveal"
+                        data-linea-reveal="fan-right"
+                        data-linea-delay="3"
+                    >
+
+                        <div class="subline-card__image zoom-image">
+
+                            <img
+                                src="assets/images/Linea_Investigacion/Proyeccion_social.png"
+                                alt="Proyección Social"
+                                class="zoomable"
+                            >
+
+                            <span class="zoom-image__indicator">⤢</span>
+
+                        </div>
+
+                        <a
+                            href="sublinea-investigacion.html"
+                            class="subline-card__body"
+                        >
+
+                            <div class="subline-card__icon floating-icon">
+                                <svg viewBox="0 0 64 64">
+                                    <circle cx="32" cy="18" r="7"></circle>
+                                    <circle cx="15" cy="26" r="5"></circle>
+                                    <circle cx="49" cy="26" r="5"></circle>
+                                    <path d="M19 52C19 40 24 33 32 33C40 33 45 40 45 52"></path>
+                                </svg>
+                            </div>
+
+                            <h3>Proyección Social</h3>
+
+                            <span class="subline-card__arrow">→</span>
+
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================================
+             BANNER FINAL
+             AHORA TERMINA PEGADO AL FOOTER
+        ============================================= -->
+
+        <section
+            class="linea-final-banner linea-reveal zoom-image"
+            data-linea-reveal="curtain"
+        >
+
+            <img
+                src="assets/images/Linea_Investigacion/Banner_final.png"
+                alt="Investigar la gastronomía es preservar la memoria de los territorios"
+                class="zoomable"
+            >
+
+            <span class="zoom-image__indicator">⤢</span>
+
+        </section>
+
+    </main>
+
+
+    <!-- ============================================
+         FOOTER
+    ============================================= -->
+
+    <footer class="linea-footer">
+
+        <div
+            class="linea-footer__particles"
+            aria-hidden="true"
+        >
+            <span style="--x:8%;--y:20%;--s:5px;"></span>
+            <span style="--x:17%;--y:69%;--s:9px;"></span>
+            <span style="--x:27%;--y:18%;--s:4px;"></span>
+            <span style="--x:35%;--y:60%;--s:5px;"></span>
+            <span style="--x:49%;--y:24%;--s:5px;"></span>
+            <span style="--x:58%;--y:72%;--s:8px;"></span>
+            <span style="--x:67%;--y:33%;--s:4px;"></span>
+            <span style="--x:77%;--y:65%;--s:6px;"></span>
+            <span style="--x:87%;--y:20%;--s:5px;"></span>
+            <span style="--x:94%;--y:58%;--s:7px;"></span>
+        </div>
+
+
+        <div class="container linea-footer__main">
+
+            <div class="linea-footer__brand">
+
+                <img
+                    src="assets/logos/logo-footer.png"
+                    alt="Fundación Universitaria San Mateo"
+                >
+
+                <p>EDUCACIÓN QUE TRANSFORMA</p>
+
+            </div>
+
+
+            <div class="linea-footer__column linea-footer__links">
+
+                <h3>Enlaces rápidos</h3>
+
+                <span class="linea-footer__title-line"></span>
+
+                <nav>
+                    <a href="el-seminario.html">El Seminario</a>
+                    <a href="linea-investigacion.html">Línea de investigación</a>
+                    <a href="sublinea-investigacion.html">Sub-línea de investigación</a>
+                    <a href="publicaciones.html">Publicaciones</a>
+                    <a href="investigadores.html">Investigadores</a>
+                </nav>
+
+            </div>
+
+
+            <div class="linea-footer__column linea-footer__information">
+
+                <h3>Información</h3>
+
+                <span class="linea-footer__title-line"></span>
+
+
+                <div class="linea-footer__info-item">
+
+                    <div class="linea-footer__info-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"></path>
+                            <circle cx="12" cy="9" r="2.3"></circle>
+                        </svg>
+                    </div>
+
+                    <span>Bogotá, Colombia</span>
+
+                </div>
+
+
+                <div class="linea-footer__info-item">
+
+                    <div class="linea-footer__info-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M3 10H21"></path>
+                            <path d="M5 10V19"></path>
+                            <path d="M9 10V19"></path>
+                            <path d="M15 10V19"></path>
+                            <path d="M19 10V19"></path>
+                            <path d="M3 19H21"></path>
+                            <path d="M2 22H22"></path>
+                            <path d="M12 3L3 8H21Z"></path>
+                        </svg>
+                    </div>
+
+                    <span>
+                        Fundación Universitaria
+                        <br>
+                        San Mateo
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="container linea-footer__bottom">
+
+            <p>
+                © <span id="year">2026</span>
+                Fundación Universitaria San Mateo.
+                Todos los derechos reservados.
+            </p>
+
+            <div class="linea-footer__legal">
+
+                <a href="#">Términos y condiciones</a>
+
+                <span></span>
+
+                <a href="#">Política de privacidad</a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- VISOR DE IMÁGENES -->
+
+    <div
+        class="image-lightbox"
+        id="imageLightbox"
+        aria-hidden="true"
+    >
+
+        <button
+            class="image-lightbox__close"
+            id="lightboxClose"
+            type="button"
+            aria-label="Cerrar imagen"
+        >
+            ×
+        </button>
+
+        <div class="image-lightbox__content">
+
+            <img
+                src=""
+                alt=""
+                id="lightboxImage"
+            >
+
+            <p id="lightboxCaption"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- VOLVER ARRIBA -->
+
+    <button
+        class="back-to-top"
+        id="backToTop"
+        type="button"
+        aria-label="Volver arriba"
+    >
+        <svg viewBox="0 0 24 24">
+            <path d="M6 14L12 8L18 14"></path>
+        </svg>
+    </button>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/linea-investigacion.js"></script>
+
+</body>
+</html>

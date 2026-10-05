@@ -1,0 +1,2030 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Grupo de Investigación Patrimonio Cultural y Gastronómico de Colombia - Fundación Universitaria San Mateo"
+    >
+
+    <title>
+        El Seminario | Gastropatrimonio
+    </title>
+
+
+<!-- =====================================================
+     FAVICON
+====================================================== -->
+
+<link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="assets/logos/logo-seminario.png?v=20261005"
+>
+
+<link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="assets/logos/logo-seminario.png?v=20261005"
+>
+
+<link
+    rel="shortcut icon"
+    type="image/png"
+    href="assets/logos/logo-seminario.png?v=20261005"
+>
+
+<link
+    rel="apple-touch-icon"
+    href="assets/logos/logo-seminario.png?v=20261005"
+>
+
+<meta
+    name="theme-color"
+    content="#faf5ec"
+>
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!--
+        EXACTAMENTE COMO EN INICIO:
+        activa el estado inicial antes de cargar CSS
+    -->
+
+    <script>
+        document.documentElement.classList.add("js");
+    </script>
+
+
+    <!-- CSS GLOBAL -->
+
+    <link
+        rel="stylesheet"
+        href="./css/styles.css"
+    >
+
+
+    <!-- CSS DE ESTA PÁGINA -->
+
+    <link
+        rel="stylesheet"
+        href="./css/seminario.css"
+    >
+
+</head>
+
+
+<body class="seminario-page">
+
+
+    <!-- =====================================================
+         PARTÍCULAS
+    ====================================================== -->
+
+    <div
+        class="particles"
+        id="particles"
+        aria-hidden="true"
+    ></div>
+
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header
+        class="header"
+        id="header"
+    >
+
+        <div class="container header__container">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="./index.html"
+                class="brand"
+                aria-label="Ir al inicio"
+            >
+
+                <img
+                    src="./assets/logos/logo-seminario.png"
+                    alt="Fundación Universitaria San Mateo"
+                    class="brand__logo"
+                >
+
+
+                <div class="brand__text">
+
+                    <span>
+                        Fundación Universitaria
+                    </span>
+
+                    <strong>
+                        SAN MATEO
+                    </strong>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- NAVEGACIÓN -->
+
+            <nav
+                class="navigation"
+                id="navigation"
+                aria-label="Navegación principal"
+            >
+
+                <div class="navigation__mobile-title">
+
+                    <span>
+                        MENÚ
+                    </span>
+
+                    <strong>
+                        GASTROPATRIMONIO
+                    </strong>
+
+                </div>
+
+
+                <a
+                    href="./el-seminario.html"
+                    class="navigation__link active"
+                >
+
+                    <span>
+                        El Seminario
+                    </span>
+
+                    <b>
+                        01
+                    </b>
+
+                </a>
+
+
+                <a
+                    href="./linea-investigacion.html"
+                    class="navigation__link"
+                >
+
+                    <span>
+                        Línea de investigación
+                    </span>
+
+                    <b>
+                        02
+                    </b>
+
+                </a>
+
+
+                <a
+                    href="./sublinea-investigacion.html"
+                    class="navigation__link"
+                >
+
+                    <span>
+                        Sub-línea de investigación
+                    </span>
+
+                    <b>
+                        03
+                    </b>
+
+                </a>
+
+
+                <a
+                    href="./publicaciones.html"
+                    class="navigation__link"
+                >
+
+                    <span>
+                        Publicaciones
+                    </span>
+
+                    <b>
+                        04
+                    </b>
+
+                </a>
+
+
+                <a
+                    href="./investigadores.html"
+                    class="navigation__link"
+                >
+
+                    <span>
+                        Investigadores
+                    </span>
+
+                    <b>
+                        05
+                    </b>
+
+                </a>
+
+
+                <div class="navigation__mobile-footer">
+
+                    <span>
+                        Bogotá, Colombia
+                    </span>
+
+                    <small>
+                        Fundación Universitaria San Mateo
+                    </small>
+
+                </div>
+
+            </nav>
+
+
+
+            <!-- ACCIONES -->
+
+            <div class="header__actions">
+
+
+                <button
+                    class="search-button"
+                    id="searchButton"
+                    type="button"
+                    aria-label="Buscar"
+                >
+
+                    <svg viewBox="0 0 24 24">
+
+                        <circle
+                            cx="10.5"
+                            cy="10.5"
+                            r="6.4"
+                        ></circle>
+
+                        <path
+                            d="M15.4 15.4L20.5 20.5"
+                        ></path>
+
+                    </svg>
+
+                </button>
+
+
+
+                <button
+                    class="menu-button"
+                    id="menuButton"
+                    type="button"
+                    aria-label="Abrir menú"
+                    aria-expanded="false"
+                    aria-controls="navigation"
+                >
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         BACKDROP MENÚ
+    ====================================================== -->
+
+    <button
+        class="menu-backdrop"
+        id="menuBackdrop"
+        type="button"
+        aria-label="Cerrar menú"
+        tabindex="-1"
+    ></button>
+
+
+
+    <!-- =====================================================
+         BUSCADOR
+    ====================================================== -->
+
+    <div
+        class="search-overlay"
+        id="searchOverlay"
+    >
+
+        <div class="search-box">
+
+
+            <button
+                class="search-box__close"
+                id="closeSearch"
+                type="button"
+                aria-label="Cerrar buscador"
+            >
+                ×
+            </button>
+
+
+            <span class="search-box__eyebrow">
+                GASTROPATRIMONIO
+            </span>
+
+
+            <h2>
+                ¿Qué deseas encontrar?
+            </h2>
+
+
+            <div class="search-box__field">
+
+                <svg viewBox="0 0 24 24">
+
+                    <circle
+                        cx="10.5"
+                        cy="10.5"
+                        r="6.4"
+                    ></circle>
+
+                    <path
+                        d="M15.4 15.4L20.5 20.5"
+                    ></path>
+
+                </svg>
+
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Buscar..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <div
+                class="search-results"
+                id="searchResults"
+            >
+
+                <a
+                    href="./el-seminario.html"
+                    data-search="seminario patrimonio cultural gastronómico"
+                >
+                    El Seminario
+                </a>
+
+
+                <a
+                    href="./linea-investigacion.html"
+                    data-search="línea investigación patrimonio"
+                >
+                    Línea de investigación
+                </a>
+
+
+                <a
+                    href="./sublinea-investigacion.html"
+                    data-search="sub línea investigación gastronomía"
+                >
+                    Sub-línea de investigación
+                </a>
+
+
+                <a
+                    href="./publicaciones.html"
+                    data-search="publicaciones artículos libros"
+                >
+                    Publicaciones
+                </a>
+
+
+                <a
+                    href="./investigadores.html"
+                    data-search="investigadores colaboradores"
+                >
+                    Investigadores
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="seminario-main">
+
+
+        <!-- =================================================
+             BANNER
+        ================================================== -->
+
+        <section class="seminario-hero">
+
+
+            <div class="container seminario-hero__container">
+
+
+                <div class="seminario-hero__content">
+
+
+                    <!-- equivalente al eyebrow de Inicio -->
+
+                    <span class="seminario-kicker">
+                        GRUPO DE INVESTIGACIÓN
+                    </span>
+
+
+
+                    <!-- equivalente al title de Inicio -->
+
+                    <h1 class="seminario-hero__title">
+
+                        PATRIMONIO
+                        <br>
+
+                        CULTURAL Y
+                        <br>
+
+                        GASTRONÓMICO
+                        <br>
+
+                        <span>
+                            DE COLOMBIA
+                        </span>
+
+                    </h1>
+
+
+
+                    <!-- equivalente al subtitle de Inicio -->
+
+                    <p class="seminario-hero__subtitle">
+
+                        Investigación, cultura y territorio
+                        <br>
+
+                        para una gastronomía con identidad.
+
+                    </p>
+
+
+
+                    <!--
+                        MISMO floating-button DE INICIO
+                    -->
+
+                    <a
+                        href="#sobre-nosotros"
+                        class="main-button floating-button seminario-hero__button"
+                    >
+
+                        <span>
+                            Conoce más
+                        </span>
+
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path
+                                d="M4 12H19"
+                            ></path>
+
+                            <path
+                                d="M14 7L19 12L14 17"
+                            ></path>
+
+                        </svg>
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             INFORMACIÓN DEL GRUPO
+        ================================================== -->
+
+        <section class="seminario-stats">
+
+
+            <div class="container seminario-stats__grid">
+
+
+                <!-- AÑO -->
+
+                <article
+                    class="seminario-stat reveal"
+                    data-reveal="up"
+                >
+
+                    <div class="seminario-stat__icon">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <rect
+                                x="3"
+                                y="5"
+                                width="18"
+                                height="16"
+                                rx="2"
+                            ></rect>
+
+                            <path
+                                d="M7 3V7"
+                            ></path>
+
+                            <path
+                                d="M17 3V7"
+                            ></path>
+
+                            <path
+                                d="M3 10H21"
+                            ></path>
+
+                        </svg>
+
+                    </div>
+
+
+                    <div class="seminario-stat__text">
+
+                        <span>
+                            Año de formación
+                        </span>
+
+                        <strong>
+                            2013
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CIUDAD -->
+
+                <article
+                    class="seminario-stat reveal"
+                    data-reveal="up"
+                    data-delay="1"
+                >
+
+                    <div class="seminario-stat__icon">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path
+                                d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"
+                            ></path>
+
+                            <circle
+                                cx="12"
+                                cy="9"
+                                r="2.4"
+                            ></circle>
+
+                        </svg>
+
+                    </div>
+
+
+                    <div class="seminario-stat__text">
+
+                        <span>
+                            Ciudad
+                        </span>
+
+                        <strong>
+                            Bogotá D.C.
+                        </strong>
+
+                        <small>
+                            Colombia
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- LÍDER -->
+
+                <article
+                    class="seminario-stat reveal"
+                    data-reveal="up"
+                    data-delay="2"
+                >
+
+                    <div class="seminario-stat__icon">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <circle
+                                cx="12"
+                                cy="7"
+                                r="4"
+                            ></circle>
+
+                            <path
+                                d="M4 21C4 16.8 7.2 13.5 12 13.5C16.8 13.5 20 16.8 20 21"
+                            ></path>
+
+                        </svg>
+
+                    </div>
+
+
+                    <div class="seminario-stat__text">
+
+                        <span>
+                            Líder
+                        </span>
+
+                        <strong>
+                            Elizabeth
+                        </strong>
+
+                        <small>
+                            Araque Elaica
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CLASIFICACIÓN -->
+
+                <article
+                    class="seminario-stat reveal"
+                    data-reveal="up"
+                    data-delay="3"
+                >
+
+                    <div class="seminario-stat__icon">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <circle
+                                cx="12"
+                                cy="8"
+                                r="5"
+                            ></circle>
+
+                            <path
+                                d="M9 13L7.5 21L12 18.5L16.5 21L15 13"
+                            ></path>
+
+                        </svg>
+
+                    </div>
+
+
+                    <div class="seminario-stat__text">
+
+                        <span>
+                            Clasificación
+                        </span>
+
+                        <strong>
+                            B
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- INSTITUCIÓN -->
+
+                <article
+                    class="seminario-stat reveal"
+                    data-reveal="up"
+                >
+
+                    <div class="seminario-stat__icon">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path
+                                d="M3 9H21"
+                            ></path>
+
+                            <path
+                                d="M5 9V19"
+                            ></path>
+
+                            <path
+                                d="M9 9V19"
+                            ></path>
+
+                            <path
+                                d="M15 9V19"
+                            ></path>
+
+                            <path
+                                d="M19 9V19"
+                            ></path>
+
+                            <path
+                                d="M2 21H22"
+                            ></path>
+
+                            <path
+                                d="M12 3L2 8H22L12 3Z"
+                            ></path>
+
+                        </svg>
+
+                    </div>
+
+
+                    <div class="seminario-stat__text">
+
+                        <span>
+                            Institución
+                        </span>
+
+                        <strong>
+                            Fundación Universitaria
+                        </strong>
+
+                        <small>
+                            San Mateo
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ÁREA -->
+
+                <article
+                    class="seminario-stat reveal"
+                    data-reveal="up"
+                    data-delay="1"
+                >
+
+                    <div class="seminario-stat__icon">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path
+                                d="M12 3L21 8L12 13L3 8L12 3Z"
+                            ></path>
+
+                            <path
+                                d="M3 12L12 17L21 12"
+                            ></path>
+
+                            <path
+                                d="M3 16L12 21L21 16"
+                            ></path>
+
+                        </svg>
+
+                    </div>
+
+
+                    <div class="seminario-stat__text">
+
+                        <span>
+                            Área de conocimiento
+                        </span>
+
+                        <strong>
+                            Ciencias Sociales
+                        </strong>
+
+                        <small>
+                            Otras Ciencias Sociales
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             SOBRE NOSOTROS
+        ================================================== -->
+
+        <section
+            class="seminario-about"
+            id="sobre-nosotros"
+        >
+
+
+            <div class="container seminario-about__container">
+
+
+                <div
+                    class="seminario-about__content reveal"
+                    data-reveal="left"
+                >
+
+
+                    <div class="seminario-section-label">
+
+                        <i></i>
+
+                        <span>
+                            SOBRE NOSOTROS
+                        </span>
+
+                    </div>
+
+
+                    <h2>
+
+                        Un grupo que investiga,
+                        preserva y proyecta
+                        nuestra identidad gastronómica
+
+                    </h2>
+
+
+                    <p>
+
+                        El grupo de investigación Patrimonio Cultural y
+                        Gastronómico de Colombia de la Fundación Universitaria
+                        San Mateo, formado en 2013, se centra en el estudio,
+                        rescate y documentación del patrimonio gastronómico
+                        colombiano, conectando la historia, las costumbres,
+                        las tradiciones, las recetas y el turismo como
+                        elementos de valor cultural, social y educativo.
+
+                    </p>
+
+
+                    <a
+                        href="#linea-investigacion"
+                        class="main-button main-button--small floating-button"
+                    >
+
+                        <span>
+                            Conoce más
+                        </span>
+
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path
+                                d="M4 12H19"
+                            ></path>
+
+                            <path
+                                d="M14 7L19 12L14 17"
+                            ></path>
+
+                        </svg>
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             LÍNEA DE INVESTIGACIÓN
+        ================================================== -->
+
+        <section
+            class="seminario-line"
+            id="linea-investigacion"
+        >
+
+
+            <div class="container seminario-line__grid">
+
+
+                <div
+                    class="seminario-line__content reveal"
+                    data-reveal="left"
+                >
+
+
+                    <div class="seminario-section-label">
+
+                        <i></i>
+
+                        <span>
+                            LÍNEA DE INVESTIGACIÓN
+                        </span>
+
+                    </div>
+
+
+                    <h2>
+
+                        Rescate del Patrimonio Cultural
+                        Gastronómico Colombiano
+
+                    </h2>
+
+
+                    <p>
+
+                        Esta línea de investigación aborda el estudio,
+                        la identificación, conservación y difusión del
+                        patrimonio gastronómico de Colombia, a través de
+                        procesos de investigación aplicada y etnográfica
+                        que integran la cultura, las tradiciones, la memoria
+                        y el territorio, para su reconocimiento y valoración
+                        como parte de la identidad nacional.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <div
+                    class="seminario-line__words reveal"
+                    data-reveal="right"
+                >
+
+                    <span>
+                        Conocer
+                    </span>
+
+                    <span>
+                        Preservar
+                    </span>
+
+                    <span>
+                        Valorar
+                    </span>
+
+                    <span>
+                        Compartir
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             SUB-LÍNEAS
+        ================================================== -->
+
+        <section class="seminario-subline">
+
+
+            <div class="container">
+
+
+                <div
+                    class="seminario-section-label reveal"
+                    data-reveal="up"
+                >
+
+                    <i></i>
+
+                    <span>
+                        SUB-LÍNEA DE INVESTIGACIÓN
+                    </span>
+
+                </div>
+
+
+
+                <div class="seminario-subline__grid">
+
+
+                    <!-- CLUSTER -->
+
+                    <article
+                        class="seminario-card reveal"
+                        data-reveal="up"
+                    >
+
+                        <div class="seminario-card__image">
+
+                            <img
+                                src="./assets/images/El-seminario/cluster.png"
+                                alt="Cluster gastronómico"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+
+                        <div class="seminario-card__icon">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <circle
+                                    cx="12"
+                                    cy="7"
+                                    r="3"
+                                ></circle>
+
+                                <circle
+                                    cx="5"
+                                    cy="10"
+                                    r="2.2"
+                                ></circle>
+
+                                <circle
+                                    cx="19"
+                                    cy="10"
+                                    r="2.2"
+                                ></circle>
+
+                                <path
+                                    d="M8 20V17C8 14.8 9.8 13 12 13C14.2 13 16 14.8 16 17V20"
+                                ></path>
+
+                                <path
+                                    d="M2 20V17.5C2 15.6 3.4 14.2 5 14.2"
+                                ></path>
+
+                                <path
+                                    d="M22 20V17.5C22 15.6 20.6 14.2 19 14.2"
+                                ></path>
+
+                            </svg>
+
+                        </div>
+
+
+                        <div class="seminario-card__body">
+
+                            <h3>
+                                Cluster
+                            </h3>
+
+
+                            <p>
+
+                                Articulación de actores del sector
+                                gastronómico para fortalecer procesos
+                                de investigación, innovación y
+                                desarrollo territorial.
+
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- DESARROLLO -->
+
+                    <article
+                        class="seminario-card reveal"
+                        data-reveal="up"
+                        data-delay="1"
+                    >
+
+                        <div class="seminario-card__image">
+
+                            <img
+                                src="./assets/images/El-seminario/desarrollo-productos.png"
+                                alt="Desarrollo de productos"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+
+                        <div class="seminario-card__icon">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path
+                                    d="M12 21C7 18 4 14.7 4 10.5C4 7.5 6.2 5 9 5C10.5 5 11.5 5.7 12 6.4C12.5 5.7 13.5 5 15 5C17.8 5 20 7.5 20 10.5C20 14.7 17 18 12 21Z"
+                                ></path>
+
+                                <path
+                                    d="M12 16V8"
+                                ></path>
+
+                                <path
+                                    d="M12 11C14 11 15.4 10 16.2 8.5"
+                                ></path>
+
+                            </svg>
+
+                        </div>
+
+
+                        <div class="seminario-card__body">
+
+                            <h3>
+
+                                Desarrollo de Productos
+                                <br>
+
+                                <small>
+                                    (Rescate - Innovación)
+                                </small>
+
+                            </h3>
+
+
+                            <p>
+
+                                Investigación y creación de productos
+                                gastronómicos que rescatan la tradición
+                                e incorporan elementos de innovación.
+
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- EMPRENDIMIENTO -->
+
+                    <article
+                        class="seminario-card reveal"
+                        data-reveal="up"
+                        data-delay="2"
+                    >
+
+                        <div class="seminario-card__image">
+
+                            <img
+                                src="./assets/images/El-seminario/emprendimiento.png"
+                                alt="Emprendimiento gastronómico"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+
+                        <div class="seminario-card__icon">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path
+                                    d="M4 20V14"
+                                ></path>
+
+                                <path
+                                    d="M9 20V10"
+                                ></path>
+
+                                <path
+                                    d="M14 20V6"
+                                ></path>
+
+                                <path
+                                    d="M19 20V3"
+                                ></path>
+
+                                <path
+                                    d="M2 20H22"
+                                ></path>
+
+                            </svg>
+
+                        </div>
+
+
+                        <div class="seminario-card__body">
+
+                            <h3>
+
+                                Emprendimiento
+                                <br>
+                                Gastronómico
+
+                            </h3>
+
+
+                            <p>
+
+                                Generación de conocimiento para el
+                                fortalecimiento de iniciativas y modelos
+                                de negocio en torno a la gastronomía.
+
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PROYECCIÓN -->
+
+                    <article
+                        class="seminario-card reveal"
+                        data-reveal="up"
+                        data-delay="3"
+                    >
+
+                        <div class="seminario-card__image">
+
+                            <img
+                                src="./assets/images/El-seminario/proyeccion-social.png"
+                                alt="Proyección social"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+
+                        <div class="seminario-card__icon">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <circle
+                                    cx="12"
+                                    cy="7"
+                                    r="3"
+                                ></circle>
+
+                                <circle
+                                    cx="5"
+                                    cy="10"
+                                    r="2.2"
+                                ></circle>
+
+                                <circle
+                                    cx="19"
+                                    cy="10"
+                                    r="2.2"
+                                ></circle>
+
+                                <path
+                                    d="M8 20V17C8 14.8 9.8 13 12 13C14.2 13 16 14.8 16 17V20"
+                                ></path>
+
+                                <path
+                                    d="M2 20V17.5C2 15.6 3.4 14.2 5 14.2"
+                                ></path>
+
+                                <path
+                                    d="M22 20V17.5C22 15.6 20.6 14.2 19 14.2"
+                                ></path>
+
+                            </svg>
+
+                        </div>
+
+
+                        <div class="seminario-card__body">
+
+                            <h3>
+                                Proyección Social
+                            </h3>
+
+
+                            <p>
+
+                                Transferencia de conocimiento a comunidades
+                                y territorios, contribuyendo al desarrollo
+                                social, cultural y turístico.
+
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             COLABORADORES
+        ================================================== -->
+
+        <section class="seminario-collaborators">
+
+
+            <div class="container">
+
+
+                <div class="seminario-section-heading">
+
+
+                    <div
+                        class="seminario-section-label reveal"
+                        data-reveal="left"
+                    >
+
+                        <i></i>
+
+                        <span>
+                            COLABORADORES
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="./investigadores.html"
+                        class="seminario-text-link reveal"
+                        data-reveal="right"
+                    >
+
+                        Conoce nuestro equipo
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+
+
+                <div class="seminario-collaborators__grid">
+
+
+                    <article
+                        class="seminario-collaborator-placeholder reveal"
+                        data-reveal="left"
+                    >
+
+                        <div class="seminario-placeholder-icon">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <circle
+                                    cx="12"
+                                    cy="8"
+                                    r="4"
+                                ></circle>
+
+                                <path
+                                    d="M4 21C4 16.8 7.2 13.5 12 13.5C16.8 13.5 20 16.8 20 21"
+                                ></path>
+
+                            </svg>
+
+                        </div>
+
+
+                        <span>
+                            Espacio para colaborador
+                        </span>
+
+                    </article>
+
+
+
+                    <article
+                        class="seminario-collaborator-placeholder reveal"
+                        data-reveal="right"
+                    >
+
+                        <div class="seminario-placeholder-icon">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <circle
+                                    cx="12"
+                                    cy="8"
+                                    r="4"
+                                ></circle>
+
+                                <path
+                                    d="M4 21C4 16.8 7.2 13.5 12 13.5C16.8 13.5 20 16.8 20 21"
+                                ></path>
+
+                            </svg>
+
+                        </div>
+
+
+                        <span>
+                            Espacio para colaborador
+                        </span>
+
+                    </article>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             PUBLICACIONES
+        ================================================== -->
+
+        <section class="seminario-publications">
+
+
+            <div class="container">
+
+
+                <div class="seminario-section-heading">
+
+
+                    <div
+                        class="seminario-section-label reveal"
+                        data-reveal="left"
+                    >
+
+                        <i></i>
+
+                        <span>
+                            PUBLICACIONES DESTACADAS
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="./publicaciones.html"
+                        class="seminario-text-link reveal"
+                        data-reveal="right"
+                    >
+
+                        Ver todas las publicaciones
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+
+
+                <div class="seminario-publications__grid">
+
+
+                    <article
+                        class="seminario-publication reveal"
+                        data-reveal="up"
+                    >
+
+                        <div class="seminario-publication__placeholder">
+
+                            <span>
+                                Imagen
+                            </span>
+
+                        </div>
+
+
+                        <div class="seminario-publication__content">
+
+                            <span class="seminario-publication__year">
+                                2024
+                            </span>
+
+                            <span class="seminario-publication__type">
+                                Publicación
+                            </span>
+
+                            <h3>
+                                Título de la publicación
+                            </h3>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article
+                        class="seminario-publication reveal"
+                        data-reveal="up"
+                        data-delay="1"
+                    >
+
+                        <div class="seminario-publication__placeholder">
+
+                            <span>
+                                Imagen
+                            </span>
+
+                        </div>
+
+
+                        <div class="seminario-publication__content">
+
+                            <span class="seminario-publication__year">
+                                2024
+                            </span>
+
+                            <span class="seminario-publication__type">
+                                Publicación
+                            </span>
+
+                            <h3>
+                                Título de la publicación
+                            </h3>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article
+                        class="seminario-publication reveal"
+                        data-reveal="up"
+                        data-delay="2"
+                    >
+
+                        <div class="seminario-publication__placeholder">
+
+                            <span>
+                                Imagen
+                            </span>
+
+                        </div>
+
+
+                        <div class="seminario-publication__content">
+
+                            <span class="seminario-publication__year">
+                                2023
+                            </span>
+
+                            <span class="seminario-publication__type">
+                                Publicación
+                            </span>
+
+                            <h3>
+                                Título de la publicación
+                            </h3>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article
+                        class="seminario-publication reveal"
+                        data-reveal="up"
+                        data-delay="3"
+                    >
+
+                        <div class="seminario-publication__placeholder">
+
+                            <span>
+                                Imagen
+                            </span>
+
+                        </div>
+
+
+                        <div class="seminario-publication__content">
+
+                            <span class="seminario-publication__year">
+                                2023
+                            </span>
+
+                            <span class="seminario-publication__type">
+                                Publicación
+                            </span>
+
+                            <h3>
+                                Título de la publicación
+                            </h3>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article
+                        class="seminario-publication reveal"
+                        data-reveal="up"
+                    >
+
+                        <div class="seminario-publication__placeholder">
+
+                            <span>
+                                Imagen
+                            </span>
+
+                        </div>
+
+
+                        <div class="seminario-publication__content">
+
+                            <span class="seminario-publication__year">
+                                2022
+                            </span>
+
+                            <span class="seminario-publication__type">
+                                Publicación
+                            </span>
+
+                            <h3>
+                                Título de la publicación
+                            </h3>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article
+                        class="seminario-publication reveal"
+                        data-reveal="up"
+                        data-delay="1"
+                    >
+
+                        <div class="seminario-publication__placeholder">
+
+                            <span>
+                                Imagen
+                            </span>
+
+                        </div>
+
+
+                        <div class="seminario-publication__content">
+
+                            <span class="seminario-publication__year">
+                                2022
+                            </span>
+
+                            <span class="seminario-publication__type">
+                                Publicación
+                            </span>
+
+                            <h3>
+                                Título de la publicación
+                            </h3>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             BANNER FINAL
+        ================================================== -->
+
+        <section
+            class="seminario-final-banner reveal"
+            data-reveal="up"
+        >
+
+            <img
+                src="./assets/images/El-seminario/Banner-final.png"
+                alt="La gastronomía es un puente entre las personas, la cultura y el territorio"
+            >
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+
+        <div class="container footer__grid">
+
+
+            <div class="footer__brand footer-reveal">
+
+                <img
+                    src="./assets/logos/logo-footer.png"
+                    alt="Fundación Universitaria San Mateo"
+                >
+
+                <span>
+                    EDUCACIÓN QUE TRANSFORMA
+                </span>
+
+            </div>
+
+
+
+            <div class="footer__column footer-reveal">
+
+                <h3>
+                    Enlaces rápidos
+                </h3>
+
+
+                <a href="./el-seminario.html">
+                    El Seminario
+                </a>
+
+                <a href="./linea-investigacion.html">
+                    Línea de investigación
+                </a>
+
+                <a href="./sublinea-investigacion.html">
+                    Sub-línea de investigación
+                </a>
+
+                <a href="./publicaciones.html">
+                    Publicaciones
+                </a>
+
+                <a href="./investigadores.html">
+                    Investigadores
+                </a>
+
+            </div>
+
+
+
+            <div class="footer__column footer-reveal">
+
+                <h3>
+                    Información
+                </h3>
+
+
+                <div class="footer__info">
+
+                    <div class="footer__info-icon">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path
+                                d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"
+                            ></path>
+
+                            <circle
+                                cx="12"
+                                cy="9"
+                                r="2.4"
+                            ></circle>
+
+                        </svg>
+
+                    </div>
+
+
+                    <span>
+                        Bogotá, Colombia
+                    </span>
+
+                </div>
+
+
+
+                <div class="footer__info">
+
+                    <div class="footer__info-icon">
+
+                        <svg viewBox="0 0 64 64">
+
+                            <path
+                                d="M11 25H53"
+                            ></path>
+
+                            <path
+                                d="M16 25V49"
+                            ></path>
+
+                            <path
+                                d="M26 25V49"
+                            ></path>
+
+                            <path
+                                d="M38 25V49"
+                            ></path>
+
+                            <path
+                                d="M48 25V49"
+                            ></path>
+
+                            <path
+                                d="M10 52H54"
+                            ></path>
+
+                            <path
+                                d="M32 7L10 20H54L32 7Z"
+                            ></path>
+
+                        </svg>
+
+                    </div>
+
+
+                    <span>
+
+                        Fundación Universitaria
+                        <br>
+                        San Mateo
+
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="container footer__bottom">
+
+
+            <p>
+
+                © <span id="year">2026</span>
+                Fundación Universitaria San Mateo.
+                Todos los derechos reservados.
+
+            </p>
+
+
+            <div class="footer__legal">
+
+                <a href="#">
+                    Términos y condiciones
+                </a>
+
+                <i></i>
+
+                <a href="#">
+                    Política de privacidad
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         VOLVER ARRIBA
+    ====================================================== -->
+
+    <button
+        class="back-to-top"
+        id="backToTop"
+        type="button"
+        aria-label="Volver al inicio"
+    >
+
+        <svg viewBox="0 0 24 24">
+
+            <path
+                d="M12 19V5"
+            ></path>
+
+            <path
+                d="M6 11L12 5L18 11"
+            ></path>
+
+        </svg>
+
+    </button>
+
+
+
+    <!--
+        MAIN.JS ES EL MISMO DE INICIO.
+        AHÍ ESTÁN LAS ANIMACIONES DE:
+        - page-ready
+        - header
+        - menu
+        - reveal
+        - footer
+        - partículas
+        - volver arriba
+    -->
+
+    <script src="./js/main.js"></script>
+
+
+    <!-- JS EXCLUSIVO DEL SEMINARIO -->
+
+    <script src="./js/seminario.js"></script>
+
+
+</body>
+
+</html>

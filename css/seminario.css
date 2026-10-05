@@ -1,0 +1,2968 @@
+/* =========================================================
+   EL SEMINARIO
+========================================================= */
+
+.seminario-page {
+
+    --seminario-orange: #cc4c28;
+    --seminario-red: #a93622;
+    --seminario-dark: #191a1c;
+    --seminario-paper: #faf5ec;
+}
+
+
+
+/* =========================================================
+   EVITAR SEGUNDO SCROLL
+========================================================= */
+
+body.seminario-page {
+
+    width: 100%;
+    max-width: 100%;
+
+    min-height: 100%;
+
+    overflow-x: hidden;
+}
+
+
+.seminario-main {
+
+    width: 100%;
+    max-width: 100%;
+
+    height: auto !important;
+
+    min-height: 0 !important;
+
+    max-height: none !important;
+
+    overflow: visible !important;
+}
+
+
+.seminario-main > section {
+
+    width: 100%;
+    max-width: 100%;
+
+    height: auto;
+
+    max-height: none !important;
+
+    overflow-y: visible !important;
+}
+
+
+.seminario-stats,
+.seminario-stats__grid,
+.seminario-about,
+.seminario-about__container,
+.seminario-line,
+.seminario-line__grid,
+.seminario-subline,
+.seminario-subline__grid,
+.seminario-collaborators,
+.seminario-collaborators__grid,
+.seminario-publications,
+.seminario-publications__grid {
+
+    height: auto;
+
+    max-height: none !important;
+
+    overflow-y: visible !important;
+}
+
+
+.seminario-hero,
+.seminario-card,
+.seminario-card__image,
+.seminario-publication,
+.seminario-final-banner {
+
+    overflow: hidden;
+}
+
+
+.seminario-page section {
+
+    scroll-margin-top:
+        calc(
+            var(--header-height) +
+            18px
+        );
+}
+
+
+
+/* =========================================================
+   MENÚ ACTIVO
+========================================================= */
+
+.seminario-page
+.navigation__link.active::after {
+
+    display: none !important;
+}
+
+
+.seminario-page
+.navigation__link.active {
+
+    color:
+        var(--red);
+}
+
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.seminario-hero {
+
+    position: relative;
+
+    min-height: 550px;
+
+    background-color:
+        #f7eee1;
+
+    background-image:
+        url("../assets/images/El-seminario/Banner.png");
+
+    background-repeat:
+        no-repeat;
+
+    background-position:
+        center;
+
+    background-size:
+        cover;
+}
+
+
+
+/* =========================================================
+   CAPA DE LEGIBILIDAD
+========================================================= */
+
+.seminario-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+
+            rgba(250,245,236,.94)
+            0%,
+
+            rgba(250,245,236,.75)
+            35%,
+
+            rgba(250,245,236,.20)
+            58%,
+
+            transparent
+            75%
+        );
+}
+
+
+
+/* =========================================================
+   CORTINA
+   MISMO ESTILO DE INICIO
+========================================================= */
+
+html.js
+.seminario-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            #faf4ea 0%,
+            #f7eee1 52%,
+            rgba(247,238,225,.96) 100%
+        );
+
+    transform:
+        scaleX(1);
+
+    /*
+        CAMBIAMOS EL SENTIDO.
+        Antes desaparecía desde la derecha.
+        Ahora se recoge hacia el lado contrario.
+    */
+
+    transform-origin:
+        left center;
+
+    transition:
+        transform
+        1.15s
+        cubic-bezier(.76,0,.24,1)
+        .08s;
+}
+
+
+html.js.page-ready
+.seminario-hero::after {
+
+    transform:
+        scaleX(0);
+}
+
+
+
+/* =========================================================
+   HERO CONTENEDOR
+========================================================= */
+
+.seminario-hero__container {
+
+    position: relative;
+
+    z-index: 2;
+
+    min-height: 550px;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.seminario-hero__content {
+
+    width: 49%;
+
+    max-width: 700px;
+
+    padding:
+        55px
+        25px
+        52px
+        0;
+}
+
+
+
+/* =========================================================
+   HERO TEXTO
+========================================================= */
+
+.seminario-kicker {
+
+    display: inline-block;
+
+    margin-bottom: 16px;
+
+    color:
+        #55514d;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.seminario-hero__title {
+
+    color:
+        var(--seminario-dark);
+
+    font-family:
+        "Libre Baskerville",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            43px,
+            4vw,
+            67px
+        );
+
+    font-weight: 700;
+
+    line-height: .99;
+
+    letter-spacing: -2.4px;
+}
+
+
+.seminario-hero__title span {
+
+    color:
+        var(--seminario-orange);
+}
+
+
+.seminario-hero__subtitle {
+
+    margin-top: 19px;
+
+    color:
+        #494541;
+
+    font-size:
+        clamp(
+            19px,
+            1.4vw,
+            24px
+        );
+
+    line-height: 1.4;
+}
+
+
+.seminario-hero__button {
+
+    width: 245px;
+    height: 56px;
+
+    margin-top: 27px;
+}
+
+
+
+/* =========================================================
+   ENTRADA INICIAL
+========================================================= */
+
+html.js:not(.page-ready)
+.seminario-kicker,
+
+html.js:not(.page-ready)
+.seminario-hero__title,
+
+html.js:not(.page-ready)
+.seminario-hero__subtitle,
+
+html.js:not(.page-ready)
+.seminario-hero
+.main-button {
+
+    opacity: 0;
+
+    filter:
+        blur(8px);
+}
+
+
+
+/* =========================================================
+   SENTIDOS INVERTIDOS
+========================================================= */
+
+/*
+    Antes kicker, subtítulo y botón venían desde ABAJO.
+    Ahora vienen desde ARRIBA.
+*/
+
+html.js:not(.page-ready)
+.seminario-kicker,
+
+html.js:not(.page-ready)
+.seminario-hero__subtitle,
+
+html.js:not(.page-ready)
+.seminario-hero
+.main-button {
+
+    translate:
+        0 -26px;
+}
+
+
+
+/*
+    Antes el título llegaba desde la IZQUIERDA.
+    Ahora llega desde la DERECHA.
+*/
+
+html.js:not(.page-ready)
+.seminario-hero__title {
+
+    translate:
+        34px 0;
+}
+
+
+
+/* =========================================================
+   ESTADO FINAL
+========================================================= */
+
+html.js.page-ready
+.seminario-kicker,
+
+html.js.page-ready
+.seminario-hero__title,
+
+html.js.page-ready
+.seminario-hero__subtitle,
+
+html.js.page-ready
+.seminario-hero
+.main-button {
+
+    opacity: 1;
+
+    filter:
+        blur(0);
+
+    translate:
+        0 0;
+
+    scale:
+        1;
+
+    transition-property:
+        opacity,
+        filter,
+        translate,
+        scale;
+
+    transition-duration:
+        .72s,
+        .72s,
+        .88s,
+        .88s;
+
+    transition-timing-function:
+        ease,
+        ease,
+        cubic-bezier(.16,1,.3,1),
+        cubic-bezier(.16,1,.3,1);
+}
+
+
+
+/* =========================================================
+   TIEMPOS DEL HERO
+========================================================= */
+
+html.js.page-ready
+.seminario-kicker {
+
+    transition-delay:
+        .24s;
+}
+
+
+html.js.page-ready
+.seminario-hero__title {
+
+    transition-delay:
+        .35s;
+}
+
+
+html.js.page-ready
+.seminario-hero__subtitle {
+
+    transition-delay:
+        .47s;
+}
+
+
+html.js.page-ready
+.seminario-hero
+.main-button {
+
+    transition-delay:
+        .71s;
+}
+
+
+
+/* =========================================================
+   HEADER - SENTIDO INVERTIDO
+========================================================= */
+
+/*
+    Inicio:
+    logo entra desde izquierda.
+    Aquí lo hacemos desde derecha.
+*/
+
+html.js:not(.page-ready)
+.seminario-page
+.brand {
+
+    translate:
+        24px 0;
+}
+
+
+
+/*
+    Acciones antes llegaban desde derecha.
+    Ahora desde izquierda.
+*/
+
+html.js:not(.page-ready)
+.seminario-page
+.header__actions {
+
+    translate:
+        -22px 0;
+}
+
+
+
+/*
+    Navegación antes caía desde arriba.
+    Ahora sube desde abajo.
+*/
+
+html.js:not(.page-ready)
+.seminario-page
+.navigation__link {
+
+    translate:
+        0 18px;
+}
+
+
+
+/* =========================================================
+   BOTONES FLOTANDO
+========================================================= */
+
+/*
+    Quitamos cualquier movimiento fuerte.
+    La flotación empieza cuando termina la intro.
+*/
+
+.seminario-page
+.floating-button {
+
+    animation:
+        none;
+}
+
+
+html.js.intro-complete
+.seminario-page
+.floating-button {
+
+    animation:
+        seminarioButtonFloat
+        4.2s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes seminarioButtonFloat {
+
+    0%,
+    100% {
+
+        translate:
+            0 0;
+    }
+
+
+    50% {
+
+        translate:
+            0 -4px;
+    }
+
+}
+
+
+
+/* =========================================================
+   SEGUNDA SECCIÓN
+========================================================= */
+
+.seminario-stats {
+
+    position: relative;
+
+    background-color:
+        #faf5ec;
+
+    background-image:
+        url("../assets/images/El-seminario/fondo-seccion-2.png");
+
+    background-repeat:
+        no-repeat;
+
+    background-position:
+        center;
+
+    background-size:
+        cover;
+
+    border-top:
+        1px solid
+        rgba(186,111,70,.12);
+
+    border-bottom:
+        1px solid
+        rgba(186,111,70,.13);
+}
+
+
+.seminario-stats__grid {
+
+    min-height: 155px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            6,
+            minmax(0,1fr)
+        );
+
+    align-items: stretch;
+}
+
+
+.seminario-stat {
+
+    position: relative;
+
+    min-width: 0;
+
+    padding:
+        18px
+        11px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+.seminario-stat:not(:last-child)::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 24px;
+    right: 0;
+
+    width: 1px;
+
+    height:
+        calc(
+            100% - 48px
+        );
+
+    background:
+        rgba(174,105,65,.25);
+}
+
+
+
+/* =========================================================
+   ICONOS
+========================================================= */
+
+.seminario-stat__icon {
+
+    width: 84px;
+    height: 84px;
+
+    flex:
+        0 0 84px;
+
+    border:
+        1px solid
+        rgba(202,75,38,.16);
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        rgba(255,250,243,.76);
+
+    animation:
+        seminarioIconFloat
+        4.8s
+        ease-in-out
+        infinite;
+
+    transition:
+        transform .4s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+}
+
+
+
+/*
+    Pequeñas diferencias para que
+    no floten todos exactamente igual.
+*/
+
+.seminario-stat:nth-child(2)
+.seminario-stat__icon {
+
+    animation-delay:
+        -.8s;
+}
+
+
+.seminario-stat:nth-child(3)
+.seminario-stat__icon {
+
+    animation-delay:
+        -1.6s;
+}
+
+
+.seminario-stat:nth-child(4)
+.seminario-stat__icon {
+
+    animation-delay:
+        -2.4s;
+}
+
+
+.seminario-stat:nth-child(5)
+.seminario-stat__icon {
+
+    animation-delay:
+        -3.2s;
+}
+
+
+.seminario-stat:nth-child(6)
+.seminario-stat__icon {
+
+    animation-delay:
+        -4s;
+}
+
+
+@keyframes seminarioIconFloat {
+
+    0%,
+    100% {
+
+        translate:
+            0 0;
+    }
+
+
+    50% {
+
+        translate:
+            0 -4px;
+    }
+
+}
+
+
+.seminario-stat:hover
+.seminario-stat__icon {
+
+    transform:
+        scale(1.06);
+
+    background:
+        rgba(255,249,241,.98);
+
+    box-shadow:
+        0 13px 27px
+        rgba(137,62,29,.14);
+}
+
+
+.seminario-stat__icon svg {
+
+    width: 49px;
+    height: 49px;
+
+    fill: none;
+
+    stroke:
+        var(--seminario-orange);
+
+    stroke-width: 1.6;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+}
+
+
+.seminario-stat__text {
+
+    min-width: 0;
+}
+
+
+.seminario-stat span,
+.seminario-stat small {
+
+    display: block;
+}
+
+
+.seminario-stat span {
+
+    margin-bottom: 4px;
+
+    color:
+        #6b655f;
+
+    font-size: 11px;
+}
+
+
+.seminario-stat strong {
+
+    display: block;
+
+    color:
+        #202123;
+
+    font-size: 16px;
+
+    line-height: 1.18;
+}
+
+
+.seminario-stat small {
+
+    margin-top: 2px;
+
+    color:
+        #4d4945;
+
+    font-size: 11px;
+
+    line-height: 1.25;
+}
+
+
+
+/* =========================================================
+   LABELS
+========================================================= */
+
+.seminario-section-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 13px;
+}
+
+
+.seminario-section-label i {
+
+    width: 36px;
+    height: 4px;
+
+    flex-shrink: 0;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--orange),
+            var(--red)
+        );
+}
+
+
+.seminario-section-label span {
+
+    color:
+        var(--seminario-orange);
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+
+/* =========================================================
+   SOBRE NOSOTROS
+========================================================= */
+
+.seminario-about {
+
+    position: relative;
+
+    min-height: 400px;
+
+    padding:
+        42px 0;
+
+    display: flex;
+
+    align-items: center;
+
+    background-color:
+        #faf5ed;
+
+    background-image:
+        url("../assets/images/El-seminario/fondo-seccion-3.png");
+
+    background-repeat:
+        no-repeat;
+
+    background-position:
+        center;
+
+    background-size:
+        cover;
+}
+
+
+
+/* =========================================================
+   SOBRE NOSOTROS MÁS A LA IZQUIERDA
+========================================================= */
+
+.seminario-about__container {
+
+    min-height: 310px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-left: 0;
+}
+
+
+.seminario-about__content {
+
+    width: 67%;
+
+    max-width: 835px;
+
+    margin-left: 0;
+}
+
+
+.seminario-about__content h2 {
+
+    max-width: 775px;
+
+    color:
+        #17191a;
+
+    font-family:
+        "Libre Baskerville",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            32px,
+            2.65vw,
+            47px
+        );
+
+    line-height: 1.09;
+
+    letter-spacing: -1.3px;
+}
+
+
+.seminario-about__content p {
+
+    max-width: 720px;
+
+    margin-top: 16px;
+
+    color:
+        #4d4945;
+
+    font-size:
+        clamp(
+            15px,
+            1.02vw,
+            17px
+        );
+
+    line-height: 1.58;
+}
+
+
+.seminario-about__content
+.main-button {
+
+    margin-top: 22px;
+}
+
+
+
+/* =========================================================
+   LINEA INVESTIGACIÓN
+========================================================= */
+
+.seminario-line {
+
+    position: relative;
+
+    padding:
+        42px 0;
+
+    background-color:
+        #faf5ec;
+
+    background-image:
+        url("../assets/images/El-seminario/fondo-seccion-4.png");
+
+    background-repeat:
+        no-repeat;
+
+    background-position:
+        center;
+
+    background-size:
+        cover;
+}
+
+
+.seminario-line__grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0,3.15fr)
+        minmax(220px,.85fr);
+
+    gap: 46px;
+
+    align-items: center;
+}
+
+
+.seminario-line__content h2 {
+
+    max-width: 1050px;
+
+    color:
+        #191a1c;
+
+    font-family:
+        "Libre Baskerville",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            30px,
+            2.35vw,
+            44px
+        );
+
+    line-height: 1.12;
+
+    letter-spacing: -1.1px;
+}
+
+
+.seminario-line__content p {
+
+    max-width: 1000px;
+
+    margin-top: 16px;
+
+    color:
+        #55504b;
+
+    font-size:
+        clamp(
+            15px,
+            1vw,
+            17px
+        );
+
+    line-height: 1.6;
+}
+
+
+
+/* =========================================================
+   PANEL PALABRAS
+========================================================= */
+
+.seminario-line__words {
+
+    min-height: 205px;
+
+    padding:
+        25px
+        24px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.8);
+
+    border-radius: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color:
+        #754333;
+
+    font-family:
+        "Libre Baskerville",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            20px,
+            1.5vw,
+            27px
+        );
+
+    font-style: italic;
+
+    line-height: 1.3;
+
+    text-align: center;
+
+    background:
+        rgba(255,255,255,.59);
+
+    -webkit-backdrop-filter:
+        blur(6px);
+
+    backdrop-filter:
+        blur(6px);
+
+    box-shadow:
+        0 13px 32px
+        rgba(79,50,31,.08);
+}
+
+
+.seminario-line__words span {
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+.seminario-line__words span:hover {
+
+    color:
+        var(--seminario-orange);
+
+    transform:
+        translateX(-5px);
+}
+
+
+
+/* =========================================================
+   SUBLÍNEAS
+========================================================= */
+
+.seminario-subline {
+
+    position: relative;
+
+    padding:
+        27px
+        0
+        46px;
+
+    background:
+        #fbf6ee;
+}
+
+
+.seminario-subline__grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(0,1fr)
+        );
+
+    gap: 19px;
+}
+
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.seminario-card {
+
+    position: relative;
+
+    min-width: 0;
+
+    border:
+        1px solid
+        rgba(177,122,87,.11);
+
+    border-radius: 13px;
+
+    background:
+        rgba(252,248,242,.98);
+
+    box-shadow:
+        0 7px 20px
+        rgba(80,51,31,.07);
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+
+.seminario-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 20px 35px
+        rgba(113,56,30,.15);
+}
+
+
+.seminario-card__image {
+
+    width: 100%;
+
+    aspect-ratio:
+        1.38 / 1;
+
+    background:
+        #e7ddd2;
+}
+
+
+.seminario-card__image img {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform .72s
+        cubic-bezier(.16,1,.3,1);
+}
+
+
+.seminario-card:hover
+.seminario-card__image img {
+
+    transform:
+        scale(1.065);
+}
+
+
+
+/* =========================================================
+   ICONOS DE CARDS + FLOTACIÓN
+========================================================= */
+
+.seminario-card__icon {
+
+    position: absolute;
+
+    z-index: 4;
+
+    left: 20px;
+
+    top:
+        calc(
+            42% - 34px
+        );
+
+    width: 70px;
+    height: 70px;
+
+    border:
+        4px solid
+        #faf5ec;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--orange),
+            var(--red-dark)
+        );
+
+    box-shadow:
+        0 8px 19px
+        rgba(112,43,23,.18);
+
+    animation:
+        seminarioCardIconFloat
+        4.4s
+        ease-in-out
+        infinite;
+
+    transition:
+        transform .4s ease,
+        box-shadow .35s ease;
+}
+
+
+.seminario-card:nth-child(2)
+.seminario-card__icon {
+
+    animation-delay:
+        -.9s;
+}
+
+
+.seminario-card:nth-child(3)
+.seminario-card__icon {
+
+    animation-delay:
+        -1.8s;
+}
+
+
+.seminario-card:nth-child(4)
+.seminario-card__icon {
+
+    animation-delay:
+        -2.7s;
+}
+
+
+@keyframes seminarioCardIconFloat {
+
+    0%,
+    100% {
+
+        translate:
+            0 0;
+    }
+
+
+    50% {
+
+        translate:
+            0 -5px;
+    }
+
+}
+
+
+.seminario-card:hover
+.seminario-card__icon {
+
+    transform:
+        scale(1.08);
+
+    box-shadow:
+        0 12px 25px
+        rgba(112,43,23,.24);
+}
+
+
+.seminario-card__icon svg {
+
+    width: 35px;
+    height: 35px;
+
+    fill: none;
+
+    stroke: white;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+}
+
+
+
+/* =========================================================
+   CARD BODY
+========================================================= */
+
+.seminario-card__body {
+
+    min-height: 180px;
+
+    padding:
+        45px
+        18px
+        20px;
+}
+
+
+.seminario-card__body h3 {
+
+    color:
+        #202122;
+
+    font-family:
+        "Libre Baskerville",
+        Georgia,
+        serif;
+
+    font-size: 19px;
+
+    line-height: 1.15;
+}
+
+
+.seminario-card__body h3 small {
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.seminario-card__body p {
+
+    margin-top: 11px;
+
+    color:
+        #615c57;
+
+    font-size: 13px;
+
+    line-height: 1.47;
+}
+
+
+
+/* =========================================================
+   ENCABEZADOS
+========================================================= */
+
+.seminario-section-heading {
+
+    margin-bottom: 19px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+        space-between;
+
+    gap: 24px;
+}
+
+
+.seminario-section-heading
+.seminario-section-label {
+
+    margin-bottom: 0;
+}
+
+
+.seminario-text-link {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color:
+        var(--seminario-orange);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        transform .3s ease,
+        color .3s ease;
+}
+
+
+.seminario-text-link span {
+
+    font-size: 24px;
+
+    transition:
+        transform .3s ease;
+}
+
+
+.seminario-text-link:hover {
+
+    color:
+        var(--seminario-red);
+
+    transform:
+        translateX(-3px);
+}
+
+
+.seminario-text-link:hover span {
+
+    transform:
+        translateX(-4px);
+}
+
+
+
+/* =========================================================
+   COLABORADORES
+========================================================= */
+
+.seminario-collaborators {
+
+    padding:
+        38px
+        0
+        43px;
+
+    background:
+        #faf6ef;
+}
+
+
+.seminario-collaborators__grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0,1fr)
+        );
+
+    gap: 23px;
+}
+
+
+.seminario-collaborator-placeholder {
+
+    min-height: 215px;
+
+    padding: 22px;
+
+    border:
+        1px solid
+        #cecece;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 13px;
+
+    color:
+        #747474;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d1d1d1,
+            #e6e6e6
+        );
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+
+.seminario-collaborator-placeholder:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 15px 29px
+        rgba(80,60,45,.12);
+}
+
+
+
+/* ICONO COLABORADOR FLOTANDO */
+
+.seminario-placeholder-icon {
+
+    width: 72px;
+    height: 72px;
+
+    border:
+        2px solid
+        rgba(90,90,90,.2);
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    animation:
+        seminarioPlaceholderFloat
+        4.6s
+        ease-in-out
+        infinite;
+}
+
+
+.seminario-collaborator-placeholder:nth-child(2)
+.seminario-placeholder-icon {
+
+    animation-delay:
+        -2.1s;
+}
+
+
+@keyframes seminarioPlaceholderFloat {
+
+    0%,
+    100% {
+
+        translate:
+            0 0;
+    }
+
+
+    50% {
+
+        translate:
+            0 -4px;
+    }
+
+}
+
+
+.seminario-placeholder-icon svg {
+
+    width: 38px;
+    height: 38px;
+
+    fill: none;
+
+    stroke:
+        rgba(80,80,80,.65);
+
+    stroke-width: 1.5;
+}
+
+
+
+/* =========================================================
+   PUBLICACIONES
+========================================================= */
+
+.seminario-publications {
+
+    padding:
+        38px
+        0
+        48px;
+
+    background-color:
+        #faf5ec;
+
+    background-image:
+        url("../assets/images/El-seminario/fondo-seccion-publicaciones.png");
+
+    background-repeat:
+        no-repeat;
+
+    background-position:
+        center;
+
+    background-size:
+        cover;
+}
+
+
+.seminario-publications__grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            6,
+            minmax(0,1fr)
+        );
+
+    gap: 15px;
+}
+
+
+.seminario-publication {
+
+    min-width: 0;
+
+    border-radius: 10px;
+
+    background:
+        rgba(253,249,243,.97);
+
+    box-shadow:
+        0 6px 18px
+        rgba(65,42,26,.06);
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+
+.seminario-publication:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        0 17px 29px
+        rgba(92,49,26,.13);
+}
+
+
+.seminario-publication__placeholder {
+
+    width: 100%;
+
+    aspect-ratio:
+        .78 / 1;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d0d0d0,
+            #e7e7e7
+        );
+}
+
+
+.seminario-publication__placeholder span {
+
+    color:
+        #818181;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+.seminario-publication__content {
+
+    min-height: 112px;
+
+    padding: 12px;
+}
+
+
+.seminario-publication__year {
+
+    display: block;
+
+    color:
+        var(--seminario-orange);
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.seminario-publication__type {
+
+    display: block;
+
+    margin:
+        2px
+        0
+        7px;
+
+    color:
+        #716b65;
+
+    font-size: 10px;
+}
+
+
+.seminario-publication__content h3 {
+
+    color:
+        #252526;
+
+    font-family:
+        "Libre Baskerville",
+        Georgia,
+        serif;
+
+    font-size: 14px;
+
+    line-height: 1.3;
+}
+
+
+
+/* =========================================================
+   BANNER FINAL
+========================================================= */
+
+.seminario-final-banner {
+
+    width: 100%;
+
+    line-height: 0;
+
+    background:
+        #6f2b1d;
+}
+
+
+.seminario-final-banner img {
+
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* =========================================================
+   INVERTIR TODAS LAS ANIMACIONES REVEAL
+========================================================= */
+
+/*
+    GLOBALMENTE:
+
+    LEFT -> ahora viene de derecha.
+    RIGHT -> ahora viene de izquierda.
+    UP -> ahora viene desde arriba.
+*/
+
+.seminario-page
+.reveal[data-reveal="left"] {
+
+    transform:
+        translateX(50px);
+}
+
+
+.seminario-page
+.reveal[data-reveal="right"] {
+
+    transform:
+        translateX(-50px);
+}
+
+
+.seminario-page
+.reveal[data-reveal="up"] {
+
+    transform:
+        translateY(-44px)
+        scale(.985);
+}
+
+
+
+/* =========================================================
+   SCROLL HACIA ARRIBA / ABAJO
+   TAMBIÉN INVERTIDO
+========================================================= */
+
+.seminario-page
+.reveal.from-top {
+
+    transform:
+        translateY(42px)
+        scale(.985);
+}
+
+
+.seminario-page
+.reveal.from-bottom {
+
+    transform:
+        translateY(-42px)
+        scale(.985);
+}
+
+
+
+/* ESTADO VISIBLE */
+
+.seminario-page
+.reveal.in-view {
+
+    opacity: 1;
+
+    transform:
+        translate3d(
+            0,
+            0,
+            0
+        )
+        scale(1);
+}
+
+
+
+/* =========================================================
+   FOOTER
+   SENTIDO INVERTIDO
+========================================================= */
+
+.seminario-page
+.footer-reveal {
+
+    opacity: 0;
+
+    transform:
+        translateY(-26px);
+
+    transition:
+        opacity .7s ease,
+        transform .8s
+        cubic-bezier(.22,.61,.36,1);
+}
+
+
+.seminario-page
+.footer-reveal.in-view {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+
+/* =========================================================
+   RESPONSIVE 1350
+========================================================= */
+
+@media (max-width: 1350px) {
+
+    .seminario-hero__content {
+
+        width: 53%;
+    }
+
+
+    .seminario-stats__grid {
+
+        grid-template-columns:
+            repeat(
+                3,
+                1fr
+            );
+    }
+
+
+    .seminario-stat {
+
+        min-height: 125px;
+
+        justify-content:
+            flex-start;
+
+        padding:
+            17px
+            20px;
+    }
+
+
+    .seminario-stat:nth-child(3)::after,
+    .seminario-stat:nth-child(6)::after {
+
+        display: none;
+    }
+
+
+    .seminario-about__container {
+
+        padding-left: 0;
+    }
+
+
+    .seminario-about__content {
+
+        width: 72%;
+    }
+
+
+    .seminario-publications__grid {
+
+        grid-template-columns:
+            repeat(
+                3,
+                1fr
+            );
+
+        gap: 20px;
+    }
+
+}
+
+
+
+/* =========================================================
+   RESPONSIVE 1050
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .seminario-hero {
+
+        min-height: 575px;
+
+        background-position:
+            63% center;
+    }
+
+
+    .seminario-hero__container {
+
+        min-height: 575px;
+    }
+
+
+    .seminario-hero__content {
+
+        width: 63%;
+    }
+
+
+    .seminario-stat__icon {
+
+        width: 78px;
+        height: 78px;
+
+        flex-basis: 78px;
+    }
+
+
+    .seminario-stat__icon svg {
+
+        width: 45px;
+        height: 45px;
+    }
+
+
+    .seminario-about {
+
+        min-height: 385px;
+
+        padding:
+            38px 0;
+
+        background-position:
+            center;
+    }
+
+
+    .seminario-about__container {
+
+        padding-left: 0;
+    }
+
+
+    .seminario-about__content {
+
+        width: 76%;
+    }
+
+
+    .seminario-line__grid {
+
+        grid-template-columns:
+            minmax(0,1fr)
+            215px;
+
+        gap: 28px;
+    }
+
+
+    .seminario-line__words {
+
+        min-height: 195px;
+
+        padding:
+            22px
+            17px;
+    }
+
+
+    .seminario-subline__grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0,1fr)
+            );
+
+        gap: 22px;
+    }
+
+
+    .seminario-card__body {
+
+        min-height: 165px;
+    }
+
+}
+
+
+
+/* =========================================================
+   RESPONSIVE 768
+========================================================= */
+
+@media (max-width: 768px) {
+
+    html.js
+    .seminario-hero::after {
+
+        transition-duration:
+            .9s;
+    }
+
+
+    /*
+        DIRECCIÓN INVERSA TAMBIÉN EN TABLET.
+    */
+
+    html.js:not(.page-ready)
+    .seminario-hero__title {
+
+        translate:
+            22px 0;
+    }
+
+
+    html.js:not(.page-ready)
+    .seminario-kicker,
+
+    html.js:not(.page-ready)
+    .seminario-hero__subtitle,
+
+    html.js:not(.page-ready)
+    .seminario-hero
+    .main-button {
+
+        translate:
+            0 -20px;
+    }
+
+
+    .seminario-hero {
+
+        min-height: 625px;
+
+        background-position:
+            67% center;
+    }
+
+
+    .seminario-hero::before {
+
+        background:
+            linear-gradient(
+                90deg,
+
+                rgba(250,245,236,.98)
+                0%,
+
+                rgba(250,245,236,.92)
+                55%,
+
+                rgba(250,245,236,.48)
+                84%,
+
+                transparent
+                100%
+            );
+    }
+
+
+    .seminario-hero__container {
+
+        min-height: 625px;
+
+        align-items:
+            flex-start;
+    }
+
+
+    .seminario-hero__content {
+
+        width: 78%;
+
+        padding-top:
+            88px;
+    }
+
+
+    .seminario-hero__title {
+
+        font-size:
+            clamp(
+                36px,
+                7.5vw,
+                49px
+            );
+    }
+
+
+    /* STATS */
+
+    .seminario-stats__grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+    }
+
+
+    .seminario-stat {
+
+        min-height: 115px;
+
+        padding:
+            16px
+            18px;
+    }
+
+
+    .seminario-stat::after {
+
+        display: none;
+    }
+
+
+    .seminario-stat__icon {
+
+        width: 74px;
+        height: 74px;
+
+        flex-basis: 74px;
+    }
+
+
+    .seminario-stat__icon svg {
+
+        width: 42px;
+        height: 42px;
+    }
+
+
+    /* ABOUT */
+
+    .seminario-about {
+
+        min-height: 400px;
+
+        padding:
+            38px 0;
+
+        background-position:
+            52% center;
+    }
+
+
+    .seminario-about__container {
+
+        min-height: 320px;
+
+        padding-left: 0;
+    }
+
+
+    .seminario-about__content {
+
+        width: 84%;
+    }
+
+
+    .seminario-about__content h2 {
+
+        font-size: 30px;
+    }
+
+
+    /* LINE */
+
+    .seminario-line__grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 23px;
+    }
+
+
+    .seminario-line__words {
+
+        width:
+            min(
+                390px,
+                100%
+            );
+
+        min-height: 0;
+
+        padding:
+            21px
+            25px;
+
+        flex-direction: row;
+
+        flex-wrap: wrap;
+
+        gap:
+            8px
+            20px;
+    }
+
+
+    .seminario-line__words span {
+
+        width:
+            calc(
+                50% - 10px
+            );
+    }
+
+
+    .seminario-section-heading {
+
+        flex-direction: column;
+
+        align-items:
+            flex-start;
+
+        gap: 10px;
+    }
+
+
+    .seminario-collaborators__grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .seminario-publications__grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .seminario-hero {
+
+        min-height: 610px;
+
+        background-position:
+            70% center;
+    }
+
+
+    .seminario-hero::before {
+
+        background:
+            linear-gradient(
+                90deg,
+
+                rgba(250,245,236,.99)
+                0%,
+
+                rgba(250,245,236,.95)
+                62%,
+
+                rgba(250,245,236,.56)
+                87%,
+
+                rgba(250,245,236,.14)
+                100%
+            );
+    }
+
+
+    .seminario-hero__container {
+
+        min-height: 610px;
+    }
+
+
+    .seminario-hero__content {
+
+        width: 100%;
+
+        max-width: 440px;
+
+        padding:
+            92px
+            0
+            34px;
+    }
+
+
+    .seminario-kicker {
+
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .seminario-hero__title {
+
+        font-size:
+            clamp(
+                30px,
+                9vw,
+                39px
+            );
+
+        line-height: 1.01;
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .seminario-hero__subtitle {
+
+        max-width: 340px;
+
+        font-size: 16px;
+    }
+
+
+    .seminario-hero__button {
+
+        width: 225px;
+    }
+
+
+    /* STATS */
+
+    .seminario-stats__grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .seminario-stat {
+
+        min-height: auto;
+
+        padding:
+            15px
+            4px;
+
+        justify-content:
+            flex-start;
+
+        border-bottom:
+            1px solid
+            rgba(180,110,68,.12);
+    }
+
+
+    .seminario-stat:last-child {
+
+        border-bottom: 0;
+    }
+
+
+    .seminario-stat__icon {
+
+        width: 70px;
+        height: 70px;
+
+        flex-basis: 70px;
+    }
+
+
+    .seminario-stat__icon svg {
+
+        width: 40px;
+        height: 40px;
+    }
+
+
+    /* SOBRE NOSOTROS */
+
+    .seminario-about {
+
+        min-height: 430px;
+
+        padding:
+            35px 0;
+
+        background-position:
+            56% center;
+    }
+
+
+    .seminario-about__container {
+
+        min-height: 360px;
+
+        padding-left: 0;
+    }
+
+
+    .seminario-about__content {
+
+        width: 96%;
+
+        padding:
+            21px
+            20px;
+
+        border:
+            1px solid
+            rgba(255,255,255,.48);
+
+        border-radius: 17px;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(250,245,237,.82),
+                rgba(250,245,237,.68)
+            );
+
+        -webkit-backdrop-filter:
+            blur(2px);
+
+        backdrop-filter:
+            blur(2px);
+    }
+
+
+    .seminario-about__content h2 {
+
+        font-size: 26px;
+    }
+
+
+    .seminario-about__content p {
+
+        font-size: 14px;
+    }
+
+
+    /* LINE */
+
+    .seminario-line {
+
+        padding:
+            36px 0;
+    }
+
+
+    .seminario-line__content h2 {
+
+        font-size: 26px;
+    }
+
+
+    .seminario-line__content p {
+
+        font-size: 14px;
+    }
+
+
+    .seminario-line__words {
+
+        width: 100%;
+
+        font-size: 17px;
+    }
+
+
+    /* SUBLINE */
+
+    .seminario-subline {
+
+        padding:
+            25px
+            0
+            40px;
+    }
+
+
+    .seminario-subline__grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .seminario-card {
+
+        width: 100%;
+
+        max-width: 500px;
+
+        margin-inline: auto;
+    }
+
+
+    .seminario-card__image {
+
+        aspect-ratio:
+            1.45 / 1;
+    }
+
+
+    .seminario-card__body {
+
+        min-height: 150px;
+    }
+
+
+    /* COLAB */
+
+    .seminario-collaborators {
+
+        padding:
+            35px
+            0
+            40px;
+    }
+
+
+    .seminario-collaborator-placeholder {
+
+        min-height: 175px;
+    }
+
+
+    /* PUBLICACIONES */
+
+    .seminario-publications {
+
+        padding:
+            34px
+            0
+            43px;
+    }
+
+
+    .seminario-publications__grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 20px;
+    }
+
+
+    .seminario-publication {
+
+        width: 100%;
+
+        max-width: 390px;
+
+        margin-inline: auto;
+    }
+
+
+    .seminario-publication__placeholder {
+
+        aspect-ratio:
+            1.05 / 1;
+    }
+
+
+    /*
+        EN MOBILE NO HACEMOS DESPLAZAMIENTOS
+        HORIZONTALES GRANDES.
+
+        Seguimos invirtiendo el sentido,
+        pero verticalmente para evitar scroll horizontal.
+    */
+
+    .seminario-page
+    .reveal[data-reveal="left"],
+
+    .seminario-page
+    .reveal[data-reveal="right"],
+
+    .seminario-page
+    .reveal[data-reveal="up"] {
+
+        transform:
+            translateY(-32px)
+            scale(.985);
+    }
+
+
+    .seminario-page
+    .reveal.from-top {
+
+        transform:
+            translateY(30px)
+            scale(.985);
+    }
+
+
+    .seminario-page
+    .reveal.from-bottom {
+
+        transform:
+            translateY(-30px)
+            scale(.985);
+    }
+
+
+    .seminario-page
+    .reveal.in-view {
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE PEQUEÑO
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .seminario-hero {
+
+        min-height: 580px;
+    }
+
+
+    .seminario-hero__container {
+
+        min-height: 580px;
+    }
+
+
+    .seminario-hero__content {
+
+        padding-top: 84px;
+    }
+
+
+    .seminario-hero__title {
+
+        font-size: 29px;
+    }
+
+
+    .seminario-about {
+
+        min-height: 445px;
+
+        background-position:
+            60% center;
+    }
+
+
+    .seminario-about__content {
+
+        width: 98%;
+
+        padding: 19px;
+    }
+
+
+    .seminario-about__content h2 {
+
+        font-size: 23px;
+    }
+
+
+    .seminario-line__content h2 {
+
+        font-size: 23px;
+    }
+
+
+    .seminario-line__words {
+
+        padding:
+            18px
+            14px;
+    }
+
+
+    .seminario-stat__icon {
+
+        width: 66px;
+        height: 66px;
+
+        flex-basis: 66px;
+    }
+
+
+    .seminario-stat__icon svg {
+
+        width: 38px;
+        height: 38px;
+    }
+
+}
+
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html.js
+    .seminario-hero::after {
+
+        display: none !important;
+    }
+
+
+    html.js:not(.page-ready)
+    .seminario-kicker,
+
+    html.js:not(.page-ready)
+    .seminario-hero__title,
+
+    html.js:not(.page-ready)
+    .seminario-hero__subtitle,
+
+    html.js:not(.page-ready)
+    .seminario-hero
+    .main-button {
+
+        opacity: 1 !important;
+
+        filter: none !important;
+
+        translate:
+            0 0 !important;
+
+        scale:
+            1 !important;
+    }
+
+
+    .seminario-stat__icon,
+    .seminario-card__icon,
+    .seminario-placeholder-icon,
+    .seminario-page
+    .floating-button {
+
+        animation:
+            none !important;
+    }
+
+}

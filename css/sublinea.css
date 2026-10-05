@@ -1,0 +1,2444 @@
+/* =========================================================
+   SUB-LÍNEA DE INVESTIGACIÓN
+   VERSIÓN FINAL
+========================================================= */
+
+.sublinea-page {
+
+    overflow-x: hidden;
+
+    background:
+        #f5ead8;
+}
+
+
+/* =========================================================
+   BANNER PRINCIPAL
+========================================================= */
+
+.sublinea-hero {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    overflow:
+        hidden;
+
+    background:
+        #f5ead8;
+
+    isolation:
+        isolate;
+}
+
+
+.sublinea-hero__image {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    line-height:
+        0;
+
+    z-index:
+        1;
+}
+
+
+.sublinea-hero__image img {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    height:
+        auto;
+
+    object-fit:
+        contain;
+}
+
+
+.sublinea-hero__container {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    z-index:
+        4;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    pointer-events:
+        none;
+}
+
+
+.sublinea-hero__content {
+
+    position:
+        relative;
+
+    width:
+        min(
+            600px,
+            40vw
+        );
+
+    margin-left:
+        clamp(
+            235px,
+            13.5vw,
+            285px
+        );
+
+    margin-top:
+        -5px;
+
+    padding:
+        18px
+        30px
+        23px
+        20px;
+
+    pointer-events:
+        auto;
+}
+
+
+.sublinea-hero__content::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    z-index:
+        -1;
+
+    left:
+        -75px;
+
+    top:
+        -55px;
+
+    width:
+        calc(
+            100% + 150px
+        );
+
+    height:
+        calc(
+            100% + 110px
+        );
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(
+                250,
+                240,
+                224,
+                .88
+            ) 0%,
+            rgba(
+                250,
+                240,
+                224,
+                .63
+            ) 48%,
+            rgba(
+                250,
+                240,
+                224,
+                .22
+            ) 72%,
+            rgba(
+                250,
+                240,
+                224,
+                0
+            ) 86%
+        );
+}
+
+
+
+/* =========================================================
+   EYEBROW DEL BANNER
+========================================================= */
+
+.sublinea-hero__eyebrow {
+
+    margin-bottom:
+        12px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        14px;
+}
+
+
+.sublinea-hero__eyebrow span {
+
+    color:
+        #625d57;
+
+    font-size:
+        clamp(
+            10px,
+            .72vw,
+            14px
+        );
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        2.5px;
+}
+
+
+.sublinea-hero__eyebrow i {
+
+    width:
+        48px;
+
+    height:
+        2px;
+
+    background:
+        #c95027;
+}
+
+
+
+/* =========================================================
+   TÍTULO DEL BANNER
+========================================================= */
+
+.sublinea-hero__title {
+
+    margin:
+        0;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    font-family:
+        "Libre Baskerville",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            43px,
+            3.55vw,
+            67px
+        );
+
+    line-height:
+        .98;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        -2.8px;
+}
+
+
+.sublinea-hero__title .title-black {
+
+    color:
+        #171a1c;
+}
+
+
+.sublinea-hero__title .title-red {
+
+    margin-top:
+        5px;
+
+    color:
+        #b53a22;
+}
+
+
+
+/* =========================================================
+   SUBTÍTULO DEL BANNER
+========================================================= */
+
+.sublinea-hero__subtitle {
+
+    max-width:
+        530px;
+
+    margin:
+        17px
+        0
+        0;
+
+    color:
+        #494541;
+
+    font-family:
+        "Libre Baskerville",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            13px,
+            .92vw,
+            17px
+        );
+
+    line-height:
+        1.45;
+}
+
+
+
+/* =========================================================
+   ANIMACIÓN DEL BANNER
+========================================================= */
+
+html.js
+.sublinea-hero::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    z-index:
+        5;
+
+    pointer-events:
+        none;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f7eddf,
+            #f6ebdb
+        );
+
+    transform:
+        scaleX(1);
+
+    transform-origin:
+        right;
+
+    transition:
+        transform
+        1.15s
+        cubic-bezier(
+            .76,
+            0,
+            .24,
+            1
+        );
+}
+
+
+html.js.page-ready
+.sublinea-hero::after {
+
+    transform:
+        scaleX(0);
+}
+
+
+html.js:not(.page-ready)
+.sublinea-hero__content {
+
+    opacity:
+        0;
+
+    filter:
+        blur(8px);
+
+    transform:
+        translateY(20px);
+}
+
+
+html.js:not(.page-ready)
+.sublinea-hero__title {
+
+    transform:
+        translateX(-22px);
+}
+
+
+html.js.page-ready
+.sublinea-hero__content {
+
+    opacity:
+        1;
+
+    filter:
+        blur(0);
+
+    transform:
+        translateY(0);
+
+    transition:
+        opacity .7s ease,
+        filter .7s ease,
+        transform .85s
+        cubic-bezier(
+            .16,
+            1,
+            .3,
+            1
+        );
+}
+
+
+html.js.page-ready
+.sublinea-hero__title {
+
+    transform:
+        translateX(0);
+
+    transition:
+        transform .85s
+        cubic-bezier(
+            .16,
+            1,
+            .3,
+            1
+        );
+}
+
+
+
+/* =========================================================
+   SEGUNDA SECCIÓN
+========================================================= */
+
+.sublinea-section {
+
+    position:
+        relative;
+
+    z-index:
+        3;
+
+    padding:
+        0;
+
+    background-color:
+        #f5ead8;
+
+    background-image:
+        url("../assets/images/Sub_linea/Fondo_segunda_Seccion.png");
+
+    background-repeat:
+        no-repeat;
+
+    background-size:
+        100% auto;
+
+    background-position:
+        center top;
+}
+
+
+.sublinea-section .container {
+
+    padding-bottom:
+        0;
+}
+
+
+
+/* =========================================================
+   INTRODUCCIÓN
+========================================================= */
+
+.sublinea-intro {
+
+    position:
+        relative;
+
+    min-height:
+        490px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(
+            0,
+            1fr
+        )
+        minmax(
+            380px,
+            41%
+        );
+
+    align-items:
+        center;
+
+    gap:
+        25px;
+
+    padding:
+        55px
+        0
+        35px;
+}
+
+
+
+/* =========================================================
+   TEXTO GRANDE DE SEGUNDA SECCIÓN
+========================================================= */
+
+.sublinea-intro__text {
+
+    position:
+        relative;
+
+    z-index:
+        5;
+
+    max-width:
+        680px;
+
+    padding-left:
+        2px;
+}
+
+
+.sublinea-intro__text .section-eyebrow {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    color:
+        #b53a22;
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        2px;
+}
+
+
+.sublinea-intro__text .section-eyebrow::before {
+
+    content:
+        "";
+
+    width:
+        35px;
+
+    height:
+        3px;
+
+    background:
+        #b53a22;
+}
+
+
+.sublinea-intro__text h2 {
+
+    margin-top:
+        14px;
+
+    color:
+        #171a1c;
+
+    font-family:
+        "Libre Baskerville",
+        Georgia,
+        serif;
+
+    /*
+       AUMENTADO
+    */
+
+    font-size:
+        clamp(
+            35px,
+            3.6vw,
+            53px
+        );
+
+    line-height:
+        1.08;
+
+    letter-spacing:
+        -1.8px;
+}
+
+
+.sublinea-intro__text p {
+
+    max-width:
+        670px;
+
+    margin-top:
+        18px;
+
+    color:
+        #494541;
+
+    /*
+       AUMENTADO
+    */
+
+    font-size:
+        16.5px;
+
+    line-height:
+        1.58;
+}
+
+
+
+/* =========================================================
+   PALABRAS DE LA DERECHA
+========================================================= */
+
+.sublinea-values {
+
+    position:
+        relative;
+
+    z-index:
+        6;
+
+    width:
+        100%;
+
+    height:
+        340px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    align-items:
+        flex-start;
+
+    padding:
+        10px
+        0
+        5px
+        55px;
+}
+
+
+.sublinea-value {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    min-height:
+        60px;
+
+    transform-origin:
+        left center;
+}
+
+
+.sublinea-value--1 {
+
+    transform:
+        rotate(-6deg)
+        translateX(0);
+}
+
+
+.sublinea-value--2 {
+
+    transform:
+        rotate(-7deg)
+        translateX(14px);
+}
+
+
+.sublinea-value--3 {
+
+    transform:
+        rotate(-6deg)
+        translateX(27px);
+}
+
+
+.sublinea-value--4 {
+
+    transform:
+        rotate(-7deg)
+        translateX(39px);
+}
+
+
+.sublinea-value__icon {
+
+    width:
+        45px;
+
+    height:
+        45px;
+
+    flex:
+        0 0 45px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+}
+
+
+.sublinea-value__icon svg {
+
+    width:
+        41px;
+
+    height:
+        41px;
+
+    fill:
+        none;
+
+    stroke:
+        #b53a22;
+
+    stroke-width:
+        2.6;
+
+    stroke-linecap:
+        round;
+
+    stroke-linejoin:
+        round;
+}
+
+
+.sublinea-value span {
+
+    color:
+        #49342a;
+
+    font-family:
+        "Caveat",
+        cursive;
+
+    /*
+       TAMBIÉN AUMENTADO
+    */
+
+    font-size:
+        clamp(
+            35px,
+            3vw,
+            48px
+        );
+
+    font-weight:
+        600;
+
+    line-height:
+        1;
+
+    white-space:
+        nowrap;
+}
+
+
+
+/* =========================================================
+   ANIMACIÓN PALABRAS
+========================================================= */
+
+html.js:not(.page-ready)
+.sublinea-value {
+
+    opacity:
+        0;
+
+    filter:
+        blur(5px);
+
+    transform:
+        translateX(25px);
+}
+
+
+html.js.page-ready
+.sublinea-value {
+
+    opacity:
+        1;
+
+    filter:
+        blur(0);
+
+    transition:
+        opacity .65s ease,
+        filter .65s ease,
+        transform .75s
+        cubic-bezier(
+            .16,
+            1,
+            .3,
+            1
+        );
+}
+
+
+html.js.page-ready
+.sublinea-value--1 {
+
+    transition-delay:
+        .12s;
+
+    transform:
+        rotate(-6deg)
+        translateX(0);
+}
+
+
+html.js.page-ready
+.sublinea-value--2 {
+
+    transition-delay:
+        .20s;
+
+    transform:
+        rotate(-7deg)
+        translateX(14px);
+}
+
+
+html.js.page-ready
+.sublinea-value--3 {
+
+    transition-delay:
+        .28s;
+
+    transform:
+        rotate(-6deg)
+        translateX(27px);
+}
+
+
+html.js.page-ready
+.sublinea-value--4 {
+
+    transition-delay:
+        .36s;
+
+    transform:
+        rotate(-7deg)
+        translateX(39px);
+}
+
+
+
+/* =========================================================
+   GRID DE TARJETAS
+========================================================= */
+
+.sublinea-grid {
+
+    position:
+        relative;
+
+    z-index:
+        5;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(
+                0,
+                1fr
+            )
+        );
+
+    gap:
+        18px;
+
+    margin:
+        0;
+
+    padding:
+        0;
+}
+
+
+
+/* =========================================================
+   TARJETAS
+========================================================= */
+
+.sublinea-card {
+
+    position:
+        relative;
+
+    min-width:
+        0;
+
+    height:
+        290px;
+
+    display:
+        flex;
+
+    align-items:
+        stretch;
+
+    overflow:
+        hidden;
+
+    background:
+        rgba(
+            255,
+            252,
+            246,
+            .88
+        );
+
+    border:
+        1px solid
+        rgba(
+            181,
+            58,
+            34,
+            .12
+        );
+
+    box-shadow:
+        0 12px 30px
+        rgba(
+            75,
+            46,
+            30,
+            .065
+        );
+
+    transition:
+        transform .4s
+        cubic-bezier(
+            .16,
+            1,
+            .3,
+            1
+        ),
+
+        box-shadow .4s ease;
+}
+
+
+.sublinea-card:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 18px 38px
+        rgba(
+            75,
+            46,
+            30,
+            .11
+        );
+}
+
+
+
+/* =========================================================
+   BOTÓN DE IMAGEN
+========================================================= */
+
+.sublinea-card__image {
+
+    position:
+        relative;
+
+    flex:
+        0 0 41%;
+
+    width:
+        41%;
+
+    height:
+        100%;
+
+    padding:
+        0;
+
+    margin:
+        0;
+
+    border:
+        0;
+
+    overflow:
+        hidden;
+
+    cursor:
+        zoom-in;
+
+    background:
+        #eee3d5;
+
+    display:
+        block;
+
+    text-align:
+        left;
+}
+
+
+.sublinea-card__image img {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    object-position:
+        center;
+
+    transition:
+        transform .65s
+        cubic-bezier(
+            .16,
+            1,
+            .3,
+            1
+        );
+}
+
+
+.sublinea-card__image:hover img {
+
+    transform:
+        scale(
+            1.06
+        );
+}
+
+
+
+/* =========================================================
+   ICONO + DE AMPLIAR
+========================================================= */
+
+.sublinea-card__zoom {
+
+    position:
+        absolute;
+
+    right:
+        15px;
+
+    bottom:
+        15px;
+
+    width:
+        36px;
+
+    height:
+        36px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .8
+        );
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(
+            70,
+            42,
+            28,
+            .65
+        );
+
+    color:
+        #fff;
+
+    font-size:
+        23px;
+
+    font-weight:
+        300;
+
+    line-height:
+        1;
+
+    opacity:
+        0;
+
+    transform:
+        scale(
+            .8
+        );
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease;
+}
+
+
+.sublinea-card__image:hover
+.sublinea-card__zoom {
+
+    opacity:
+        1;
+
+    transform:
+        scale(
+            1
+        );
+}
+
+
+
+/* =========================================================
+   CONTENIDO TARJETAS
+========================================================= */
+
+.sublinea-card__content {
+
+    position:
+        relative;
+
+    flex:
+        1;
+
+    min-width:
+        0;
+
+    padding:
+        25px
+        26px
+        24px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+}
+
+
+.sublinea-card__number {
+
+    position:
+        absolute;
+
+    top:
+        14px;
+
+    right:
+        17px;
+
+    color:
+        rgba(
+            181,
+            58,
+            34,
+            .18
+        );
+
+    font-family:
+        "Libre Baskerville",
+        Georgia,
+        serif;
+
+    font-size:
+        27px;
+
+    font-weight:
+        700;
+}
+
+
+.sublinea-card__eyebrow {
+
+    margin-bottom:
+        7px;
+
+    color:
+        #c95027;
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        1.9px;
+}
+
+
+.sublinea-card__content h3 {
+
+    margin:
+        0;
+
+    max-width:
+        310px;
+
+    color:
+        #242220;
+
+    font-family:
+        "Libre Baskerville",
+        Georgia,
+        serif;
+
+    /*
+       TEXTO DE TARJETAS
+       UN POCO MÁS GRANDE
+    */
+
+    font-size:
+        clamp(
+            19px,
+            1.35vw,
+            24px
+        );
+
+    line-height:
+        1.2;
+
+    font-weight:
+        700;
+}
+
+
+.sublinea-card__content h3 span {
+
+    display:
+        block;
+
+    margin-top:
+        3px;
+
+    color:
+        #8f3a28;
+
+    font-size:
+        .7em;
+
+    line-height:
+        1.3;
+
+    font-weight:
+        400;
+}
+
+
+.sublinea-card__content p {
+
+    margin-top:
+        13px;
+
+    color:
+        #625d57;
+
+    /*
+       TEXTO DE DESCRIPCIÓN
+       UN POCO MÁS GRANDE
+    */
+
+    font-size:
+        14px;
+
+    line-height:
+        1.55;
+}
+
+
+
+/* =========================================================
+   BANNER FINAL
+========================================================= */
+
+.sublinea-page
+.final-banner {
+
+    width:
+        100%;
+
+    height:
+        auto;
+
+    margin:
+        18px 0 0 !important;
+
+    padding:
+        0 !important;
+
+    background:
+        #f5ead8 !important;
+
+    line-height:
+        0;
+
+    display:
+        block;
+
+    overflow:
+        hidden;
+}
+
+
+.sublinea-page
+.final-banner img {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    height:
+        auto;
+
+    margin:
+        0;
+
+    padding:
+        0;
+
+    border:
+        0;
+
+    object-fit:
+        cover;
+}
+
+
+
+/* =========================================================
+   LIGHTBOX
+========================================================= */
+
+.image-lightbox {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    z-index:
+        99999;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        35px;
+
+    background:
+        rgba(
+            28,
+            20,
+            15,
+            .88
+        );
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    pointer-events:
+        none;
+
+    backdrop-filter:
+        blur(8px);
+
+    transition:
+        opacity .35s ease,
+        visibility .35s ease;
+}
+
+
+.image-lightbox.is-open {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+
+    pointer-events:
+        auto;
+}
+
+
+.image-lightbox__content {
+
+    position:
+        relative;
+
+    max-width:
+        94vw;
+
+    max-height:
+        90vh;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    flex-direction:
+        column;
+
+    transform:
+        scale(
+            .92
+        );
+
+    transition:
+        transform .4s
+        cubic-bezier(
+            .16,
+            1,
+            .3,
+            1
+        );
+}
+
+
+.image-lightbox.is-open
+.image-lightbox__content {
+
+    transform:
+        scale(
+            1
+        );
+}
+
+
+.image-lightbox__content img {
+
+    display:
+        block;
+
+    max-width:
+        92vw;
+
+    max-height:
+        84vh;
+
+    width:
+        auto;
+
+    height:
+        auto;
+
+    object-fit:
+        contain;
+
+    border:
+        2px solid
+        rgba(
+            255,
+            255,
+            255,
+            .15
+        );
+
+    box-shadow:
+        0 30px 80px
+        rgba(
+            0,
+            0,
+            0,
+            .4
+        );
+}
+
+
+.image-lightbox__close {
+
+    position:
+        absolute;
+
+    top:
+        22px;
+
+    right:
+        28px;
+
+    z-index:
+        5;
+
+    width:
+        48px;
+
+    height:
+        48px;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .4
+        );
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(
+            0,
+            0,
+            0,
+            .2
+        );
+
+    color:
+        #fff;
+
+    font-size:
+        34px;
+
+    font-weight:
+        300;
+
+    line-height:
+        1;
+
+    cursor:
+        pointer;
+
+    transition:
+        background .25s ease,
+        transform .25s ease;
+}
+
+
+.image-lightbox__close:hover {
+
+    background:
+        rgba(
+            181,
+            58,
+            34,
+            .85
+        );
+
+    transform:
+        rotate(
+            90deg
+        );
+}
+
+
+.image-lightbox__caption {
+
+    margin-top:
+        12px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            .85
+        );
+
+    font-size:
+        13px;
+
+    text-align:
+        center;
+}
+
+
+body.lightbox-open {
+
+    overflow:
+        hidden;
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .sublinea-hero__content {
+
+        width:
+            min(
+                560px,
+                42vw
+            );
+
+        margin-left:
+            clamp(
+                180px,
+                12vw,
+                245px
+            );
+    }
+
+
+    .sublinea-hero__title {
+
+        font-size:
+            clamp(
+                40px,
+                4vw,
+                60px
+            );
+    }
+
+
+    .sublinea-intro {
+
+        min-height:
+            470px;
+
+        grid-template-columns:
+            minmax(
+                0,
+                1fr
+            )
+            42%;
+
+        gap:
+            15px;
+    }
+
+
+    .sublinea-intro__text h2 {
+
+        font-size:
+            clamp(
+                32px,
+                3.5vw,
+                48px
+            );
+    }
+
+
+    .sublinea-intro__text p {
+
+        font-size:
+            15.5px;
+    }
+
+
+    .sublinea-values {
+
+        padding-left:
+            30px;
+    }
+
+
+    .sublinea-value span {
+
+        font-size:
+            40px;
+    }
+
+
+    .sublinea-card {
+
+        height:
+            280px;
+    }
+
+}
+
+
+
+/* =========================================================
+   TABLET VERTICAL
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .sublinea-hero__image img {
+
+        min-height:
+            460px;
+
+        object-fit:
+            cover;
+
+        object-position:
+            center;
+    }
+
+
+    .sublinea-hero__content {
+
+        width:
+            54%;
+
+        margin-left:
+            22%;
+
+        padding:
+            15px
+            20px
+            20px
+            12px;
+    }
+
+
+    .sublinea-hero__title {
+
+        font-size:
+            clamp(
+                36px,
+                5vw,
+                54px
+            );
+    }
+
+
+    .sublinea-hero__subtitle {
+
+        font-size:
+            13px;
+    }
+
+
+    .sublinea-intro {
+
+        min-height:
+            auto;
+
+        grid-template-columns:
+            1fr;
+
+        padding:
+            50px
+            0
+            30px;
+
+        gap:
+            5px;
+    }
+
+
+    .sublinea-intro__text h2 {
+
+        font-size:
+            clamp(
+                34px,
+                5vw,
+                46px
+            );
+    }
+
+
+    .sublinea-intro__text p {
+
+        font-size:
+            16px;
+    }
+
+
+    .sublinea-values {
+
+        width:
+            min(
+                410px,
+                100%
+            );
+
+        height:
+            300px;
+
+        margin-left:
+            auto;
+
+        padding-left:
+            55px;
+    }
+
+
+    .sublinea-value span {
+
+        font-size:
+            39px;
+    }
+
+
+    .sublinea-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            18px;
+    }
+
+
+    .sublinea-card {
+
+        height:
+            280px;
+
+        max-width:
+            760px;
+    }
+
+}
+
+
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .sublinea-hero__image img {
+
+        min-height:
+            490px;
+
+        object-fit:
+            cover;
+
+        object-position:
+            65%
+            center;
+    }
+
+
+    .sublinea-hero__content {
+
+        width:
+            66%;
+
+        margin-left:
+            29%;
+
+        padding:
+            17px
+            12px
+            20px
+            10px;
+    }
+
+
+    .sublinea-hero__content::before {
+
+        left:
+            -30px;
+
+        top:
+            -30px;
+
+        width:
+            calc(
+                100% + 60px
+            );
+
+        height:
+            calc(
+                100% + 60px
+            );
+    }
+
+
+    .sublinea-hero__eyebrow {
+
+        margin-bottom:
+            9px;
+
+        gap:
+            8px;
+    }
+
+
+    .sublinea-hero__eyebrow span {
+
+        font-size:
+            8px;
+
+        letter-spacing:
+            1.3px;
+    }
+
+
+    .sublinea-hero__eyebrow i {
+
+        width:
+            25px;
+    }
+
+
+    .sublinea-hero__title {
+
+        font-size:
+            clamp(
+                27px,
+                7.4vw,
+                39px
+            );
+
+        letter-spacing:
+            -1.4px;
+    }
+
+
+    .sublinea-hero__subtitle {
+
+        margin-top:
+            11px;
+
+        font-size:
+            10.5px;
+
+        line-height:
+            1.4;
+    }
+
+
+
+    /* =====================================================
+       SEGUNDA SECCIÓN
+    ====================================================== */
+
+    .sublinea-section {
+
+        background-size:
+            auto 650px;
+
+        background-position:
+            center top;
+    }
+
+
+    .sublinea-intro {
+
+        min-height:
+            auto;
+
+        padding:
+            45px
+            0
+            25px;
+
+        gap:
+            4px;
+    }
+
+
+    .sublinea-intro__text h2 {
+
+        margin-top:
+            11px;
+
+        font-size:
+            30px;
+
+        line-height:
+            1.12;
+    }
+
+
+    .sublinea-intro__text p {
+
+        margin-top:
+            13px;
+
+        font-size:
+            14.5px;
+
+        line-height:
+            1.55;
+    }
+
+
+    .sublinea-values {
+
+        width:
+            100%;
+
+        height:
+            285px;
+
+        margin-top:
+            0;
+
+        padding:
+            0
+            0
+            0
+            25px;
+
+        justify-content:
+            center;
+    }
+
+
+    .sublinea-value {
+
+        min-height:
+            53px;
+
+        gap:
+            10px;
+    }
+
+
+    .sublinea-value__icon {
+
+        width:
+            36px;
+
+        height:
+            36px;
+
+        flex:
+            0 0 36px;
+    }
+
+
+    .sublinea-value__icon svg {
+
+        width:
+            33px;
+
+        height:
+            33px;
+    }
+
+
+    .sublinea-value span {
+
+        font-size:
+            33px;
+    }
+
+
+    .sublinea-value--1,
+    .sublinea-value--2,
+    .sublinea-value--3,
+    .sublinea-value--4 {
+
+        transform:
+            rotate(-5deg)
+            translateX(0);
+    }
+
+
+    html.js.page-ready
+    .sublinea-value--1,
+    html.js.page-ready
+    .sublinea-value--2,
+    html.js.page-ready
+    .sublinea-value--3,
+    html.js.page-ready
+    .sublinea-value--4 {
+
+        transform:
+            rotate(-5deg)
+            translateX(0);
+    }
+
+
+
+    /* =====================================================
+       TARJETAS
+    ====================================================== */
+
+    .sublinea-grid {
+
+        gap:
+            15px;
+    }
+
+
+    .sublinea-card {
+
+        height:
+            auto;
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+    }
+
+
+    .sublinea-card__image {
+
+        width:
+            100%;
+
+        height:
+            230px;
+
+        flex:
+            none;
+    }
+
+
+    .sublinea-card__image img {
+
+        width:
+            100%;
+
+        height:
+            100%;
+
+        object-fit:
+            cover;
+    }
+
+
+    .sublinea-card__zoom {
+
+        opacity:
+            1;
+
+        transform:
+            scale(
+                .9
+            );
+    }
+
+
+    .sublinea-card__content {
+
+        min-height:
+            210px;
+
+        padding:
+            24px
+            22px
+            25px;
+    }
+
+
+    .sublinea-card__content h3 {
+
+        font-size:
+            20px;
+    }
+
+
+    .sublinea-card__content p {
+
+        margin-top:
+            11px;
+
+        font-size:
+            13.5px;
+    }
+
+
+
+    /* =====================================================
+       LIGHTBOX MÓVIL
+    ====================================================== */
+
+    .image-lightbox {
+
+        padding:
+            20px;
+    }
+
+
+    .image-lightbox__content img {
+
+        max-width:
+            94vw;
+
+        max-height:
+            80vh;
+    }
+
+
+    .image-lightbox__close {
+
+        top:
+            12px;
+
+        right:
+            14px;
+
+        width:
+            42px;
+
+        height:
+            42px;
+
+        font-size:
+            29px;
+    }
+
+
+    .image-lightbox__caption {
+
+        font-size:
+            11px;
+    }
+
+
+    .sublinea-page
+    .final-banner {
+
+        margin-top:
+            14px !important;
+
+        padding:
+            0 !important;
+    }
+
+}
+
+
+
+/* =========================================================
+   MÓVIL PEQUEÑO
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .sublinea-hero__image img {
+
+        min-height:
+            460px;
+
+        object-position:
+            67%
+            center;
+    }
+
+
+    .sublinea-hero__content {
+
+        width:
+            65%;
+
+        margin-left:
+            31%;
+    }
+
+
+    .sublinea-hero__title {
+
+        font-size:
+            26px;
+    }
+
+
+    .sublinea-hero__subtitle {
+
+        font-size:
+            10px;
+    }
+
+
+    .sublinea-intro {
+
+        padding:
+            40px
+            0
+            20px;
+    }
+
+
+    .sublinea-intro__text h2 {
+
+        font-size:
+            27px;
+    }
+
+
+    .sublinea-intro__text p {
+
+        font-size:
+            13.5px;
+    }
+
+
+    .sublinea-values {
+
+        height:
+            270px;
+
+        padding-left:
+            15px;
+    }
+
+
+    .sublinea-value span {
+
+        font-size:
+            30px;
+    }
+
+
+    .sublinea-card__image {
+
+        height:
+            210px;
+    }
+
+
+    .sublinea-card__content {
+
+        min-height:
+            195px;
+    }
+
+}
+
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .sublinea-hero::after {
+
+        display:
+            none;
+    }
+
+
+    .sublinea-hero__content,
+    .sublinea-hero__title,
+    .sublinea-value {
+
+        opacity:
+            1 !important;
+
+        filter:
+            none !important;
+
+        transform:
+            none !important;
+
+        transition:
+            none !important;
+    }
+
+
+    .sublinea-card,
+    .sublinea-card__image img,
+    .image-lightbox,
+    .image-lightbox__content {
+
+        transition:
+            none !important;
+    }
+
+}
