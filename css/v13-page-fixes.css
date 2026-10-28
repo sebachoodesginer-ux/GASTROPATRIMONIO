@@ -1,0 +1,74 @@
+/* =========================================================
+   GastroPatrimonio V13 — solo ajustes solicitados
+   Home y su sistema de animaciones permanecen sin cambios.
+========================================================= */
+
+/* Línea de investigación: banner final un poco más alto y con recorte controlado. */
+.linea-page .linea-main > .linea-final-banner {
+  height: clamp(145px, 16.2vw, 252px) !important;
+  min-height: clamp(145px, 16.2vw, 252px) !important;
+  overflow: hidden !important;
+}
+.linea-page .linea-main > .linea-final-banner .linea-final-banner__image {
+  position: absolute !important;
+  inset: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  object-fit: cover !important;
+  object-position: center 52% !important;
+}
+
+/* Sub-líneas: fondo de papel continuo, visible y de ruta segura sin espacios/caracteres especiales. */
+.sublinea-page .sublinea-section {
+  background-color: #f6ecdd !important;
+  background-image:
+    linear-gradient(180deg, rgba(250,245,236,.09) 0%, rgba(250,245,236,.22) 100%),
+    url("../assets/images/Sub_linea/sublinea-fondo-seccion.webp") !important;
+  background-repeat: no-repeat !important;
+  background-position: center top !important;
+  background-size: 100% auto !important;
+  background-attachment: scroll !important;
+}
+
+/* Imágenes de dos fichas: tamaño estable para que nunca aparezca el texto alternativo por el camino de carga. */
+.sublinea-page .sublinea-card__image img[src*="mercado-rustico-verduras"],
+.sublinea-page .sublinea-card__image img[src*="cosecha-cafe-amanecer"] {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+  object-position: center;
+  background: #ead8c2;
+}
+
+@media (max-width: 900px) {
+  .linea-page .linea-main > .linea-final-banner {
+    height: clamp(155px, 20vw, 205px) !important;
+    min-height: clamp(155px, 20vw, 205px) !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .linea-page .linea-main > .linea-final-banner {
+    height: 178px !important;
+    min-height: 178px !important;
+  }
+  .linea-page .linea-main > .linea-final-banner .linea-final-banner__image {
+    object-position: center 50% !important;
+  }
+  .sublinea-page .sublinea-section {
+    background-size: auto 100% !important;
+    background-position: center top !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .linea-page .linea-main > .linea-final-banner .linea-final-banner__image {
+    transition: none !important;
+    transform: none !important;
+  }
+}

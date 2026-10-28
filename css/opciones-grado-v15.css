@@ -1,0 +1,459 @@
+/* GastroPatrimonio V15 — refinamiento exclusivo de Opciones de grado.
+   Conserva intactos Home y el resto de las páginas. */
+
+.degree-page {
+  --degree-v15-gutter: clamp(1.25rem, 5.2vw, 5.75rem);
+  --degree-v15-orange: #d9572b;
+  --degree-v15-rust: #a93621;
+  --degree-v15-paper: #fbf5ec;
+  --degree-v15-line: rgba(169, 54, 33, .22);
+  background: #fbf5ec;
+  color: #29231f;
+}
+
+/* Larger, more useful content width on the degree page only. */
+.degree-page .container {
+  width: min(calc(100% - (var(--degree-v15-gutter) * 2)), 1640px);
+  max-width: none;
+}
+
+.degree-page .section-padding {
+  padding-block: clamp(3.5rem, 6vw, 5.8rem);
+}
+
+/* Hero: more editorial hierarchy without losing the existing artwork. */
+.degree-page .degree-hero {
+  min-height: clamp(590px, 76svh, 840px);
+  padding-block: clamp(5rem, 9vw, 8.25rem);
+  background: #ead9c3;
+}
+.degree-page .degree-hero__background {
+  object-position: center 52%;
+}
+.degree-page .degree-hero__veil {
+  background: linear-gradient(90deg,
+    rgba(250,245,236,.97) 0%,
+    rgba(250,245,236,.91) 34%,
+    rgba(250,245,236,.64) 59%,
+    rgba(250,245,236,.12) 100%);
+}
+.degree-page .degree-hero__content {
+  max-width: 1640px;
+}
+.degree-page .degree-hero h1 {
+  max-width: 900px;
+  margin-block: 1.15rem 1.25rem;
+  font-size: clamp(3.55rem, 7.4vw, 7.15rem);
+  line-height: 1.02;
+  letter-spacing: -.062em;
+  text-wrap: balance;
+}
+.degree-page .degree-hero__content > p {
+  max-width: 650px;
+  font-size: clamp(1.05rem, 1.3vw, 1.22rem);
+  line-height: 1.8;
+}
+.degree-page .degree-eyebrow,
+.degree-page .degree-kicker {
+  font-size: .75rem;
+  letter-spacing: .16em;
+}
+.degree-page .degree-button {
+  min-height: 52px;
+  padding: .95rem 1.4rem;
+  gap: 1.25rem;
+}
+
+/* Intro: tighter and more deliberate separation from the option selector. */
+.degree-page .degree-intro {
+  position: relative;
+  background: linear-gradient(118deg, #fffaf3 0%, #f8ecdd 100%);
+  border-bottom: 1px solid rgba(169,54,33,.15);
+}
+.degree-page .degree-intro::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: var(--degree-v15-gutter);
+  right: var(--degree-v15-gutter);
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #a93621 0%, #df6c3b 40%, rgba(223,108,59,0) 100%);
+  opacity: .75;
+}
+.degree-page .degree-intro__grid {
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  align-items: center;
+}
+.degree-page .degree-intro h2,
+.degree-page .degree-section-heading h2,
+.degree-page .degree-resources h2 {
+  font-size: clamp(2.2rem, 3.8vw, 3.8rem);
+  line-height: 1.16;
+  text-wrap: balance;
+}
+.degree-page .degree-intro__copy {
+  max-width: 760px;
+  padding-left: clamp(1rem, 2.4vw, 2rem);
+  border-left: 2px solid rgba(217,87,43,.35);
+}
+.degree-page .degree-intro__copy p,
+.degree-page .degree-section-heading > p,
+.degree-page .degree-resources__grid > div > p {
+  font-size: clamp(1rem, 1.08vw, 1.12rem);
+  line-height: 1.8;
+}
+
+/* Options section heading becomes a slim, full-width editorial rule. */
+.degree-page .degree-options {
+  position: relative;
+  background:
+    radial-gradient(circle at 5% 10%, rgba(217,87,43,.055), transparent 23rem),
+    linear-gradient(145deg, #f6eadb 0%, #fbf5ec 50%, #f3e4d2 100%);
+}
+.degree-page .degree-section-heading--options {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 1rem 2rem;
+  margin: 0 calc(var(--degree-v15-gutter) * -1) clamp(1.7rem, 3vw, 2.7rem) !important;
+  padding: 1.15rem var(--degree-v15-gutter) 1.2rem !important;
+  border-top: 1px solid rgba(169,54,33,.25);
+  border-bottom: 1px solid rgba(169,54,33,.28);
+  background: linear-gradient(90deg, rgba(255,250,243,.88), rgba(249,235,220,.62));
+}
+.degree-page .degree-section-heading--options .degree-section-heading__main {
+  min-width: 0;
+}
+.degree-page .degree-section-heading--options .degree-kicker {
+  gap: .55rem;
+}
+.degree-page .degree-section-heading--options h2 {
+  margin: .24rem 0 .35rem;
+  font-size: clamp(1.9rem, 3.2vw, 3.05rem);
+  line-height: 1.12;
+}
+.degree-page .degree-section-heading--options .degree-options__intro {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(.95rem, 1vw, 1.06rem);
+  line-height: 1.55;
+  color: #706258;
+}
+.degree-page .degree-section-heading__stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  align-self: center;
+  white-space: nowrap;
+  border: 1px solid rgba(169,54,33,.28);
+  border-radius: 999px;
+  padding: .65rem .9rem;
+  background: rgba(255,250,243,.9);
+  color: #a93621;
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+.degree-page .degree-section-heading__stamp i {
+  display: inline-block;
+  width: 1.3rem;
+  height: 1px;
+  background: #d9572b;
+}
+
+/* Modal-choice cards: larger imagery, better rhythm, stronger hover response. */
+.degree-page .degree-options__grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(.9rem, 1.35vw, 1.35rem);
+}
+.degree-page .degree-option-card {
+  min-height: 385px;
+  border: 1px solid rgba(169,54,33,.19) !important;
+  border-radius: 1.2rem !important;
+  background: rgba(255,251,245,.97) !important;
+  box-shadow: 0 12px 30px rgba(65,40,22,.07) !important;
+  isolation: isolate;
+  overflow: hidden;
+  transition: transform .38s cubic-bezier(.2,.75,.25,1), box-shadow .38s ease, border-color .3s ease !important;
+}
+.degree-page .degree-option-card::after {
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  height: 4px !important;
+  z-index: 3;
+  background: linear-gradient(90deg, #a93621, #e16b38) !important;
+}
+.degree-page .degree-option-card__media {
+  height: clamp(165px, 15vw, 220px) !important;
+  background: #e9d7bf;
+}
+.degree-page .degree-option-card__media img {
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(.93);
+}
+.degree-page .degree-option-card__icon {
+  width: 44px !important;
+  height: 44px !important;
+  margin: 1rem 1.25rem .75rem !important;
+  font-size: 1.25rem !important;
+  border: 1px solid rgba(217,87,43,.14);
+  background: #f6e1cd !important;
+  color: #a93621 !important;
+}
+.degree-page .degree-option-card h3 {
+  margin: 0 1.25rem .65rem !important;
+  font-size: clamp(1.02rem, 1.06vw, 1.19rem) !important;
+  line-height: 1.38 !important;
+  text-wrap: balance;
+}
+.degree-page .degree-option-card p {
+  margin: 0 1.25rem 1rem !important;
+  font-size: clamp(.9rem, .92vw, 1rem) !important;
+  line-height: 1.68 !important;
+}
+.degree-page .degree-option-card__link {
+  margin: auto 1.25rem 0 !important;
+  padding: 1rem 0 1.3rem !important;
+  border-top: 1px solid rgba(169,54,33,.14);
+  font-size: .84rem !important;
+  letter-spacing: .01em;
+}
+.degree-page .degree-option-card:hover,
+.degree-page .degree-option-card:focus-visible {
+  transform: translateY(-7px) scale(1.012) !important;
+  border-color: rgba(217,87,43,.62) !important;
+  box-shadow: 0 22px 45px rgba(98,49,22,.15), 0 0 0 3px rgba(217,87,43,.075) !important;
+}
+.degree-page .degree-option-card:focus-visible {
+  outline: 2px solid #c54b27;
+  outline-offset: 3px;
+}
+
+/* Level matrix and its contents: clearer contrast, larger reading size. */
+.degree-page .degree-levels {
+  background: linear-gradient(180deg, #fffaf3 0%, #f7ecde 100%);
+}
+.degree-page .degree-levels__table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(169,54,33,.23);
+  border-radius: 1.2rem;
+  background: #fffdf8;
+  box-shadow: 0 16px 38px rgba(59,37,20,.07);
+}
+.degree-page .degree-levels__table th,
+.degree-page .degree-levels__table td {
+  padding: clamp(1rem, 1.6vw, 1.45rem) clamp(1rem, 1.9vw, 1.65rem);
+  font-size: clamp(.94rem, 1vw, 1.05rem);
+  line-height: 1.65;
+}
+.degree-page .degree-levels__table thead th {
+  background: linear-gradient(100deg, #8f321e, #d9572b);
+  font-size: .88rem;
+  letter-spacing: .02em;
+}
+.degree-page .degree-levels__table tbody th {
+  color: #96351f;
+  font-size: 1rem;
+}
+.degree-page .degree-levels__table td span {
+  padding: .52rem .78rem;
+  font-size: .87rem;
+  border-color: rgba(169,54,33,.17);
+  background: #faf2e7;
+}
+.degree-page .degree-note {
+  font-size: .9rem;
+}
+
+/* Application call-to-action becomes a slim, edge-to-edge strip instead of a tall panel. */
+.degree-page .degree-application.section-padding {
+  padding-block: 0 !important;
+  background: linear-gradient(105deg, #7d2d1d 0%, #a83a21 52%, #c94e27 100%) !important;
+  border-top: 1px solid rgba(255,255,255,.25);
+  border-bottom: 1px solid rgba(255,255,255,.25);
+  position: relative;
+  overflow: hidden;
+}
+.degree-page .degree-application.section-padding::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .13;
+  background-image: radial-gradient(circle at 12% 50%, #ffe3c7 0 1px, transparent 2px), radial-gradient(circle at 70% 24%, #ffe3c7 0 2px, transparent 4px);
+  background-size: 190px 120px, 260px 180px;
+}
+.degree-page .degree-application > .degree-application__box.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+.degree-page .degree-application__box {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(1.2rem, 3vw, 3rem);
+  padding: clamp(1.25rem, 2.2vw, 2rem) var(--degree-v15-gutter);
+  min-height: 0;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.degree-page .degree-application__text {
+  display: grid;
+  grid-template-columns: minmax(250px, .9fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: .3rem clamp(1rem, 2.7vw, 2.8rem);
+  min-width: 0;
+}
+.degree-page .degree-application__text > .degree-kicker {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: end;
+  margin: 0;
+  color: #ffd4a8 !important;
+}
+.degree-page .degree-application h2 {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: start;
+  max-width: 560px;
+  margin: .2rem 0 0 !important;
+  font-size: clamp(1.8rem, 2.65vw, 2.85rem) !important;
+  line-height: 1.13 !important;
+  letter-spacing: -.04em !important;
+}
+.degree-page .degree-application__text > p {
+  grid-column: 2;
+  max-width: 750px;
+  margin: 0 !important;
+  color: rgba(255,248,239,.9) !important;
+  font-size: clamp(.9rem, .98vw, 1rem);
+  line-height: 1.62 !important;
+}
+.degree-page .degree-application__text > p:first-of-type { grid-row: 1; align-self: end; }
+.degree-page .degree-application__text > p:last-of-type { grid-row: 2; align-self: start; margin-top: .3rem !important; }
+.degree-page .degree-application__text b { color: #fff !important; }
+.degree-page .degree-application .degree-button--light {
+  justify-self: end;
+  margin: 0 !important;
+  padding: .9rem 1.15rem;
+  min-height: 48px;
+  white-space: normal;
+  max-width: 265px;
+  color: #98351f;
+  border-color: rgba(255,255,255,.72);
+  background: #fffaf3;
+  box-shadow: 0 8px 22px rgba(57,20,10,.15);
+}
+.degree-page .degree-application .degree-button--light:hover {
+  color: #fffaf3;
+  background: #74291b;
+  border-color: rgba(255,255,255,.4);
+}
+
+/* Institutional resources: clearer icon-to-copy hierarchy. */
+.degree-page .degree-resources {
+  background: linear-gradient(145deg, #f8ecdd 0%, #fffaf3 68%, #f6e9d9 100%);
+}
+.degree-page .degree-resources__heading {
+  align-items: end;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  padding-bottom: 1.45rem;
+  border-bottom: 1px solid rgba(169,54,33,.23);
+}
+.degree-page .degree-resources__grid {
+  gap: clamp(1rem, 1.6vw, 1.5rem) !important;
+}
+.degree-page .degree-resource-link {
+  min-height: 260px !important;
+  padding: clamp(1.25rem, 1.8vw, 1.7rem) !important;
+  border-radius: 1.2rem !important;
+  background: rgba(255,252,247,.97) !important;
+  border-color: rgba(169,54,33,.21) !important;
+}
+.degree-page .degree-resource-link p {
+  color: #706258;
+  font-size: .95rem;
+  line-height: 1.7;
+}
+.degree-page .degree-resource-link strong {
+  font-size: clamp(1.08rem, 1.25vw, 1.3rem) !important;
+}
+
+/* Tablet and mobile layouts: preserve the full-bleed strip but stack its content cleanly. */
+@media (max-width: 1180px) {
+  .degree-page .degree-options__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .degree-page .degree-option-card { min-height: 365px; }
+  .degree-page .degree-application__box { grid-template-columns: minmax(0, 1fr) auto; }
+  .degree-page .degree-application__text { grid-template-columns: minmax(220px, .8fr) minmax(0, 1.2fr); }
+}
+
+@media (max-width: 900px) {
+  .degree-page .container { width: min(calc(100% - 2.5rem), 1640px); }
+  .degree-page .degree-intro__grid { grid-template-columns: minmax(0,1fr); gap: 1.5rem; }
+  .degree-page .degree-intro__copy { max-width: none; }
+  .degree-page .degree-options__grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .degree-page .degree-option-card { min-height: 370px; }
+  .degree-page .degree-section-heading--options { margin-inline: -1.25rem !important; padding-inline: 1.25rem !important; }
+  .degree-page .degree-application__box { grid-template-columns: minmax(0,1fr); gap: 1rem; }
+  .degree-page .degree-application__text { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); }
+  .degree-page .degree-application .degree-button--light { justify-self: start; max-width: none; }
+  .degree-page .degree-resources__heading { align-items: flex-start; flex-direction: column; gap: .5rem; }
+}
+
+@media (max-width: 620px) {
+  .degree-page { --degree-v15-gutter: 1.1rem; }
+  .degree-page .container { width: calc(100% - 2.2rem); }
+  .degree-page .section-padding { padding-block: 3.15rem; }
+  .degree-page .degree-hero { min-height: 570px; padding-block: 4.5rem; }
+  .degree-page .degree-hero__veil { background: linear-gradient(90deg, rgba(250,245,236,.96), rgba(250,245,236,.88) 72%, rgba(250,245,236,.63)); }
+  .degree-page .degree-hero h1 { max-width: 100%; font-size: clamp(3rem, 13.8vw, 4.4rem); line-height: 1.02; }
+  .degree-page .degree-hero__content > p { font-size: 1rem; line-height: 1.68; }
+  .degree-page .degree-intro h2,
+  .degree-page .degree-section-heading h2,
+  .degree-page .degree-resources h2 { font-size: clamp(1.95rem, 8.5vw, 2.7rem); }
+  .degree-page .degree-intro__copy { padding-left: .95rem; }
+  .degree-page .degree-section-heading--options {
+    grid-template-columns: minmax(0,1fr);
+    gap: .65rem;
+    margin: 0 -1.1rem 1.4rem !important;
+    padding: 1rem 1.1rem 1.05rem !important;
+  }
+  .degree-page .degree-section-heading--options h2 { font-size: clamp(1.8rem, 7.5vw, 2.35rem); }
+  .degree-page .degree-section-heading__stamp { justify-self: start; padding: .48rem .7rem; }
+  .degree-page .degree-options__grid { grid-template-columns: minmax(0,1fr); gap: 1rem; }
+  .degree-page .degree-option-card { min-height: 0; }
+  .degree-page .degree-option-card__media { height: clamp(180px, 54vw, 245px) !important; }
+  .degree-page .degree-option-card h3 { font-size: 1.15rem !important; }
+  .degree-page .degree-option-card p { font-size: .95rem !important; }
+  .degree-page .degree-levels__table { min-width: 530px; }
+  .degree-page .degree-levels__table th,
+  .degree-page .degree-levels__table td { padding: .85rem .9rem; }
+  .degree-page .degree-application__box { padding: 1.25rem 1.1rem; }
+  .degree-page .degree-application__text { grid-template-columns: minmax(0,1fr); gap: .4rem; }
+  .degree-page .degree-application__text > .degree-kicker { grid-column: 1; grid-row: auto; }
+  .degree-page .degree-application h2 { grid-column: 1; grid-row: auto; font-size: clamp(1.75rem, 7.8vw, 2.35rem) !important; }
+  .degree-page .degree-application__text > p { grid-column: 1; grid-row: auto !important; font-size: .92rem; }
+  .degree-page .degree-application__text > p:last-of-type { margin-top: .45rem !important; }
+  .degree-page .degree-application .degree-button--light { width: 100%; justify-content: center; max-width: none; }
+  .degree-page .degree-resources__grid { grid-template-columns: minmax(0,1fr) !important; }
+  .degree-page .degree-resource-link { min-height: 220px !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .degree-page .degree-option-card,
+  .degree-page .degree-option-card__media img,
+  .degree-page .degree-button,
+  .degree-page .degree-resource-link { transition: none !important; }
+  .degree-page .degree-option-card:hover,
+  .degree-page .degree-resource-link:hover { transform: none !important; }
+}

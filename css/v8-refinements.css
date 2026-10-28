@@ -1,0 +1,201 @@
+/* =========================================================
+   GASTROPATRIMONIO V8 — carrusel central, logo footer y línea de investigación
+   Capa de ajustes: se conserva la identidad visual y la estructura existentes.
+========================================================= */
+:root {
+  --gp-v8-orange: #dc642f;
+  --gp-v8-orange-deep: #b53a22;
+  --gp-v8-cream: #fffaf2;
+}
+
+/* Home: publicación central más presente, con resplandor naranja elegante. */
+.home-pub-carousel .home-publications__card.is-active,
+.home-pub-carousel .home-publications__card[aria-current="true"] {
+  position: relative;
+  z-index: 3;
+  transform: scale(1.075) translateY(-5px) !important;
+  opacity: 1 !important;
+  filter: saturate(1.08);
+  border: 1px solid rgba(220, 100, 47, .88) !important;
+  box-shadow:
+    0 0 0 1px rgba(220,100,47,.20),
+    0 0 22px rgba(220,100,47,.30),
+    0 0 48px rgba(220,100,47,.16),
+    0 25px 48px rgba(83,46,24,.19) !important;
+}
+.home-pub-carousel .home-publications__card:not(.is-active) {
+  transform: scale(.84) translateY(3px) !important;
+  opacity: .62 !important;
+  filter: saturate(.84);
+}
+.home-pub-carousel .home-publications__card {
+  transform-origin: center center;
+  transition:
+    transform .62s cubic-bezier(.2,.72,.22,1),
+    opacity .48s ease,
+    filter .55s ease,
+    box-shadow .62s ease,
+    border-color .45s ease !important;
+  will-change: transform, opacity;
+}
+.home-pub-carousel .home-publications__card.is-active:hover {
+  transform: scale(1.09) translateY(-7px) !important;
+  box-shadow:
+    0 0 0 1px rgba(220,100,47,.25),
+    0 0 28px rgba(220,100,47,.34),
+    0 0 55px rgba(220,100,47,.18),
+    0 30px 55px rgba(83,46,24,.22) !important;
+}
+
+/* Footer: centrar el logo en su columna y darle presencia sin deformarlo. */
+.footer__brand {
+  min-height: 100%;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: flex-start;
+  align-self: stretch;
+}
+.footer__brand img {
+  display: block;
+  width: clamp(190px, 18vw, 270px) !important;
+  max-width: 100%;
+  height: auto !important;
+  object-fit: contain;
+  object-position: center;
+  margin-block: auto !important;
+}
+
+/* Línea de investigación: banner más dominante y contenido algo mayor. */
+.linea-hero__content,
+.linea-hero__content p,
+.linea-section-intro,
+.linea-sublines .container {
+  font-size: 1.035em;
+}
+.linea-hero__content h1,
+.linea-hero h1 {
+  font-size: clamp(2.8rem, 5.7vw, 5.9rem) !important;
+  line-height: .99 !important;
+  max-width: 12ch;
+  text-wrap: balance;
+}
+.linea-hero__image,
+.linea-hero__visual,
+.linea-hero > img {
+  min-height: clamp(340px, 43vw, 650px);
+}
+.linea-hero__image img,
+.linea-hero__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.linea-main .linea-reveal,
+.linea-main [data-linea-reveal] {
+  transition:
+    opacity .82s cubic-bezier(.22,.68,.24,1),
+    transform .92s cubic-bezier(.22,.68,.24,1),
+    clip-path 1s cubic-bezier(.22,.68,.24,1) !important;
+  transition-delay: 0ms !important;
+}
+.linea-main .linea-reveal.is-visible,
+.linea-main [data-linea-reveal].is-visible {
+  transition-delay: 70ms !important;
+}
+.linea-main .linea-reveal img,
+.linea-main [data-linea-reveal] img {
+  transition: transform 1.15s cubic-bezier(.2,.7,.2,1), opacity .8s ease !important;
+}
+
+/* Mantener sub-líneas, banner final y footer como una secuencia continua. */
+.linea-main > .linea-sublines {
+  margin-block: 0 !important;
+  padding-top: clamp(2.2rem, 4vw, 4rem) !important;
+  padding-bottom: 0 !important;
+}
+.linea-sublines .linea-heading {
+  margin-bottom: clamp(1.25rem, 2.2vw, 2.1rem) !important;
+}
+.linea-sublines__grid {
+  margin-bottom: 0 !important;
+  padding-bottom: clamp(1.4rem, 2.3vw, 2.2rem) !important;
+}
+.linea-main > .linea-final-banner {
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 0 !important;
+  min-height: 0 !important;
+}
+.linea-main > .linea-final-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 !important;
+}
+.linea-main + .linea-footer {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+.linea-footer {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 900px) {
+  .home-pub-carousel .home-publications__card.is-active,
+  .home-pub-carousel .home-publications__card[aria-current="true"] {
+    transform: scale(1.035) translateY(-3px) !important;
+  }
+  .home-pub-carousel .home-publications__card:not(.is-active) {
+    transform: scale(.92) !important;
+    opacity: .76 !important;
+  }
+  .footer__brand {
+    align-items: center;
+    text-align: center;
+  }
+  .footer__brand img {
+    width: clamp(180px, 45vw, 250px) !important;
+    margin: 0 auto !important;
+  }
+  .linea-hero__content h1,
+  .linea-hero h1 {
+    font-size: clamp(2.45rem, 7.4vw, 4.4rem) !important;
+  }
+  .linea-hero__image,
+  .linea-hero__visual,
+  .linea-hero > img {
+    min-height: 0;
+  }
+}
+@media (max-width: 560px) {
+  .home-pub-carousel .home-publications__card.is-active,
+  .home-pub-carousel .home-publications__card[aria-current="true"] {
+    transform: scale(1.015) translateY(-2px) !important;
+    box-shadow: 0 0 0 1px rgba(220,100,47,.2), 0 0 16px rgba(220,100,47,.22), 0 12px 28px rgba(83,46,24,.14) !important;
+  }
+  .home-pub-carousel .home-publications__card:not(.is-active) {
+    transform: scale(.96) !important;
+    opacity: .83 !important;
+  }
+  .linea-hero__content h1,
+  .linea-hero h1 {
+    font-size: clamp(2.1rem, 10vw, 3.2rem) !important;
+    line-height: 1.02 !important;
+  }
+  .linea-main > .linea-sublines {
+    padding-top: 1.8rem !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-pub-carousel .home-publications__card,
+  .linea-main .linea-reveal,
+  .linea-main [data-linea-reveal],
+  .linea-main .linea-reveal img,
+  .linea-main [data-linea-reveal] img {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -923,7 +923,7 @@ span:nth-child(3) {
         #f8f0e4;
 
     background-image:
-        url("../assets/images/Inicio/Banner-inicio.png");
+        url("../assets/images/Inicio/Banner-inicio.webp");
 
     background-repeat:
         no-repeat;
@@ -1300,7 +1300,7 @@ span:nth-child(3) {
 
     background:
         #faf4ea
-        url("../assets/images/Inicio/fondo-seccion-2.png")
+        url("../assets/images/Inicio/fondo-seccion-2.webp")
         center /
         cover
         no-repeat;
@@ -1446,7 +1446,7 @@ span:nth-child(3) {
 
     background:
         #faf5ed
-        url("../assets/images/Inicio/fondo-seccion-3.png")
+        url("../assets/images/Inicio/fondo-seccion-3.webp")
         center /
         cover
         no-repeat;
@@ -1689,7 +1689,7 @@ span:nth-child(3) {
 
     background:
         #faf6ef
-        url("../assets/images/Inicio/fondo-seccion4.png")
+        url("../assets/images/Inicio/fondo-seccion4.webp")
         center /
         cover
         no-repeat;

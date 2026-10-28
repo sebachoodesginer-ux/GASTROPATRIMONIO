@@ -1,1347 +1,333 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="Publicaciones del grupo GastroPatrimonio de la Fundación Universitaria San Mateo">
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Publicaciones del grupo GastroPatrimonio de la Fundación Universitaria San Mateo" name="description"/>
 <title>Publicaciones | GastroPatrimonio</title>
-
 <!-- FAVICON -->
-<link rel="icon" type="image/png" sizes="32x32" href="assets/logos/logo-seminario.png?v=20261005">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/logos/logo-seminario.png?v=20261005">
-<link rel="shortcut icon" type="image/png" href="assets/logos/logo-seminario.png?v=20261005">
-<link rel="apple-touch-icon" href="assets/logos/logo-seminario.png?v=20261005">
-
-<meta name="theme-color" content="#faf5ec">
-
+<link href="assets/logos/logo-seminario.webp?v=20261005" rel="icon" sizes="32x32" type="image/png"/>
+<link href="assets/logos/logo-seminario.webp?v=20261005" rel="icon" sizes="16x16" type="image/png"/>
+<link href="assets/logos/logo-seminario.webp?v=20261005" rel="shortcut icon" type="image/png"/>
+<link href="assets/logos/logo-seminario.webp?v=20261005" rel="apple-touch-icon"/>
+<meta content="#faf5ec" name="theme-color"/>
 <!-- FUENTES -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
-    rel="stylesheet"
->
-
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
 <!-- CSS -->
-<link rel="stylesheet" href="css/publicaciones.css">
-
+<link href="css/publicaciones.css" rel="stylesheet"/><link href="css/responsive-enhancements.css" rel="stylesheet"/>
+ <link href="css/v6-enhancements.css" rel="stylesheet"/>
+<link href="css/v7-refinements.css" rel="stylesheet"/>
+<link href="css/v8-refinements.css" rel="stylesheet"/>
+<link href="css/v9-refinements.css" rel="stylesheet"/><link href="css/v10-refinements.css" rel="stylesheet"/>
+<link href="css/v11-refinements.css" rel="stylesheet"/>
+ <link href="css/v14-motion-refinements.css" rel="stylesheet"/>
+<link href="css/v16-final-fixes.css" rel="stylesheet"/><link href="css/v17-final-polish.css" rel="stylesheet"/>
+  <link href="css/v19-responsive-banners.css" rel="stylesheet"/>
 </head>
-
 <body>
-
 <!-- =====================================================
      PARTICULAS
 ====================================================== -->
-
-<div
-    class="particles"
-    id="particles"
-    aria-hidden="true"
-></div>
-
-
+<div aria-hidden="true" class="particles" id="particles"></div>
 <!-- =====================================================
      HEADER
 ====================================================== -->
-
-<header
-    class="header"
-    id="header"
->
-
-    <div class="container header__container">
-
-        <!-- LOGO -->
-
-        <a
-            href="index.html"
-            class="brand"
-            aria-label="Ir al inicio"
-        >
-
-            <img
-                src="assets/logos/logo-seminario.png"
-                alt="Fundación Universitaria San Mateo"
-                class="brand__logo"
-            >
-
-            <div class="brand__text">
-
-                <span>
+<header class="header" id="header">
+<div class="container header__container">
+<!-- LOGO -->
+<a aria-label="Ir al inicio" class="brand" href="index.html">
+<img alt="Fundación Universitaria San Mateo" class="brand__logo" src="assets/logos/logo-seminario.webp"/>
+<div class="brand__text">
+<span>
                     Fundación Universitaria
                 </span>
-
-                <strong>
+<strong>
                     SAN MATEO
                 </strong>
-
-            </div>
-
-        </a>
-
-
-        <!-- MENU -->
-
-        <nav
-            class="navigation"
-            id="navigation"
-            aria-label="Navegación principal"
-        >
-
-            <a
-                href="el-seminario.html"
-                class="navigation__link"
-            >
-                <span>
-                    El Seminario
-                </span>
-            </a>
-
-
-            <a
-                href="linea-investigacion.html"
-                class="navigation__link"
-            >
-                <span>
-                    Línea de investigación
-                </span>
-            </a>
-
-
-            <a
-                href="sublinea-investigacion.html"
-                class="navigation__link"
-            >
-                <span>
-                    Sub-línea de investigación
-                </span>
-            </a>
-
-
-            <a
-                href="publicaciones.html"
-                class="navigation__link active"
-            >
-                <span>
-                    Publicaciones
-                </span>
-            </a>
-
-
-            <a
-                href="investigadores.html"
-                class="navigation__link"
-            >
-                <span>
-                    Investigadores
-                </span>
-            </a>
-
-        </nav>
-
-
-        <!-- ACCIONES -->
-
-        <div class="header__actions">
-
-            <!-- BUSCAR -->
-
-            <button
-                class="search-button"
-                id="searchButton"
-                type="button"
-                aria-label="Buscar"
-            >
-
-                <svg viewBox="0 0 24 24">
-
-                    <circle
-                        cx="10.5"
-                        cy="10.5"
-                        r="6.4"
-                    ></circle>
-
-                    <path
-                        d="M15.4 15.4L20.5 20.5"
-                    ></path>
-
-                </svg>
-
-            </button>
-
-
-            <!-- HAMBURGUESA -->
-
-            <button
-                class="menu-button"
-                id="menuButton"
-                type="button"
-                aria-label="Abrir menú"
-                aria-expanded="false"
-            >
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
-
-        </div>
-
-    </div>
-
+</div>
+</a>
+<!-- MENU -->
+<nav aria-label="Navegación principal" class="navigation" id="navigation"><div class="navigation__mobile-title"><span>MENÚ</span><strong>GASTROPATRIMONIO</strong></div><a class="navigation__link" href="index.html"><span>GastroPatrimonio</span></a><a class="navigation__link" href="linea-investigacion.html"><span>Línea de investigación</span></a><a class="navigation__link" href="sublinea-investigacion.html"><span>Sub-línea de investigación</span></a><a aria-current="page" class="navigation__link active" href="publicaciones.html"><span>Publicaciones</span></a><a class="navigation__link" href="investigadores.html"><span>Investigadores</span></a><a class="navigation__link" href="opciones-de-grado.html"><span>Opciones de grado</span></a></nav>
+<!-- ACCIONES -->
+<div class="header__actions">
+<!-- BUSCAR -->
+<button aria-label="Buscar" class="search-button" id="searchButton" type="button">
+<svg viewbox="0 0 24 24">
+<circle cx="10.5" cy="10.5" r="6.4"></circle>
+<path d="M15.4 15.4L20.5 20.5"></path>
+</svg>
+</button>
+<!-- HAMBURGUESA -->
+<button aria-controls="navigation" aria-expanded="false" aria-label="Abrir menú" class="menu-button" id="menuButton" type="button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+</div>
 </header>
-
-
+<button aria-label="Cerrar menú" class="menu-backdrop" id="menuBackdrop" tabindex="-1" type="button"></button>
 <!-- =====================================================
      BUSCADOR GLOBAL
 ====================================================== -->
-
-<div
-    class="search-overlay"
-    id="searchOverlay"
->
-
-    <div class="search-box">
-
-        <button
-            class="search-box__close"
-            id="closeSearch"
-            type="button"
-            aria-label="Cerrar buscador"
-        >
+<div class="search-overlay" id="searchOverlay">
+<div class="search-box">
+<button aria-label="Cerrar buscador" class="search-box__close" id="closeSearch" type="button">
             ×
         </button>
-
-
-        <span class="search-box__eyebrow">
+<span class="search-box__eyebrow">
             GASTROPATRIMONIO
         </span>
-
-
-        <h2>
+<h2>
             ¿Qué deseas encontrar?
         </h2>
-
-
-        <div class="search-box__field">
-
-            <svg
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-            >
-
-                <circle
-                    cx="10.5"
-                    cy="10.5"
-                    r="6.4"
-                ></circle>
-
-                <path
-                    d="M15.4 15.4L20.5 20.5"
-                ></path>
-
-            </svg>
-
-
-            <input
-                type="search"
-                id="searchInput"
-                placeholder="Buscar..."
-                autocomplete="off"
-            >
-
-        </div>
-
-
-        <div
-            class="search-results"
-            id="searchResults"
-        >
-
-            <a
-                href="el-seminario.html"
-                data-search="seminario gastronomía gastropatrimonio"
-            >
-                El Seminario
-            </a>
-
-
-            <a
-                href="linea-investigacion.html"
-                data-search="línea investigación gastronomía"
-            >
-                Línea de investigación
-            </a>
-
-
-            <a
-                href="sublinea-investigacion.html"
-                data-search="sub línea investigación"
-            >
-                Sub-línea de investigación
-            </a>
-
-
-            <a
-                href="publicaciones.html"
-                data-search="publicaciones artículos libros documentos"
-            >
-                Publicaciones
-            </a>
-
-
-            <a
-                href="investigadores.html"
-                data-search="investigadores docentes profesores"
-            >
-                Investigadores
-            </a>
-
-        </div>
-
-    </div>
-
+<div class="search-box__field">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<circle cx="10.5" cy="10.5" r="6.4"></circle>
+<path d="M15.4 15.4L20.5 20.5"></path>
+</svg>
+<input autocomplete="off" id="searchInput" placeholder="Buscar..." type="search"/>
 </div>
-
-
+<div class="search-results" id="searchResults"><a data-search="grupo gastronomía patrimonio cultura investigación" href="index.html">GastroPatrimonio</a><a data-search="línea investigacion gastronomía patrimonio" href="linea-investigacion.html">Línea de investigación</a><a data-search="sub línea investigacion gastronómica" href="sublinea-investigacion.html">Sub-línea de investigación</a><a data-search="opciones de grado trabajo investigación ayudantía pasantía seminario" href="opciones-de-grado.html">Opciones de grado</a><a data-search="publicaciones libros artículos revista científica Sosquua" href="publicaciones.html">Publicaciones</a><a data-search="investigadores docentes equipo grupo gastronomía" href="investigadores.html">Investigadores</a></div>
+</div>
+</div>
 <!-- =====================================================
      CONTENIDO
 ====================================================== -->
-
 <main>
-
-
-    <!-- =================================================
+<!-- =================================================
          HERO
     ================================================== -->
-
-    <section class="pub-hero">
-
-        <img
-            src="assets/images/publicaciones/Banner.png"
-            alt=""
-            class="pub-hero__image"
-        >
-
-
-        <div class="pub-hero__content">
-
-            <div class="hero-load hero-load-1 hero-eyebrow">
-
-                <span></span>
-
-                <p>
+<section class="pub-hero">
+<img alt="" class="pub-hero__image" src="assets/images/publicaciones/Banner.webp"/>
+<div class="pub-hero__content">
+<div class="hero-load hero-load-1 hero-eyebrow">
+<span></span>
+<p>
                     NUESTRA PRODUCCIÓN
                 </p>
-
-            </div>
-
-
-            <h1 class="hero-load hero-load-2">
+</div>
+<h1 aria-label="Publicaciones" class="hero-load hero-load-2">
                 PUBLICACIONES
             </h1>
-
-
-            <p class="hero-load hero-load-3 hero-description">
+<p class="hero-load hero-load-3 hero-description">
                 Producción bibliográfica que preserva,
                 analiza y divulga el patrimonio
                 gastronómico colombiano.
             </p>
-
-
-            <a
-                href="#publicaciones"
-                class="primary-button hero-load hero-load-4"
-            >
-
-                <span>
+<a class="primary-button hero-load hero-load-4" href="#publicaciones">
+<span>
                     Explora nuestras publicaciones
                 </span>
-
-                <b>
+<b>
                     →
                 </b>
-
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- =================================================
+</a>
+</div>
+</section><section aria-labelledby="journal-title" class="journal-feature">
+<div class="container journal-feature__inner">
+<a aria-label="Abrir revista Sosquua en la plataforma institucional" class="journal-feature__cover-link" href="https://cipres.sanmateo.edu.co/ojs/index.php/sosquua" rel="noopener noreferrer" target="_blank">
+<img alt="Portada de Sosquua, revista especializada en gastronomía" class="journal-feature__cover" data-fallback="assets/images/publicaciones/Banner.webp" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="https://cipres.sanmateo.edu.co/ojs/public/journals/4/cover_issue_58_es_ES.jpg"/>
+</a>
+<div class="journal-feature__content">
+<span class="journal-feature__eyebrow"><i></i> PUBLICACIÓN DESTACADA</span>
+<h2 id="journal-title">Sosquua</h2>
+<p class="journal-feature__subtitle">Revista especializada en gastronomía</p>
+<p>Un espacio de divulgación académica para compartir investigación, experiencias y conocimiento en torno a la gastronomía. Consulta sus números y contenidos en la plataforma institucional.</p>
+<div class="journal-feature__actions">
+<a class="journal-feature__button" href="https://cipres.sanmateo.edu.co/ojs/index.php/sosquua" rel="noopener noreferrer" target="_blank">Explorar la revista <span aria-hidden="true">↗</span></a>
+<span class="journal-feature__meta">Acceso desde el portal editorial de San Mateo</span>
+</div>
+</div>
+<span aria-hidden="true" class="journal-feature__mark">S.</span>
+</div>
+</section>
+<section aria-labelledby="editorial-picks-title" class="editorial-picks">
+  <div class="container editorial-picks__container">
+    <div class="editorial-picks__heading">
+      <div><span class="section-label"><span></span><p>SELECCIÓN EDITORIAL</p></span><h2 id="editorial-picks-title">Publicaciones para explorar</h2><p>Una selección de libros que conectan sabores, memoria y territorio.</p></div>
+      <a href="#publicaciones" class="editorial-picks__all">Explorar catálogo <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="editorial-picks__grid" aria-label="Selección editorial de libros">
+      <a class="editorial-picks__card" href="https://cipres.sanmateo.edu.co/ojs/index.php/libros/issue/view/181" rel="noopener noreferrer" target="_blank">
+        <img alt="Portada de Cacao, sabores y tradición" src="assets/images/publicaciones/portadas/cacao-sabores-tradicion.webp" loading="lazy" decoding="async" width="600" height="800"/>
+        <div><small>2023 · LIBRO</small><h3>Cacao, sabores y tradición</h3><span>Consultar en PALMA ↗</span></div>
+      </a>
+      <a class="editorial-picks__card" href="https://cipres.sanmateo.edu.co/ojs/index.php/libros/issue/view/192" rel="noopener noreferrer" target="_blank">
+        <img alt="Portada de Tesoros líquidos de Colombia" src="assets/images/publicaciones/portadas/tesoros-liquidos-colombia.webp" loading="lazy" decoding="async" width="600" height="800"/>
+        <div><small>2023 · LIBRO</small><h3>Tesoros líquidos de Colombia</h3><span>Consultar en PALMA ↗</span></div>
+      </a>
+      <a class="editorial-picks__card" href="https://cipres.sanmateo.edu.co/ojs/index.php/libros/issue/view/5" rel="noopener noreferrer" target="_blank">
+        <img alt="Portada de El turismo gastronómico sostenible: Ruta Bochica" src="assets/images/publicaciones/portadas/ruta-bochica.webp" loading="lazy" decoding="async" width="600" height="800"/>
+        <div><small>2020 · LIBRO</small><h3>El turismo gastronómico sostenible: Ruta Bochica</h3><span>Consultar en PALMA ↗</span></div>
+      </a>
+      <a class="editorial-picks__card" href="https://cipres.sanmateo.edu.co/ojs/index.php/libros/issue/view/13" rel="noopener noreferrer" target="_blank">
+        <img alt="Portada de Ambientes de aprendizaje para la formación del profesional gastrónomo" src="assets/images/publicaciones/portadas/profesional-gastronomo.webp" loading="lazy" decoding="async" width="600" height="800"/>
+        <div><small>2019 · LIBRO</small><h3>Ambientes de aprendizaje para la formación del profesional gastrónomo</h3><span>Consultar en PALMA ↗</span></div>
+      </a>
+      <a class="editorial-picks__card" href="https://cipres.sanmateo.edu.co/ojs/index.php/libros/issue/view/69" rel="noopener noreferrer" target="_blank">
+        <img alt="Portada de Perspectivas turísticas" src="assets/images/publicaciones/portadas/perspectivas-turisticas.webp" loading="lazy" decoding="async" width="600" height="800"/>
+        <div><small>2020 · LIBRO</small><h3>Perspectivas turísticas</h3><span>Consultar en PALMA ↗</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- =================================================
          INTRO
     ================================================== -->
-
-    <section class="pub-intro">
-
-        <div class="pub-intro__background"></div>
-
-
-        <div class="container pub-intro__container">
-
-
-            <div class="pub-intro__content reveal reveal-right">
-
-                <div class="section-label">
-
-                    <span></span>
-
-                    <p>
+<section class="pub-intro">
+<div class="pub-intro__background"></div>
+<div class="container pub-intro__container">
+<div class="pub-intro__content reveal reveal-right">
+<div class="section-label">
+<span></span>
+<p>
                         CONOCIMIENTO QUE SE COMPARTE
                     </p>
-
-                </div>
-
-
-                <h2>
-                    Conocimiento que<br>
+</div>
+<h2>
+                    Conocimiento que<br/>
                     se publica y se comparte
                 </h2>
-
-
-                <p>
-                    Nuestras publicaciones reúnen los resultados
-                    de investigación del grupo en libros,
-                    capítulos de libro y artículos científicos,
-                    aportando al reconocimiento, conservación
-                    y difusión del patrimonio gastronómico colombiano.
-                </p>
-
-            </div>
-
-
-            <!-- NOTA -->
-
-            <div class="publication-note reveal reveal-note">
-
-                <div class="note-content">
-
-                    <div class="note-row">
-                        <span class="note-icon">
+<p>Nuestras publicaciones reúnen libros, capítulos de libro y revistas académicas que aportan al reconocimiento, conservación y difusión del patrimonio gastronómico colombiano.</p>
+</div>
+<!-- NOTA -->
+<div class="publication-note reveal reveal-note">
+<div class="note-content">
+<div class="note-row">
+<span class="note-icon">
                             ♧
                         </span>
-
-                        <span>
+<span>
                             Ciencia
                         </span>
-                    </div>
-
-
-                    <div class="note-row">
-                        <span class="note-icon">
+</div>
+<div class="note-row">
+<span class="note-icon">
                             ▧
                         </span>
-
-                        <span>
+<span>
                             Territorio
                         </span>
-                    </div>
-
-
-                    <div class="note-row">
-                        <span class="note-icon">
+</div>
+<div class="note-row">
+<span class="note-icon">
                             ♧
                         </span>
-
-                        <span>
+<span>
                             Cultura
                         </span>
-                    </div>
-
-
-                    <div class="note-row">
-                        <span class="note-icon">
+</div>
+<div class="note-row">
+<span class="note-icon">
                             ♨
                         </span>
-
-                        <span>
+<span>
                             Gastronomía
                         </span>
-                    </div>
-
-
-                    <div class="note-underline"></div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =================================================
+</div>
+<div class="note-underline"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- =================================================
          CONTROLES
     ================================================== -->
-
-    <section
-        class="publication-controls"
-        id="publicaciones"
-    >
-
-        <div class="container controls-container">
-
-
-            <div class="filter-buttons">
-
-                <button
-                    type="button"
-                    class="filter-button active"
-                    data-filter="all"
-                >
-                    Todos
-                </button>
-
-
-                <button
-                    type="button"
-                    class="filter-button"
-                    data-filter="libro"
-                >
-                    Libros
-                </button>
-
-
-                <button
-                    type="button"
-                    class="filter-button"
-                    data-filter="articulo"
-                >
-                    Artículos
-                </button>
-
-
-                <button
-                    type="button"
-                    class="filter-button"
-                    data-filter="capitulo"
-                >
-                    Capítulos de libro
-                </button>
-
-            </div>
-
-
-            <!-- BUSQUEDA DE PUBLICACIONES -->
-
-            <div class="publication-search">
-
-                <svg viewBox="0 0 24 24">
-
-                    <circle
-                        cx="10.5"
-                        cy="10.5"
-                        r="6"
-                    ></circle>
-
-                    <path
-                        d="M15.3 15.3L20.5 20.5"
-                    ></path>
-
-                </svg>
-
-
-                <input
-                    id="publicationSearch"
-                    type="search"
-                    placeholder="Buscar publicación..."
-                >
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =================================================
+<section class="publication-controls" id="publicaciones">
+<div class="container controls-container">
+<div class="filter-buttons"><button aria-pressed="true" class="filter-button active" data-filter="all" type="button">Todos</button><button aria-pressed="false" class="filter-button" data-filter="libro" type="button">Libros</button><button aria-pressed="false" class="filter-button" data-filter="capitulo" type="button">Capítulos de libro</button><button aria-pressed="false" class="filter-button" data-filter="revista" type="button">Revistas</button></div>
+<!-- BUSQUEDA DE PUBLICACIONES -->
+<div class="publication-search">
+<svg viewbox="0 0 24 24">
+<circle cx="10.5" cy="10.5" r="6"></circle>
+<path d="M15.3 15.3L20.5 20.5"></path>
+</svg>
+<input id="publicationSearch" placeholder="Buscar publicación..." type="search"/>
+</div>
+</div>
+</section>
+<!-- =================================================
          LIBROS
     ================================================== -->
-
-    <section
-        class="publication-section"
-        data-section="libro"
-    >
-
-        <div class="container">
-
-            <div class="section-heading reveal reveal-left">
-
-                <div class="section-label">
-
-                    <span></span>
-
-                    <p>
-                        LIBROS RESULTADO DE INVESTIGACIÓN
-                    </p>
-
-                </div>
-
-
-                <button
-                    class="section-link"
-                    type="button"
-                    data-filter-target="libro"
-                >
-                    Ver todos los libros →
-                </button>
-
-            </div>
-
-
-            <div class="publications-grid">
-
-
-                <article
-                    class="publication-card reveal reveal-bottom"
-                    data-type="libro"
-                    data-title="Tesoros líquidos de Colombia"
-                    data-year="2022"
-                    data-category="Libro"
-                    data-description="Publicación dedicada a reconocer bebidas, preparaciones y saberes asociados a la tradición gastronómica de diferentes territorios colombianos."
-                >
-
-                    <button
-                        class="publication-open"
-                        type="button"
-                    >
-
-                        <div class="publication-image placeholder">
-
-                            <span>
-                                IMAGEN
-                            </span>
-
-                        </div>
-
-
-                        <div class="publication-info">
-
-                            <h3>
-                                Tesoros líquidos<br>
-                                de Colombia
-                            </h3>
-
-                            <span class="year">
-                                2022
-                            </span>
-
-                            <span class="card-button">
-                                Ver publicación →
-                            </span>
-
-                        </div>
-
-                    </button>
-
-                </article>
-
-
-                <article
-                    class="publication-card reveal reveal-bottom"
-                    data-type="libro"
-                    data-title="Cacao, sabores y tradición"
-                    data-year="2022"
-                    data-category="Libro"
-                    data-description="Exploración del cacao como producto cultural, gastronómico y territorial."
-                >
-
-                    <button
-                        class="publication-open"
-                        type="button"
-                    >
-
-                        <div class="publication-image placeholder">
-
-                            <span>
-                                IMAGEN
-                            </span>
-
-                        </div>
-
-
-                        <div class="publication-info">
-
-                            <h3>
-                                Cacao, sabores<br>
-                                y tradición
-                            </h3>
-
-                            <span class="year">
-                                2022
-                            </span>
-
-                            <span class="card-button">
-                                Ver publicación →
-                            </span>
-
-                        </div>
-
-                    </button>
-
-                </article>
-
-
-                <article
-                    class="publication-card reveal reveal-bottom"
-                    data-type="libro"
-                    data-title="Cocinas regionales"
-                    data-year="2022"
-                    data-category="Libro"
-                    data-description="Recopilación de relatos y saberes relacionados con las cocinas regionales y las tradiciones gastronómicas del territorio."
-                >
-
-                    <button
-                        class="publication-open"
-                        type="button"
-                    >
-
-                        <div class="publication-image placeholder">
-
-                            <span>
-                                IMAGEN
-                            </span>
-
-                        </div>
-
-
-                        <div class="publication-info">
-
-                            <h3>
-                                Cocinas regionales.<br>
-                                Relatos sazones payaneses
-                            </h3>
-
-                            <span class="year">
-                                2022
-                            </span>
-
-                            <span class="card-button">
-                                Ver publicación →
-                            </span>
-
-                        </div>
-
-                    </button>
-
-                </article>
-
-
-                <article
-                    class="publication-card reveal reveal-bottom"
-                    data-type="libro"
-                    data-title="Recopilación en Técnicas de Panadería"
-                    data-year="2020"
-                    data-category="Libro"
-                    data-description="Recopilación de conocimientos y técnicas relacionadas con la elaboración tradicional de productos de panadería."
-                >
-
-                    <button
-                        class="publication-open"
-                        type="button"
-                    >
-
-                        <div class="publication-image placeholder">
-
-                            <span>
-                                IMAGEN
-                            </span>
-
-                        </div>
-
-
-                        <div class="publication-info">
-
-                            <h3>
-                                Recopilación en Técnicas<br>
-                                de Panadería
-                            </h3>
-
-                            <span class="year">
-                                2020
-                            </span>
-
-                            <span class="card-button">
-                                Ver publicación →
-                            </span>
-
-                        </div>
-
-                    </button>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =================================================
+<section class="publication-section" data-section="libro"><div class="container"><div class="section-heading reveal reveal-left"><div class="section-label"><span></span><p>LIBROS RESULTADO DE INVESTIGACIÓN</p></div><button class="section-link" data-filter-target="libro" type="button">Ver todos los libros →</button></div><div class="publications-grid"><article class="publication-card reveal reveal-bottom" data-category="Libro" data-description="Obra sobre experiencias relacionadas con la gastronomía y el agroturismo del cacao, su origen, cultivo, transformación y potencial como patrimonio alimentario." data-title="Cacao, sabores y tradición" data-type="libro" data-url="https://cipres.sanmateo.edu.co/ojs/index.php/libros/issue/view/181" data-year="2023"><button aria-label="Consultar detalles de Cacao, sabores y tradición" class="publication-open" type="button"><div class="publication-image has-image"><img alt="Portada del libro «Cacao, sabores y tradición»" class="publication-cover" data-editorial-source="https://cipres.sanmateo.edu.co/ojs/public/journals/1/cover_issue_181_es_ES.jpg" data-fallback="assets/images/publicaciones/portadas/cacao-sabores-tradicion.webp" decoding="async" loading="lazy" src="assets/images/publicaciones/portadas/cacao-sabores-tradicion.webp"/></div><div class="publication-info"><span class="year">2023</span><h3>Cacao, sabores y tradición</h3><span class="card-button">Ver detalles →</span></div></button></article><article class="publication-card reveal reveal-bottom" data-category="Libro" data-description="Publicación que reúne saberes y preparaciones vinculados con bebidas y tradiciones de distintos territorios colombianos." data-title="Tesoros líquidos de Colombia" data-type="libro" data-url="https://cipres.sanmateo.edu.co/ojs/index.php/libros/issue/view/192" data-year="2023"><button aria-label="Consultar detalles de Tesoros líquidos de Colombia" class="publication-open" type="button"><div class="publication-image has-image"><img alt="Portada del libro «Tesoros líquidos de Colombia»" class="publication-cover" data-editorial-source="https://cipres.sanmateo.edu.co/ojs/public/journals/1/cover_issue_192_es_ES.jpg" data-fallback="assets/images/publicaciones/portadas/tesoros-liquidos-colombia.webp" decoding="async" loading="lazy" src="assets/images/publicaciones/portadas/tesoros-liquidos-colombia.webp"/></div><div class="publication-info"><span class="year">2023</span><h3>Tesoros líquidos de Colombia</h3><span class="card-button">Ver detalles →</span></div></button></article><article class="publication-card reveal reveal-bottom" data-category="Libro" data-description="Reflexiona sobre la gastronomía como patrimonio cultural y su relación con el turismo, las comunidades y el desarrollo territorial." data-title="Gastronomía y turismo: Una reflexión cultural" data-type="libro" data-url="https://cipres.sanmateo.edu.co/ojs/index.php/libros/issue/view/70" data-year="2020"><button aria-label="Consultar detalles de Gastronomía y turismo: Una reflexión cultural" class="publication-open" type="button"><div class="publication-image has-image"><img alt="Portada del libro «Gastronomía y turismo: Una reflexión cultural»" class="publication-cover" data-editorial-source="https://cipres.sanmateo.edu.co/ojs/public/journals/1/cover_issue_70_es_ES.jpg" data-fallback="assets/images/publicaciones/portadas/gastronomia-y-turismo.webp" decoding="async" loading="lazy" src="assets/images/publicaciones/portadas/gastronomia-y-turismo.webp"/></div><div class="publication-info"><span class="year">2020</span><h3>Gastronomía y turismo: Una reflexión cultural</h3><span class="card-button">Ver detalles →</span></div></button></article><article class="publication-card reveal reveal-bottom" data-category="Libro" data-description="Reúne miradas sobre turismo, sociedad y cultura, con capítulos acerca de ruralidad, memoria y potencialidades territoriales." data-title="Perspectivas turísticas: Una discusión entre lo social y lo cultural" data-type="libro" data-url="https://cipres.sanmateo.edu.co/ojs/index.php/libros/issue/view/69" data-year="2020"><button aria-label="Consultar detalles de Perspectivas turísticas: Una discusión entre lo social y lo cultural" class="publication-open" type="button"><div class="publication-image has-image"><img alt="Portada del libro «Perspectivas turísticas: Una discusión entre lo social y lo cultural»" class="publication-cover" data-editorial-source="https://cipres.sanmateo.edu.co/ojs/public/journals/1/cover_issue_69_es_ES.jpg" data-fallback="assets/images/publicaciones/portadas/perspectivas-turisticas.webp" decoding="async" loading="lazy" src="assets/images/publicaciones/portadas/perspectivas-turisticas.webp"/></div><div class="publication-info"><span class="year">2020</span><h3>Perspectivas turísticas: Una discusión entre lo social y lo cultural</h3><span class="card-button">Ver detalles →</span></div></button></article><article class="publication-card reveal reveal-bottom" data-category="Libro" data-description="Libro sobre las potencialidades del turismo gastronómico sostenible y un modelo pedagógico para desarrollar la Ruta Bochica en Colombia." data-title="El turismo gastronómico sostenible. Ruta Bochica - Potencialidades y modelo pedagógico para su desarrollo en Colombia" data-type="libro" data-url="https://cipres.sanmateo.edu.co/ojs/index.php/libros/issue/view/5" data-year="2020"><button aria-label="Consultar detalles de El turismo gastronómico sostenible. Ruta Bochica - Potencialidades y modelo pedagógico para su desarrollo en Colombia" class="publication-open" type="button"><div class="publication-image has-image"><img alt="Portada del libro «El turismo gastronómico sostenible: Ruta Bochica»" class="publication-cover" data-editorial-source="https://cipres.sanmateo.edu.co/ojs/public/journals/1/cover_issue_5_es_ES.jpg" data-fallback="assets/images/publicaciones/portadas/ruta-bochica.webp" decoding="async" loading="lazy" src="assets/images/publicaciones/portadas/ruta-bochica.webp"/></div><div class="publication-info"><span class="year">2020</span><h3>El turismo gastronómico sostenible. Ruta Bochica - Potencialidades y modelo pedagógico para su desarrollo en Colombia</h3><span class="card-button">Ver detalles →</span></div></button></article><article class="publication-card reveal reveal-bottom" data-category="Libro" data-description="Analiza la formación del profesional en gastronomía, las tendencias del sector productivo y la identidad nacional en los procesos educativos." data-title="Tendencias en los procesos de formación del gastrónomo en Colombia" data-type="libro" data-url="https://cipres.sanmateo.edu.co/ojs/index.php/libros/issue/view/15" data-year="2019"><button aria-label="Consultar detalles de Tendencias en los procesos de formación del gastrónomo en Colombia" class="publication-open" type="button"><div class="publication-image has-image"><img alt="Portada del libro «Tendencias en los procesos de formación del gastrónomo en Colombia»" class="publication-cover" data-editorial-source="https://cipres.sanmateo.edu.co/ojs/public/journals/1/cover_issue_15_es_ES.jpg" data-fallback="assets/images/publicaciones/portadas/tendencias-formacion-gastronomo.webp" decoding="async" loading="lazy" src="assets/images/publicaciones/portadas/tendencias-formacion-gastronomo.webp"/></div><div class="publication-info"><span class="year">2019</span><h3>Tendencias en los procesos de formación del gastrónomo en Colombia</h3><span class="card-button">Ver detalles →</span></div></button></article><article class="publication-card reveal reveal-bottom" data-category="Libro" data-description="Compendio de contenidos sobre el pan, los procesos y técnicas de panificación y distintas recetas vinculadas con el oficio panadero." data-title="Recopilación de técnicas en panadería" data-type="libro" data-url="https://cipres.sanmateo.edu.co/ojs/index.php/libros/issue/view/6" data-year="2020"><button aria-label="Consultar detalles de Recopilación de técnicas en panadería" class="publication-open" type="button"><div class="publication-image has-image"><img alt="Portada del libro «Recopilación de técnicas en panadería»" class="publication-cover" data-editorial-source="https://cipres.sanmateo.edu.co/ojs/public/journals/1/cover_issue_6_es_ES.jpg" data-fallback="assets/images/publicaciones/portadas/recopilacion-tecnicas-panaderia.webp" decoding="async" loading="lazy" src="assets/images/publicaciones/portadas/recopilacion-tecnicas-panaderia.webp"/></div><div class="publication-info"><span class="year">2020</span><h3>Recopilación de técnicas en panadería</h3><span class="card-button">Ver detalles →</span></div></button></article><article class="publication-card reveal reveal-bottom" data-category="Libro" data-description="Obra sobre la formación profesional en gastronomía, los modelos pedagógicos y la creación de ambientes de aprendizaje presenciales y virtuales." data-title="Ambientes de aprendizaje para la formación del profesional gastrónomo" data-type="libro" data-url="https://cipres.sanmateo.edu.co/ojs/index.php/libros/issue/view/13" data-year="2019"><button aria-label="Consultar detalles de Ambientes de aprendizaje para la formación del profesional gastrónomo" class="publication-open" type="button"><div class="publication-image has-image"><img alt="Portada del libro «Ambientes de aprendizaje para la formación del profesional gastrónomo»" class="publication-cover" data-editorial-source="https://cipres.sanmateo.edu.co/ojs/public/journals/1/cover_issue_13_es_ES.jpg" data-fallback="assets/images/publicaciones/portadas/profesional-gastronomo.webp" decoding="async" loading="lazy" src="assets/images/publicaciones/portadas/profesional-gastronomo.webp"/></div><div class="publication-info"><span class="year">2019</span><h3>Ambientes de aprendizaje para la formación del profesional gastrónomo</h3><span class="card-button">Ver detalles →</span></div></button></article></div></div></section>
+<!-- =================================================
          ARTICULOS
     ================================================== -->
-
-    <section
-        class="publication-section"
-        data-section="articulo"
-    >
-
-        <div class="container">
-
-            <div class="section-heading reveal reveal-right">
-
-                <div class="section-label">
-
-                    <span></span>
-
-                    <p>
-                        ARTÍCULOS DESTACADOS
-                    </p>
-
-                </div>
-
-
-                <button
-                    class="section-link"
-                    type="button"
-                    data-filter-target="articulo"
-                >
-                    Ver todos los artículos →
-                </button>
-
-            </div>
-
-
-            <div class="publications-grid">
-
-
-                <article
-                    class="publication-card reveal reveal-bottom"
-                    data-type="articulo"
-                    data-title="Analysis of Food Truck Services in Bogota as a Gastronomic Trend"
-                    data-year="2024"
-                    data-category="Artículo"
-                    data-description="Análisis del fenómeno de los Food Trucks en Bogotá y su relación con las nuevas tendencias de consumo y gastronomía urbana."
-                >
-
-                    <button
-                        class="publication-open"
-                        type="button"
-                    >
-
-                        <div class="article-image placeholder">
-
-                            <span>
-                                IMAGEN
-                            </span>
-
-                        </div>
-
-
-                        <div class="article-info">
-
-                            <span class="article-year">
-                                2024
-                            </span>
-
-                            <span class="article-type">
-                                Artículo
-                            </span>
-
-                            <h3>
-                                Analysis of Food Truck Services
-                                in Bogota as a Gastronomic Trend
-                            </h3>
-
-                            <span class="card-button">
-                                Leer más →
-                            </span>
-
-                        </div>
-
-                    </button>
-
-                </article>
-
-
-                <article
-                    class="publication-card reveal reveal-bottom"
-                    data-type="articulo"
-                    data-title="Tradiciones gastronómicas de origen ancestral"
-                    data-year="2023"
-                    data-category="Artículo"
-                    data-description="Investigación sobre tradiciones gastronómicas de origen ancestral y su permanencia en el territorio colombiano."
-                >
-
-                    <button
-                        class="publication-open"
-                        type="button"
-                    >
-
-                        <div class="article-image placeholder">
-
-                            <span>
-                                IMAGEN
-                            </span>
-
-                        </div>
-
-
-                        <div class="article-info">
-
-                            <span class="article-year">
-                                2023
-                            </span>
-
-                            <span class="article-type">
-                                Artículo
-                            </span>
-
-                            <h3>
-                                Tradiciones gastronómicas de origen
-                                ancestral en el Altiplano cundiboyacense
-                            </h3>
-
-                            <span class="card-button">
-                                Leer más →
-                            </span>
-
-                        </div>
-
-                    </button>
-
-                </article>
-
-
-                <article
-                    class="publication-card reveal reveal-bottom"
-                    data-type="articulo"
-                    data-title="Informal gastronomy"
-                    data-year="2023"
-                    data-category="Artículo"
-                    data-description="Análisis de las relaciones entre gastronomía informal, territorio, identidad y prácticas sociales."
-                >
-
-                    <button
-                        class="publication-open"
-                        type="button"
-                    >
-
-                        <div class="article-image placeholder">
-
-                            <span>
-                                IMAGEN
-                            </span>
-
-                        </div>
-
-
-                        <div class="article-info">
-
-                            <span class="article-year">
-                                2023
-                            </span>
-
-                            <span class="article-type">
-                                Artículo
-                            </span>
-
-                            <h3>
-                                Informal gastronomy:
-                                food, territory and resistance
-                            </h3>
-
-                            <span class="card-button">
-                                Leer más →
-                            </span>
-
-                        </div>
-
-                    </button>
-
-                </article>
-
-
-                <article
-                    class="publication-card reveal reveal-bottom"
-                    data-type="articulo"
-                    data-title="Bebidas ancestrales"
-                    data-year="2023"
-                    data-category="Artículo"
-                    data-description="Estudio sobre bebidas ancestrales, prácticas tradicionales y conocimientos gastronómicos."
-                >
-
-                    <button
-                        class="publication-open"
-                        type="button"
-                    >
-
-                        <div class="article-image placeholder">
-
-                            <span>
-                                IMAGEN
-                            </span>
-
-                        </div>
-
-
-                        <div class="article-info">
-
-                            <span class="article-year">
-                                2023
-                            </span>
-
-                            <span class="article-type">
-                                Artículo
-                            </span>
-
-                            <h3>
-                                Bebidas ancestrales
-                                y prácticas tradicionales
-                            </h3>
-
-                            <span class="card-button">
-                                Leer más →
-                            </span>
-
-                        </div>
-
-                    </button>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =================================================
+<!-- =================================================
          CAPITULOS
     ================================================== -->
-
-    <section
-        class="publication-section"
-        data-section="capitulo"
-    >
-
-        <div class="container">
-
-            <div class="section-heading reveal reveal-left">
-
-                <div class="section-label">
-
-                    <span></span>
-
-                    <p>
-                        CAPÍTULOS DE LIBRO
-                    </p>
-
-                </div>
-
-
-                <button
-                    class="section-link"
-                    type="button"
-                    data-filter-target="capitulo"
-                >
-                    Ver todos los capítulos →
-                </button>
-
-            </div>
-
-
-            <div class="chapters-grid">
-
-
-                <article
-                    class="chapter-card reveal reveal-bottom"
-                    data-type="capitulo"
-                    data-title="Reflexiones en torno al patrimonio culinario"
-                    data-year="2022"
-                    data-category="Capítulo de libro"
-                    data-description="Reflexiones sobre patrimonio culinario, memoria, territorio y prácticas gastronómicas."
-                >
-
-                    <button
-                        class="publication-open"
-                        type="button"
-                    >
-
-                        <div class="chapter-image placeholder">
-
-                            <span>
-                                IMAGEN
-                            </span>
-
-                        </div>
-
-
-                        <div class="chapter-info">
-
-                            <span>
-                                2022
-                            </span>
-
-                            <small>
-                                Capítulo de libro
-                            </small>
-
-                            <h3>
-                                Reflexiones en torno al
-                                patrimonio culinario
-                            </h3>
-
-                            <span class="card-button">
-                                Ver publicación →
-                            </span>
-
-                        </div>
-
-                    </button>
-
-                </article>
-
-
-                <article
-                    class="chapter-card reveal reveal-bottom"
-                    data-type="capitulo"
-                    data-title="Agricultura orgánica, emprendimiento social y turismo"
-                    data-year="2020"
-                    data-category="Capítulo de libro"
-                    data-description="Análisis de la relación entre agricultura orgánica, emprendimiento social y turismo."
-                >
-
-                    <button
-                        class="publication-open"
-                        type="button"
-                    >
-
-                        <div class="chapter-image placeholder">
-
-                            <span>
-                                IMAGEN
-                            </span>
-
-                        </div>
-
-
-                        <div class="chapter-info">
-
-                            <span>
-                                2020
-                            </span>
-
-                            <small>
-                                Capítulo de libro
-                            </small>
-
-                            <h3>
-                                Agricultura orgánica,
-                                emprendimiento social y turismo
-                            </h3>
-
-                            <span class="card-button">
-                                Ver publicación →
-                            </span>
-
-                        </div>
-
-                    </button>
-
-                </article>
-
-
-                <article
-                    class="chapter-card reveal reveal-bottom"
-                    data-type="capitulo"
-                    data-title="Prácticas gastronómicas domésticas"
-                    data-year="2020"
-                    data-category="Capítulo de libro"
-                    data-description="Investigación sobre prácticas gastronómicas domésticas y su papel en la identidad y memoria."
-                >
-
-                    <button
-                        class="publication-open"
-                        type="button"
-                    >
-
-                        <div class="chapter-image placeholder">
-
-                            <span>
-                                IMAGEN
-                            </span>
-
-                        </div>
-
-
-                        <div class="chapter-info">
-
-                            <span>
-                                2020
-                            </span>
-
-                            <small>
-                                Capítulo de libro
-                            </small>
-
-                            <h3>
-                                Prácticas gastronómicas domésticas
-                                como factor de identidad
-                            </h3>
-
-                            <span class="card-button">
-                                Ver publicación →
-                            </span>
-
-                        </div>
-
-                    </button>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =================================================
+<section class="publication-section" data-section="capitulo"><div class="container"><div class="section-heading reveal reveal-left"><div class="section-label"><span></span><p>CAPÍTULOS DE LIBRO</p></div><button class="section-link" data-filter-target="capitulo" type="button">Ver todos los capítulos →</button></div><div class="chapters-grid"><article class="chapter-card reveal reveal-bottom" data-category="Capítulo de libro" data-description="Capítulo de Alvelayis Nieto Mejía sobre las prácticas culinarias campesinas, identidad cultural y su relación con el territorio de la provincia Guanentina, Santander." data-title="Prácticas gastronómicas domésticas como factor de identidad y construcción cultural" data-type="capitulo" data-url="https://cipres.sanmateo.edu.co/ojs/index.php/libros/article/view/380" data-year="2020"><button aria-label="Consultar detalles de Prácticas gastronómicas domésticas como factor de identidad y construcción cultural" class="publication-open" type="button"><div class="chapter-image has-image"><img alt="Portada del libro que contiene el capítulo «Prácticas gastronómicas domésticas como factor de identidad y construcción cultural»" class="publication-cover" data-editorial-source="https://cipres.sanmateo.edu.co/ojs/public/journals/1/cover_issue_70_es_ES.jpg" data-fallback="assets/images/publicaciones/portadas/gastronomia-y-turismo.webp" decoding="async" loading="lazy" src="assets/images/publicaciones/portadas/gastronomia-y-turismo.webp"/></div><div class="chapter-info"><span>2020</span><small>Capítulo de libro</small><h3>Prácticas gastronómicas domésticas como factor de identidad y construcción cultural</h3><span class="card-button">Ver detalles →</span></div></button></article><article class="chapter-card reveal reveal-bottom" data-category="Capítulo de libro" data-description="Capítulo sobre el turismo gastronómico como posibilidad de revitalización de un destino y articulación con su oferta cultural y productiva." data-title="Turismo gastronómico en Villeta, Cundinamarca: Una alternativa para revitalizar el destino" data-type="capitulo" data-url="https://cipres.sanmateo.edu.co/ojs/index.php/libros/article/view/381" data-year="2020"><button aria-label="Consultar detalles de Turismo gastronómico en Villeta, Cundinamarca: Una alternativa para revitalizar el destino" class="publication-open" type="button"><div class="chapter-image has-image"><img alt="Portada del libro que contiene el capítulo «Turismo gastronómico en Villeta, Cundinamarca: Una alternativa para revitalizar el destino»" class="publication-cover" data-editorial-source="https://cipres.sanmateo.edu.co/ojs/public/journals/1/cover_issue_70_es_ES.jpg" data-fallback="assets/images/publicaciones/portadas/gastronomia-y-turismo.webp" decoding="async" loading="lazy" src="assets/images/publicaciones/portadas/gastronomia-y-turismo.webp"/></div><div class="chapter-info"><span>2020</span><small>Capítulo de libro</small><h3>Turismo gastronómico en Villeta, Cundinamarca: Una alternativa para revitalizar el destino</h3><span class="card-button">Ver detalles →</span></div></button></article><article class="chapter-card reveal reveal-bottom" data-category="Capítulo de libro" data-description="Capítulo de Ruta Bochica que conecta memoria, relatos de vida y sistematización de recetas en el contexto gastronómico." data-title="Memoria y gastronomía: De las historias de vida a la receta estándar" data-type="capitulo" data-url="https://cipres.sanmateo.edu.co/ojs/index.php/libros/article/view/247" data-year="2020"><button aria-label="Consultar detalles de Memoria y gastronomía: De las historias de vida a la receta estándar" class="publication-open" type="button"><div class="chapter-image has-image"><img alt="Portada del libro que contiene el capítulo «Memoria y gastronomía: De las historias de vida a la receta estándar»" class="publication-cover" data-editorial-source="https://cipres.sanmateo.edu.co/ojs/public/journals/1/cover_issue_5_es_ES.jpg" data-fallback="assets/images/publicaciones/portadas/ruta-bochica.webp" decoding="async" loading="lazy" src="assets/images/publicaciones/portadas/ruta-bochica.webp"/></div><div class="chapter-info"><span>2020</span><small>Capítulo de libro</small><h3>Memoria y gastronomía: De las historias de vida a la receta estándar</h3><span class="card-button">Ver detalles →</span></div></button></article><article class="chapter-card reveal reveal-bottom" data-category="Capítulo de libro" data-description="Capítulo sobre el papel de la gastronomía y el patrimonio cultural inmaterial en la gestión del turismo local." data-title="Gastronomía, patrimonio cultural inmaterial en la gestión del turismo local" data-type="capitulo" data-url="https://cipres.sanmateo.edu.co/ojs/index.php/libros/article/view/248" data-year="2020"><button aria-label="Consultar detalles de Gastronomía, patrimonio cultural inmaterial en la gestión del turismo local" class="publication-open" type="button"><div class="chapter-image has-image"><img alt="Portada del libro que contiene el capítulo «Gastronomía, patrimonio cultural inmaterial en la gestión del turismo local»" class="publication-cover" data-editorial-source="https://cipres.sanmateo.edu.co/ojs/public/journals/1/cover_issue_5_es_ES.jpg" data-fallback="assets/images/publicaciones/portadas/ruta-bochica.webp" decoding="async" loading="lazy" src="assets/images/publicaciones/portadas/ruta-bochica.webp"/></div><div class="chapter-info"><span>2020</span><small>Capítulo de libro</small><h3>Gastronomía, patrimonio cultural inmaterial en la gestión del turismo local</h3><span class="card-button">Ver detalles →</span></div></button></article><article class="chapter-card reveal reveal-bottom" data-category="Capítulo de libro" data-description="Capítulo que estudia las tendencias de producción y formación profesional en gastronomía en el contexto colombiano." data-title="Tendencias en los procesos productivos y de formación del gastrónomo en Colombia" data-type="capitulo" data-url="https://cipres.sanmateo.edu.co/ojs/index.php/libros/article/view/245" data-year="2019"><button aria-label="Consultar detalles de Tendencias en los procesos productivos y de formación del gastrónomo en Colombia" class="publication-open" type="button"><div class="chapter-image has-image"><img alt="Portada del libro que contiene el capítulo «Tendencias en los procesos productivos y de formación del gastrónomo en Colombia»" class="publication-cover" data-editorial-source="https://cipres.sanmateo.edu.co/ojs/public/journals/1/cover_issue_15_es_ES.jpg" data-fallback="assets/images/publicaciones/portadas/tendencias-formacion-gastronomo.webp" decoding="async" loading="lazy" src="assets/images/publicaciones/portadas/tendencias-formacion-gastronomo.webp"/></div><div class="chapter-info"><span>2019</span><small>Capítulo de libro</small><h3>Tendencias en los procesos productivos y de formación del gastrónomo en Colombia</h3><span class="card-button">Ver detalles →</span></div></button></article><article class="chapter-card reveal reveal-bottom" data-category="Capítulo de libro" data-description="Capítulo de Recopilación de técnicas en panadería que aborda el pan como alimento, práctica y saber gastronómico." data-title="El pan, mucho más que un alimento" data-type="capitulo" data-url="https://cipres.sanmateo.edu.co/ojs/index.php/libros/article/view/300" data-year="2020"><button aria-label="Consultar detalles de El pan, mucho más que un alimento" class="publication-open" type="button"><div class="chapter-image has-image"><img alt="Portada del libro que contiene el capítulo «El pan, mucho más que un alimento»" class="publication-cover" data-editorial-source="https://cipres.sanmateo.edu.co/ojs/public/journals/1/cover_issue_6_es_ES.jpg" data-fallback="assets/images/publicaciones/portadas/recopilacion-tecnicas-panaderia.webp" decoding="async" loading="lazy" src="assets/images/publicaciones/portadas/recopilacion-tecnicas-panaderia.webp"/></div><div class="chapter-info"><span>2020</span><small>Capítulo de libro</small><h3>El pan, mucho más que un alimento</h3><span class="card-button">Ver detalles →</span></div></button></article><article class="chapter-card reveal reveal-bottom" data-category="Capítulo de libro" data-description="Capítulo de Alvelayis Nieto Mejía sobre agricultura orgánica, formación rural y emprendimiento social como ejes de desarrollo territorial." data-title="Agricultura orgánica, emprendimiento social y turismo: Ejes de desarrollo en la nueva ruralidad" data-type="capitulo" data-url="https://cipres.sanmateo.edu.co/ojs/index.php/libros/article/view/376" data-year="2020"><button aria-label="Consultar detalles de Agricultura orgánica, emprendimiento social y turismo: Ejes de desarrollo en la nueva ruralidad" class="publication-open" type="button"><div class="chapter-image has-image"><img alt="Portada del libro que contiene el capítulo «Agricultura orgánica, emprendimiento social y turismo»" class="publication-cover" data-editorial-source="https://cipres.sanmateo.edu.co/ojs/public/journals/1/cover_issue_69_es_ES.jpg" data-fallback="assets/images/publicaciones/portadas/perspectivas-turisticas.webp" decoding="async" loading="lazy" src="assets/images/publicaciones/portadas/perspectivas-turisticas.webp"/></div><div class="chapter-info"><span>2020</span><small>Capítulo de libro</small><h3>Agricultura orgánica, emprendimiento social y turismo: Ejes de desarrollo en la nueva ruralidad</h3><span class="card-button">Ver detalles →</span></div></button></article></div></div></section>
+<!-- =================================================
          BANNER FINAL
     ================================================== -->
-
-    <section class="pub-final-banner">
-
-        <img
-            src="assets/images/publicaciones/Cocina rústica con memoria culinaria.png"
-            alt=""
-        >
-
-    </section>
-
+<section aria-labelledby="journal-grid-title" class="publication-section" data-section="revista">
+<div class="container"><div class="section-heading reveal reveal-left"><div class="section-label"><span></span><p id="journal-grid-title">REVISTAS</p></div><a class="section-link" href="https://cipres.sanmateo.edu.co/ojs/index.php/sosquua/issue/archive" rel="noopener noreferrer" target="_blank">Ver todos los números →</a></div>
+<div class="publications-grid"><article class="publication-card reveal reveal-bottom" data-category="Revista" data-description="Sosquua. Revista Especializada en Gastronomía es una publicación científica de acceso abierto de la Fundación Universitaria San Mateo. Publica contenidos sobre gastronomía, desarrollo de productos, emprendimiento gastronómico y patrimonio gastronómico." data-title="Sosquua. Revista Especializada en Gastronomía" data-type="revista" data-url="https://cipres.sanmateo.edu.co/ojs/index.php/sosquua/issue/archive" data-year="2019–actualidad"><button aria-label="Consultar detalles de Sosquua" class="publication-open" type="button"><div class="publication-image has-image"><img alt="Portada de la revista Sosquua" class="publication-cover" data-fallback="assets/images/publicaciones/Banner.webp" decoding="async" loading="lazy" onerror="if(this.dataset.fallback &amp;&amp; this.src !== new URL(this.dataset.fallback, document.baseURI).href){this.onerror=null;this.src=this.dataset.fallback;}" src="https://cipres.sanmateo.edu.co/ojs/public/journals/4/cover_issue_58_es_ES.jpg"/></div><div class="publication-info"><span class="year">2019–actualidad</span><h3>Sosquua. Revista Especializada en Gastronomía</h3><span class="card-button">Ver detalles →</span></div></button></article></div>
+</div></section><section class="pub-final-banner">
+<img alt="" src="assets/images/publicaciones/Cocina rústica con memoria culinaria.webp"/>
+</section>
 </main>
-
-
 <!-- =====================================================
      FOOTER
 ====================================================== -->
-
 <footer class="footer">
-
-    <div class="container footer__grid">
-
-
-        <div class="footer__brand footer-reveal">
-
-            <img
-                src="assets/logos/logo-footer.png"
-                alt="Fundación Universitaria San Mateo"
-            >
-
-            <span>
+<div class="container footer__grid">
+<div class="footer__brand footer-reveal">
+<img alt="Fundación Universitaria San Mateo" src="assets/logos/logo-footer.webp"/>
+<span>
                 EDUCACIÓN QUE TRANSFORMA
             </span>
-
-        </div>
-
-
-        <div class="footer__column footer-reveal">
-
-            <h3>
-                Enlaces rápidos
-            </h3>
-
-            <a href="el-seminario.html">
-                El Seminario
-            </a>
-
-            <a href="linea-investigacion.html">
-                Línea de investigación
-            </a>
-
-            <a href="sublinea-investigacion.html">
-                Sub-línea de investigación
-            </a>
-
-            <a href="publicaciones.html">
-                Publicaciones
-            </a>
-
-            <a href="investigadores.html">
-                Investigadores
-            </a>
-
-        </div>
-
-
-        <div class="footer__column footer-reveal">
-
-            <h3>
+</div>
+<div class="footer__column footer-reveal">
+<h3>Enlaces rápidos</h3>
+<a href="index.html">GastroPatrimonio</a>
+<a href="linea-investigacion.html">Línea de investigación</a>
+<a href="sublinea-investigacion.html">Sub-línea de investigación</a>
+<a href="publicaciones.html">Publicaciones</a>
+<a href="investigadores.html">Investigadores</a>
+<a href="opciones-de-grado.html">Opciones de grado</a>
+<div class="footer__resource-links">
+<span class="footer__subheading">Recursos editoriales</span>
+<a href="https://cipres.sanmateo.edu.co/ojs/index.php/sosquua/issue/view/232" target="_blank" rel="noopener noreferrer">Revista Sosquua <span aria-hidden="true">↗</span></a>
+<a href="https://cipres.sanmateo.edu.co/ojs/index.php/libros/issue/archive" target="_blank" rel="noopener noreferrer">Catálogo PALMA <span aria-hidden="true">↗</span></a>
+</div>
+</div>
+<div class="footer__column footer-reveal">
+<h3>
                 Información
             </h3>
-
-
-            <div class="footer__info">
-
-                <svg viewBox="0 0 24 24">
-
-                    <path
-                        d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"
-                    ></path>
-
-                    <circle
-                        cx="12"
-                        cy="9"
-                        r="2.4"
-                    ></circle>
-
-                </svg>
-
-                <span>
+<div class="footer__info">
+<svg viewbox="0 0 24 24">
+<path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"></path>
+<circle cx="12" cy="9" r="2.4"></circle>
+</svg>
+<span>
                     Bogotá, Colombia
                 </span>
-
-            </div>
-
-
-            <div class="footer__info">
-
-                <svg viewBox="0 0 64 64">
-
-                    <path d="M11 25H53"></path>
-                    <path d="M16 25V49"></path>
-                    <path d="M26 25V49"></path>
-                    <path d="M38 25V49"></path>
-                    <path d="M48 25V49"></path>
-                    <path d="M10 52H54"></path>
-                    <path d="M32 7L10 20H54L32 7Z"></path>
-
-                </svg>
-
-                <span>
-                    Fundación Universitaria<br>
+</div>
+<div class="footer__info">
+<svg viewbox="0 0 64 64">
+<path d="M11 25H53"></path>
+<path d="M16 25V49"></path>
+<path d="M26 25V49"></path>
+<path d="M38 25V49"></path>
+<path d="M48 25V49"></path>
+<path d="M10 52H54"></path>
+<path d="M32 7L10 20H54L32 7Z"></path>
+</svg>
+<span>
+                    Fundación Universitaria<br/>
                     San Mateo
                 </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="container footer__bottom">
-
-        <p>
+</div>
+</div>
+</div>
+<div class="container footer__bottom">
+<p>
             ©
             <span id="year">
                 2026
@@ -1349,109 +335,40 @@
             Fundación Universitaria San Mateo.
             Todos los derechos reservados.
         </p>
-
-
-        <div class="footer__legal">
-
-            <a href="#">
-                Términos y condiciones
-            </a>
-
-            <i></i>
-
-            <a href="#">
-                Política de privacidad
-            </a>
-
-        </div>
-
-    </div>
-
+<div class="footer__legal">
+<a href="https://www.sanmateo.edu.co/" target="_blank" rel="noopener noreferrer">Sitio institucional</a>
+<i></i>
+<a href="https://www.sanmateo.edu.co/docs/politica_proteccion.pdf" target="_blank" rel="noopener noreferrer">Política de protección de datos</a>
+</div>
+</div>
 </footer>
-
-
 <!-- =====================================================
      MODAL PUBLICACION
 ====================================================== -->
-
-<div
-    class="publication-modal"
-    id="publicationModal"
->
-
-    <div class="modal-backdrop"></div>
-
-
-    <div class="modal-window">
-
-        <button
-            class="modal-close"
-            id="closePublicationModal"
-            type="button"
-        >
-            ×
-        </button>
-
-
-        <div class="modal-image placeholder">
-
-            <span>
-                PUBLICACIÓN
-            </span>
-
-        </div>
-
-
-        <div class="modal-content">
-
-            <span
-                class="modal-category"
-                id="modalCategory"
-            ></span>
-
-
-            <span
-                class="modal-year"
-                id="modalYear"
-            ></span>
-
-
-            <h2 id="modalTitle"></h2>
-
-
-            <p id="modalDescription"></p>
-
-
-            <button
-                class="primary-button"
-                id="closeModalButton"
-                type="button"
-            >
+<div aria-labelledby="modalTitle" aria-modal="true" class="publication-modal" id="publicationModal" role="dialog">
+<div aria-hidden="true" class="modal-backdrop"></div>
+<div class="modal-window">
+<button aria-label="Cerrar ficha de publicación" class="modal-close" id="closePublicationModal" type="button">×</button>
+<div class="modal-image has-image" id="modalImage"><img alt="Portada de la publicación seleccionada" loading="lazy" src="assets/images/publicaciones/Banner.webp"/></div>
+<div class="modal-content">
+<span class="modal-category" id="modalCategory"></span>
+<span class="modal-year" id="modalYear"></span>
+<h2 id="modalTitle"></h2>
+<p id="modalDescription"></p>
+<a class="primary-button modal-external-link" href="https://cipres.sanmateo.edu.co/ojs/index.php/libros/issue/archive" id="modalExternalLink" rel="noopener noreferrer" target="_blank">Consultar publicación ↗</a><button class="primary-button" id="closeModalButton" type="button">
                 Cerrar
             </button>
-
-        </div>
-
-    </div>
-
 </div>
-
-
+</div>
+</div>
 <!-- BOTON VOLVER ARRIBA -->
-
-<button
-    class="back-to-top"
-    id="backToTop"
-    type="button"
-    aria-label="Volver arriba"
->
+<button aria-label="Volver arriba" class="back-to-top" id="backToTop" type="button">
     ↑
 </button>
-
-
 <!-- JAVASCRIPT -->
-
 <script src="js/publicaciones.js"></script>
-
+<script defer="" src="js/site-motion.js"></script>
+<script defer src="js/v6-interactions.js"></script>
+<script src="js/menu-sync.js"></script>
 </body>
 </html>

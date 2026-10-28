@@ -1,0 +1,99 @@
+/* GastroPatrimonio V14 — entradas independientes para Home y Sub-líneas */
+:root { --gp-motion-ease: cubic-bezier(.16, 1, .3, 1); }
+
+body.gp-motion-individual .gp-motion-reveal {
+  transition:
+    opacity var(--gp-reveal-duration, 760ms) var(--gp-motion-ease),
+    transform var(--gp-reveal-duration, 760ms) var(--gp-motion-ease),
+    filter var(--gp-reveal-duration, 760ms) ease,
+    clip-path var(--gp-reveal-duration, 760ms) var(--gp-motion-ease);
+  transition-delay: var(--gp-reveal-delay, 0ms);
+  backface-visibility: hidden;
+}
+html.gp-motion-ready body.gp-motion-individual .gp-motion-reveal:not(.gp-motion-visible) {
+  opacity: 0;
+  filter: blur(4px);
+  transform: translate3d(0, 24px, 0) scale(.99);
+  clip-path: inset(0 0 0 0);
+}
+html.gp-motion-ready body.gp-motion-individual .gp-motion-reveal[data-gp-direction="up"]:not(.gp-motion-visible) { transform: translate3d(0, 25px, 0) scale(.99); }
+html.gp-motion-ready body.gp-motion-individual .gp-motion-reveal[data-gp-direction="left"]:not(.gp-motion-visible) { transform: translate3d(-30px, 0, 0) rotate(-.35deg); }
+html.gp-motion-ready body.gp-motion-individual .gp-motion-reveal[data-gp-direction="right"]:not(.gp-motion-visible) { transform: translate3d(30px, 0, 0) rotate(.35deg); }
+html.gp-motion-ready body.gp-motion-individual .gp-motion-reveal[data-gp-direction="diagonal"]:not(.gp-motion-visible) { transform: translate3d(-18px, 18px, 0) scale(.985); }
+html.gp-motion-ready body.gp-motion-individual .gp-motion-reveal[data-gp-direction="scale"]:not(.gp-motion-visible) { transform: scale(.92); }
+html.gp-motion-ready body.gp-motion-individual .gp-motion-reveal[data-gp-direction="rotate-left"]:not(.gp-motion-visible) { transform: translate3d(0, 18px, 0) rotate(-2deg) scale(.985); }
+html.gp-motion-ready body.gp-motion-individual .gp-motion-reveal[data-gp-direction="rotate-right"]:not(.gp-motion-visible) { transform: translate3d(0, 18px, 0) rotate(2deg) scale(.985); }
+html.gp-motion-ready body.gp-motion-individual .gp-motion-reveal[data-gp-direction="blur"]:not(.gp-motion-visible) { transform: translate3d(0, 8px, 0) scale(1.015); filter: blur(11px); }
+html.gp-motion-ready body.gp-motion-individual .gp-motion-reveal[data-gp-direction="drop"]:not(.gp-motion-visible) { transform: translate3d(0, -28px, 0) scale(.985); }
+html.gp-motion-ready body.gp-motion-individual .gp-motion-reveal[data-gp-direction="clip"]:not(.gp-motion-visible) { transform: translate3d(0, 13px, 0); clip-path: inset(0 0 100% 0); }
+html.gp-motion-ready body.gp-motion-individual .gp-motion-reveal.gp-motion-visible {
+  opacity: 1;
+  filter: none;
+  transform: translate3d(0, 0, 0) rotate(0) scale(1);
+  clip-path: inset(0 0 0 0);
+}
+
+/* Línea de investigación: centrar y ampliar la frase HTML sobre el banner panorámico. */
+.linea-page .linea-final-banner__quote {
+  width: min(calc(100% - 54px), 1320px) !important;
+  min-height: 100%;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: clamp(12px, 1.8vw, 28px) !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+.linea-page .linea-final-banner__quote-mark {
+  align-self: center !important;
+  margin: 0 !important;
+  font-size: clamp(52px, 5vw, 82px) !important;
+  line-height: .8 !important;
+}
+.linea-page .linea-final-banner__quote p {
+  flex: 0 1 auto;
+  max-width: min(960px, 72vw) !important;
+  margin: 0 !important;
+  font-size: clamp(21px, 2vw, 32px) !important;
+  line-height: 1.38 !important;
+  text-align: center !important;
+}
+.linea-page .linea-final-banner__rule { margin-top: 0 !important; }
+
+@media (max-width: 760px) {
+  .linea-page .linea-final-banner__quote {
+    width: calc(100% - 32px) !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+  }
+  .linea-page .linea-final-banner__quote-mark {
+    font-size: 44px !important;
+    line-height: .65 !important;
+  }
+  .linea-page .linea-final-banner__quote p {
+    width: 100%;
+    max-width: 100% !important;
+    font-size: clamp(17px, 4.4vw, 22px) !important;
+    line-height: 1.4 !important;
+  }
+  .linea-page .linea-final-banner__rule { display: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.gp-motion-individual .gp-motion-reveal,
+  html.gp-motion-ready body.gp-motion-individual .gp-motion-reveal:not(.gp-motion-visible),
+  html.gp-motion-ready body.gp-motion-individual .gp-motion-reveal.gp-motion-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    clip-path: none !important;
+    transition: none !important;
+  }
+  .linea-page .linea-final-banner__quote,
+  .linea-page .linea-final-banner__quote-mark,
+  .linea-page .linea-final-banner__quote p {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

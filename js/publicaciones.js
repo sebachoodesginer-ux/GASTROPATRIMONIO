@@ -402,7 +402,7 @@ document.addEventListener(
             () => {
 
                 if (
-                    innerWidth > 800
+                    innerWidth > 1450
                 ) {
 
                     closeMenu();
@@ -804,6 +804,7 @@ document.addEventListener(
                         button.classList.add(
                             'active'
                         );
+                        filters.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
 
 
                         current =
@@ -907,26 +908,50 @@ document.addEventListener(
         const modalDescription =
             $('#modalDescription');
 
+        const modalImage =
+            $('#modalImage');
+
+        const modalExternalLink =
+            $('#modalExternalLink');
+
 
         function openPublication(
             card
         ) {
 
             modalTitle.textContent =
-                card.dataset.title;
+                card.dataset.title || 'Publicación';
 
 
             modalCategory.textContent =
-                card.dataset.category;
+                card.dataset.category || '';
 
 
             modalYear.textContent =
-                card.dataset.year;
+                card.dataset.year || '';
 
 
             modalDescription.textContent =
-                card.dataset.description;
+                card.dataset.description || 'Consulta la ficha de la publicación en el catálogo editorial.';
 
+            const cardImage = card.querySelector('.publication-cover');
+            const expandedImage = modalImage?.querySelector('img');
+            if (expandedImage && cardImage) {
+                expandedImage.src = cardImage.currentSrc || cardImage.src;
+                expandedImage.alt = cardImage.alt || `Imagen relacionada con ${card.dataset.title || 'la publicación'}`;
+            }
+
+            const targetUrl = card.dataset.url;
+            if (modalExternalLink) {
+                if (targetUrl) {
+                    modalExternalLink.href = targetUrl;
+                    modalExternalLink.hidden = false;
+                    modalExternalLink.style.display = 'inline-flex';
+                } else {
+                    modalExternalLink.hidden = true;
+                    modalExternalLink.style.display = 'none';
+                }
+            }
 
             modal.classList.add(
                 'open'
@@ -1002,6 +1027,14 @@ document.addEventListener(
                 'click',
                 closePublication
             );
+
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && modal?.classList.contains('open')) closePublication();
+        });
+
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && modal?.classList.contains('open')) closePublication();
+        });
 
 
         /* =====================================================

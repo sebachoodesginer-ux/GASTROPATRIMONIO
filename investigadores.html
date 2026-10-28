@@ -1,500 +1,154 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-
-<meta charset="UTF-8">
-
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
-
-<meta
-  name="description"
-  content="Investigadores del grupo GastroPatrimonio de la Fundación Universitaria San Mateo"
->
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Investigadores del grupo GastroPatrimonio de la Fundación Universitaria San Mateo" name="description"/>
 <title>Investigadores | GastroPatrimonio</title>
-
-
 <!-- FAVICON -->
-
-<link
-  rel="icon"
-  type="image/png"
-  sizes="32x32"
-  href="assets/logos/logo-seminario.png?v=20261005"
->
-
-<link
-  rel="icon"
-  type="image/png"
-  sizes="16x16"
-  href="assets/logos/logo-seminario.png?v=20261005"
->
-
-<link
-  rel="shortcut icon"
-  type="image/png"
-  href="assets/logos/logo-seminario.png?v=20261005"
->
-
-<link
-  rel="apple-touch-icon"
-  href="assets/logos/logo-seminario.png?v=20261005"
->
-
-
-<meta
-  name="theme-color"
-  content="#faf5ec"
->
-
-
+<link href="assets/logos/logo-seminario.webp?v=20261005" rel="icon" sizes="32x32" type="image/png"/>
+<link href="assets/logos/logo-seminario.webp?v=20261005" rel="icon" sizes="16x16" type="image/png"/>
+<link href="assets/logos/logo-seminario.webp?v=20261005" rel="shortcut icon" type="image/png"/>
+<link href="assets/logos/logo-seminario.webp?v=20261005" rel="apple-touch-icon"/>
+<meta content="#faf5ec" name="theme-color"/>
 <!-- FUENTES -->
-
-<link
-  rel="preconnect"
-  href="https://fonts.googleapis.com"
->
-
-<link
-  rel="preconnect"
-  href="https://fonts.gstatic.com"
-  crossorigin
->
-
-<link
-  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
-  rel="stylesheet"
->
-
-
-<link
-  rel="stylesheet"
-  href="css/investigadores.css"
->
-
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="css/investigadores.css" rel="stylesheet"/><link href="css/responsive-enhancements.css" rel="stylesheet"/>
+ <link href="css/v6-enhancements.css" rel="stylesheet"/>
+<link href="css/v7-refinements.css" rel="stylesheet"/>
+<link href="css/v8-refinements.css" rel="stylesheet"/>
+<link href="css/v9-refinements.css" rel="stylesheet"/><link href="css/v10-refinements.css" rel="stylesheet"/>
+<link href="css/v11-refinements.css" rel="stylesheet"/>
+ <link href="css/v14-motion-refinements.css" rel="stylesheet"/>
+<link href="css/v16-final-fixes.css" rel="stylesheet"/><link href="css/v17-final-polish.css" rel="stylesheet"/>
+  <link href="css/v19-responsive-banners.css" rel="stylesheet"/>
 </head>
-
-
 <body>
-
-
 <!-- =========================================
      PARTICULAS
 ========================================= -->
-
-<div
-  class="particles"
-  id="particles"
-  aria-hidden="true"
-></div>
-
-
-
+<div aria-hidden="true" class="particles" id="particles"></div>
 <!-- =========================================
      HEADER
 ========================================= -->
-
-<header
-  class="header"
-  id="header"
->
-
-  <div class="container header__container">
-
-
-    <!-- LOGO -->
-
-    <a
-      href="index.html"
-      class="brand"
-      aria-label="Ir al inicio"
-    >
-
-      <img
-        src="assets/logos/logo-seminario.png"
-        alt="Fundación Universitaria San Mateo"
-        class="brand__logo"
-      >
-
-      <div class="brand__text">
-
-        <span>
+<header class="header" id="header">
+<div class="container header__container">
+<!-- LOGO -->
+<a aria-label="Ir al inicio" class="brand" href="index.html">
+<img alt="Fundación Universitaria San Mateo" class="brand__logo" src="assets/logos/logo-seminario.webp"/>
+<div class="brand__text">
+<span>
           Fundación Universitaria
         </span>
-
-        <strong>
+<strong>
           SAN MATEO
         </strong>
-
-      </div>
-
-    </a>
-
-
-
-    <!-- NAVEGACION -->
-
-    <nav
-      class="navigation"
-      id="navigation"
-      aria-label="Navegación principal"
-    >
-
-      <a
-        href="el-seminario.html"
-        class="navigation__link"
-      >
-        <span>
-          El Seminario
-        </span>
-      </a>
-
-
-      <a
-        href="linea-investigacion.html"
-        class="navigation__link"
-      >
-        <span>
-          Línea de investigación
-        </span>
-      </a>
-
-
-      <a
-        href="sublinea-investigacion.html"
-        class="navigation__link"
-      >
-        <span>
-          Sub-línea de investigación
-        </span>
-      </a>
-
-
-      <a
-        href="publicaciones.html"
-        class="navigation__link"
-      >
-        <span>
-          Publicaciones
-        </span>
-      </a>
-
-
-      <a
-        href="investigadores.html"
-        class="navigation__link active"
-      >
-        <span>
-          Investigadores
-        </span>
-      </a>
-
-    </nav>
-
-
-
-    <!-- ACCIONES -->
-
-    <div class="header__actions">
-
-
-      <!-- BUSCADOR -->
-
-      <button
-        class="search-button"
-        id="searchButton"
-        type="button"
-        aria-label="Buscar"
-      >
-
-        <svg
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
-
-          <circle
-            cx="10.5"
-            cy="10.5"
-            r="6.4"
-          ></circle>
-
-          <path
-            d="M15.4 15.4L20.5 20.5"
-          ></path>
-
-        </svg>
-
-      </button>
-
-
-
-      <!-- HAMBURGUESA -->
-
-      <button
-        class="menu-button"
-        id="menuButton"
-        type="button"
-        aria-label="Abrir menú"
-        aria-expanded="false"
-      >
-
-        <span></span>
-        <span></span>
-        <span></span>
-
-      </button>
-
-
-    </div>
-
-  </div>
-
+</div>
+</a>
+<!-- NAVEGACION -->
+<nav aria-label="Navegación principal" class="navigation" id="navigation"><div class="navigation__mobile-title"><span>MENÚ</span><strong>GASTROPATRIMONIO</strong></div><a class="navigation__link" href="index.html"><span>GastroPatrimonio</span></a><a class="navigation__link" href="linea-investigacion.html"><span>Línea de investigación</span></a><a class="navigation__link" href="sublinea-investigacion.html"><span>Sub-línea de investigación</span></a><a class="navigation__link" href="publicaciones.html"><span>Publicaciones</span></a><a aria-current="page" class="navigation__link active" href="investigadores.html"><span>Investigadores</span></a><a class="navigation__link" href="opciones-de-grado.html"><span>Opciones de grado</span></a></nav>
+<!-- ACCIONES -->
+<div class="header__actions">
+<!-- BUSCADOR -->
+<button aria-label="Buscar" class="search-button" id="searchButton" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<circle cx="10.5" cy="10.5" r="6.4"></circle>
+<path d="M15.4 15.4L20.5 20.5"></path>
+</svg>
+</button>
+<!-- HAMBURGUESA -->
+<button aria-controls="navigation" aria-expanded="false" aria-label="Abrir menú" class="menu-button" id="menuButton" type="button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+</div>
 </header>
-
-
-
+<button aria-label="Cerrar menú" class="menu-backdrop" id="menuBackdrop" tabindex="-1" type="button"></button>
 <!-- =========================================
      BUSCADOR
 ========================================= -->
-
-<div
-  class="search-overlay"
-  id="searchOverlay"
->
-
-  <div class="search-box">
-
-
-    <button
-      class="search-box__close"
-      id="closeSearch"
-      type="button"
-      aria-label="Cerrar buscador"
-    >
+<div class="search-overlay" id="searchOverlay">
+<div class="search-box">
+<button aria-label="Cerrar buscador" class="search-box__close" id="closeSearch" type="button">
       ×
     </button>
-
-
-    <span class="search-box__eyebrow">
+<span class="search-box__eyebrow">
       GASTROPATRIMONIO
     </span>
-
-
-    <h2>
+<h2>
       ¿Qué deseas encontrar?
     </h2>
-
-
-    <div class="search-box__field">
-
-
-      <svg
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-      >
-
-        <circle
-          cx="10.5"
-          cy="10.5"
-          r="6.4"
-        ></circle>
-
-        <path
-          d="M15.4 15.4L20.5 20.5"
-        ></path>
-
-      </svg>
-
-
-      <input
-        type="search"
-        id="searchInput"
-        placeholder="Buscar..."
-        autocomplete="off"
-      >
-
-    </div>
-
-
-    <div
-      class="search-results"
-      id="searchResults"
-    >
-
-      <a
-        href="el-seminario.html"
-        data-search="seminario gastronomía gastropatrimonio"
-      >
-        El Seminario
-      </a>
-
-
-      <a
-        href="linea-investigacion.html"
-        data-search="línea investigación gastronomía"
-      >
-        Línea de investigación
-      </a>
-
-
-      <a
-        href="sublinea-investigacion.html"
-        data-search="sub línea investigación"
-      >
-        Sub-línea de investigación
-      </a>
-
-
-      <a
-        href="publicaciones.html"
-        data-search="publicaciones artículos libros documentos"
-      >
-        Publicaciones
-      </a>
-
-
-      <a
-        href="investigadores.html"
-        data-search="investigadores docentes profesores equipo"
-      >
-        Investigadores
-      </a>
-
-    </div>
-
-  </div>
-
+<div class="search-box__field">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<circle cx="10.5" cy="10.5" r="6.4"></circle>
+<path d="M15.4 15.4L20.5 20.5"></path>
+</svg>
+<input autocomplete="off" id="searchInput" placeholder="Buscar..." type="search"/>
 </div>
-
-
-
+<div class="search-results" id="searchResults"><a data-search="grupo gastronomía patrimonio cultura investigación" href="index.html">GastroPatrimonio</a><a data-search="línea investigacion gastronomía patrimonio" href="linea-investigacion.html">Línea de investigación</a><a data-search="sub línea investigacion gastronómica" href="sublinea-investigacion.html">Sub-línea de investigación</a><a data-search="opciones de grado trabajo investigación ayudantía pasantía seminario" href="opciones-de-grado.html">Opciones de grado</a><a data-search="publicaciones libros artículos revista científica Sosquua" href="publicaciones.html">Publicaciones</a><a data-search="investigadores docentes equipo grupo gastronomía" href="investigadores.html">Investigadores</a></div>
+</div>
+</div>
 <main>
-
-
 <!-- =========================================
      HERO
 ========================================= -->
-
 <section class="investigator-hero">
-
-
-  <img
-    src="assets/images/profesionales/Banner.png"
-    alt=""
-    class="investigator-hero__image"
-  >
-
-
-  <div
-    class="investigator-hero__wash"
-    aria-hidden="true"
-  ></div>
-
-
-  <div class="container investigator-hero__content">
-
-
-    <div
-      class="hero-load hero-load-1 hero-eyebrow"
-    >
-
-      <span></span>
-
-      <p>
+<img alt="" class="investigator-hero__image" src="assets/images/profesionales/Banner.webp"/>
+<div aria-hidden="true" class="investigator-hero__wash"></div>
+<div class="container investigator-hero__content">
+<div class="hero-load hero-load-1 hero-eyebrow">
+<span></span>
+<p>
         NUESTRO EQUIPO
       </p>
-
-    </div>
-
-
-    <h1
-      class="hero-load hero-load-2"
-    >
+</div>
+<h1 class="hero-load hero-load-2">
       INVESTIGADORES
     </h1>
-
-
-    <p
-      class="hero-load hero-load-3"
-    >
+<p class="hero-load hero-load-3">
 
       Personas que investigan, preservan y proyectan
       nuestro patrimonio gastronómico.
 
     </p>
-
-
-  </div>
-
+</div>
 </section>
-
-
-
 <!-- =========================================
      LINEA DELGADA
 ========================================= -->
-
 <section class="institution-divider">
-
-  <div class="container">
-
-    <div class="institution-divider__line">
-
-      <span></span>
-
-    </div>
-
-  </div>
-
+<div class="container">
+<div class="institution-divider__line">
+<span></span>
+</div>
+</div>
 </section>
-
-
-
 <!-- =========================================
      INTRODUCCION
 ========================================= -->
-
 <section class="investigator-intro">
-
-
-  <div
-    class="intro-paper"
-    aria-hidden="true"
-  ></div>
-
-
-  <div class="container intro-grid">
-
-
-    <!-- TEXTO -->
-
-    <div
-      class="intro-copy reveal reveal-left"
-    >
-
-      <div class="section-label">
-
-        <span></span>
-
-        <p>
+<div aria-hidden="true" class="intro-paper"></div>
+<div class="container intro-grid">
+<!-- TEXTO -->
+<div class="intro-copy reveal reveal-left">
+<div class="section-label">
+<span></span>
+<p>
           SOBRE NUESTRO EQUIPO
         </p>
+</div>
+<h2>
 
-      </div>
-
-
-      <h2>
-
-        Un equipo que transforma<br>
+        Un equipo que transforma<br/>
         conocimiento en patrimonio
 
       </h2>
-
-
-      <p>
+<p>
 
         El grupo Patrimonio Cultural y Gastronómico de Colombia
         reúne investigadores que trabajan en la generación de
@@ -502,861 +156,225 @@
         difusión del patrimonio gastronómico del país.
 
       </p>
-
-    </div>
-
-
-
-    <!-- VALORES -->
-
-    <div
-      class="intro-values reveal reveal-right"
-    >
-
-
-      <div class="value-item">
-
-        <span class="value-icon">
+</div>
+<!-- VALORES -->
+<div class="intro-values reveal reveal-right">
+<div class="value-item">
+<span class="value-icon">
           ✦
         </span>
-
-        <strong>
+<strong>
           Conocer
         </strong>
-
-      </div>
-
-
-      <div class="value-item">
-
-        <span class="value-icon">
+</div>
+<div class="value-item">
+<span class="value-icon">
           ▤
         </span>
-
-        <strong>
+<strong>
           Preservar
         </strong>
-
-      </div>
-
-
-      <div class="value-item">
-
-        <span class="value-icon">
+</div>
+<div class="value-item">
+<span class="value-icon">
           ♧
         </span>
-
-        <strong>
+<strong>
           Valorar
         </strong>
-
-      </div>
-
-
-      <div class="value-item">
-
-        <span class="value-icon">
+</div>
+<div class="value-item">
+<span class="value-icon">
           ↗
         </span>
-
-        <strong>
+<strong>
           Compartir
         </strong>
-
-      </div>
-
-
-    </div>
-
-
-
-    <!-- NOTA -->
-
-    <div
-      class="intro-note reveal reveal-note"
-      aria-hidden="true"
-    >
-
-      <span>
+</div>
+</div>
+<!-- NOTA -->
+<div aria-hidden="true" class="intro-note reveal reveal-note">
+<span>
         Territorios
       </span>
-
-      <span>
+<span>
         Saberes
       </span>
-
-      <span>
+<span>
         Personas
       </span>
-
-      <i></i>
-
-    </div>
-
-
-  </div>
-
+<i></i>
+</div>
+</div>
 </section>
-
-
-
 <!-- =========================================
      INVESTIGADORES
 ========================================= -->
-
-<section
-  class="profiles-section"
-  id="investigadores"
->
-
-
-  <div class="container">
-
-
-    <!-- TITULO -->
-
-    <div
-      class="section-heading reveal reveal-left"
-    >
-
-      <div>
-
-        <div class="section-label">
-
-          <span></span>
-
-          <p>
+<section class="profiles-section" id="investigadores">
+<div class="container">
+<!-- TITULO -->
+<div class="section-heading reveal reveal-left">
+<div>
+<div class="section-label">
+<span></span>
+<p>
             NUESTRO EQUIPO INVESTIGADOR
           </p>
-
-        </div>
-
-
-        <h2>
+</div>
+<h2>
           Conoce a nuestros investigadores
         </h2>
-
-      </div>
-
-
-      <p class="section-heading__hint">
-
-        Pasa el cursor sobre cada perfil para conocerlo.
-
-      </p>
-
-    </div>
-
-
-
-    <!-- =====================================
+</div>
+<p class="section-heading__hint">Selecciona un perfil para consultar su trayectoria y áreas de trabajo.</p>
+</div>
+<!-- =====================================
          PERFIL ABIERTO
     ====================================== -->
-
-    <div
-      class="profile-viewer"
-      id="profileViewer"
-      aria-hidden="true"
-    >
-
-
-      <div
-        class="profile-viewer__accent"
-        aria-hidden="true"
-      ></div>
-
-
-      <button
-        class="profile-viewer__close"
-        id="closeProfile"
-        type="button"
-        aria-label="Cerrar perfil"
-      >
+<div aria-hidden="true" class="profile-viewer" id="profileViewer">
+<div aria-hidden="true" class="profile-viewer__accent"></div>
+<button aria-label="Cerrar perfil" class="profile-viewer__close" id="closeProfile" type="button">
         ×
       </button>
-
-
-      <div class="profile-viewer__image-wrap">
-
-
-        <div
-          class="profile-viewer__image placeholder-image"
-          id="profileImage"
-        >
-
-          <span>
+<div class="profile-viewer__image-wrap">
+<div class="profile-viewer__image placeholder-image" id="profileImage">
+<span>
             FOTO DEL INVESTIGADOR
           </span>
-
-        </div>
-
-
-        <div class="profile-viewer__image-caption">
+</div>
+<div class="profile-viewer__image-caption">
 
           Perfil investigador
 
         </div>
-
-
-      </div>
-
-
-
-      <div class="profile-viewer__content">
-
-
-        <div class="profile-viewer__eyebrow">
-
-          <span></span>
-
-          <p>
+</div>
+<div class="profile-viewer__content">
+<div class="profile-viewer__eyebrow">
+<span></span>
+<p>
             PERFIL DEL INVESTIGADOR
           </p>
-
-        </div>
-
-
-        <h2 id="profileName">
+</div>
+<h2 id="profileName">
           Investigador
         </h2>
-
-
-        <span
-          class="profile-role"
-          id="profileRole"
-        >
+<span class="profile-role" id="profileRole">
           Integrante
         </span>
-
-
-        <p
-          class="profile-description"
-          id="profileDescription"
-        >
+<p class="profile-description" id="profileDescription">
 
           Integrante del grupo Patrimonio Cultural y
           Gastronómico de Colombia.
 
         </p>
-
-
-
-        <div class="profile-data">
-
-
-          <div class="profile-data__item">
-
-            <span class="data-icon">
+<div class="profile-data">
+<div class="profile-data__item">
+<span class="data-icon">
               ▣
             </span>
-
-            <div>
-
-              <small>
-                Vinculado desde
-              </small>
-
-              <strong id="profileSince">
+<div>
+<small>Formación principal</small>
+<strong id="profileSince">
                 —
               </strong>
-
-            </div>
-
-          </div>
-
-
-
-          <div class="profile-data__item">
-
-            <span class="data-icon">
+</div>
+</div>
+<div class="profile-data__item">
+<span class="data-icon">
               ◷
             </span>
-
-            <div>
-
-              <small>
-                Dedicación
-              </small>
-
-              <strong id="profileHours">
+<div>
+<small>Áreas de interés</small>
+<strong id="profileHours">
                 —
               </strong>
-
-            </div>
-
-          </div>
-
-
-
-          <div class="profile-data__item">
-
-            <span class="data-icon">
+</div>
+</div>
+<div class="profile-data__item">
+<span class="data-icon">
               ♧
             </span>
-
-            <div>
-
-              <small>
-                Tipo de vinculación
-              </small>
-
-              <strong id="profileType">
+<div>
+<small>Rol en el grupo</small>
+<strong id="profileType">
                 —
               </strong>
-
-            </div>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- =====================================
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- =====================================
          GRID
     ====================================== -->
-
-    <div class="profiles-grid">
-
-
-      <!-- ===================================
-           INVESTIGADOR 1
-      ==================================== -->
-
-      <article
-        class="profile-card reveal reveal-bottom"
-
-        data-name="Elizabeth Araque Elaica"
-
-        data-role="Líder del grupo"
-
-        data-since="2013/1"
-
-        data-hours="20 horas"
-
-        data-type="Integrante"
-
-        data-description="Líder del grupo Patrimonio Cultural y Gastronómico de Colombia."
-      >
-
-
-        <button
-          class="profile-card__button"
-          type="button"
-        >
-
-
-          <div
-            class="profile-card__image placeholder-image"
-          >
-
-            <span>
-              FOTO
-            </span>
-
-          </div>
-
-
-          <div
-            class="profile-card__shine"
-          ></div>
-
-
-          <!-- OPCION INFERIOR -->
-
-          <div
-            class="profile-card__overlay"
-          >
-
-            <span>
-              Mira el perfil
-            </span>
-
-            <b>
-              →
-            </b>
-
-          </div>
-
-
-          <div class="profile-card__info">
-
-
-            <div>
-
-              <h3>
-
-                Elizabeth<br>
-                Araque Elaica
-
-              </h3>
-
-
-              <span>
-                Líder del grupo
-              </span>
-
-            </div>
-
-
-            <b class="profile-card__arrow">
-              ↗
-            </b>
-
-
-          </div>
-
-
-        </button>
-
-      </article>
-
-
-
-      <!-- ===================================
-           INVESTIGADOR 2
-      ==================================== -->
-
-      <article
-        class="profile-card reveal reveal-bottom"
-
-        data-name="Alejandra Maria Rodriguez Guarin"
-
-        data-role="Integrante"
-
-        data-since="2022/1"
-
-        data-hours="23 horas"
-
-        data-type="Integrante"
-
-        data-description="Investigadora integrante del grupo Patrimonio Cultural y Gastronómico de Colombia."
-      >
-
-
-        <button
-          class="profile-card__button"
-          type="button"
-        >
-
-
-          <div
-            class="profile-card__image placeholder-image"
-          >
-
-            <span>
-              FOTO
-            </span>
-
-          </div>
-
-
-          <div
-            class="profile-card__shine"
-          ></div>
-
-
-          <div
-            class="profile-card__overlay"
-          >
-
-            <span>
-              Mira el perfil
-            </span>
-
-            <b>
-              →
-            </b>
-
-          </div>
-
-
-          <div class="profile-card__info">
-
-
-            <div>
-
-              <h3>
-
-                Alejandra Maria<br>
-                Rodriguez Guarin
-
-              </h3>
-
-
-              <span>
-                Integrante
-              </span>
-
-            </div>
-
-
-            <b class="profile-card__arrow">
-              ↗
-            </b>
-
-
-          </div>
-
-
-        </button>
-
-      </article>
-
-
-
-      <!-- ===================================
-           INVESTIGADOR 3
-      ==================================== -->
-
-      <article
-        class="profile-card reveal reveal-bottom"
-
-        data-name="Alvelayis Nieto Mejía"
-
-        data-role="Integrante"
-
-        data-since="2016/1"
-
-        data-hours="4 horas"
-
-        data-type="Integrante"
-
-        data-description="Investigadora integrante del grupo Patrimonio Cultural y Gastronómico de Colombia."
-      >
-
-
-        <button
-          class="profile-card__button"
-          type="button"
-        >
-
-
-          <div
-            class="profile-card__image placeholder-image"
-          >
-
-            <span>
-              FOTO
-            </span>
-
-          </div>
-
-
-          <div
-            class="profile-card__shine"
-          ></div>
-
-
-          <div
-            class="profile-card__overlay"
-          >
-
-            <span>
-              Mira el perfil
-            </span>
-
-            <b>
-              →
-            </b>
-
-          </div>
-
-
-          <div class="profile-card__info">
-
-
-            <div>
-
-              <h3>
-
-                Alvelayis Nieto<br>
-                Mejía
-
-              </h3>
-
-
-              <span>
-                Integrante
-              </span>
-
-            </div>
-
-
-            <b class="profile-card__arrow">
-              ↗
-            </b>
-
-
-          </div>
-
-
-        </button>
-
-      </article>
-
-
-
-      <!-- ===================================
-           INVESTIGADOR 4
-      ==================================== -->
-
-      <article
-        class="profile-card reveal reveal-bottom"
-
-        data-name="Aselio de Jesús Silvera Sarmiento"
-
-        data-role="Integrante"
-
-        data-since="2019/1"
-
-        data-hours="15 horas"
-
-        data-type="Integrante"
-
-        data-description="Investigador integrante del grupo Patrimonio Cultural y Gastronómico de Colombia."
-      >
-
-
-        <button
-          class="profile-card__button"
-          type="button"
-        >
-
-
-          <div
-            class="profile-card__image placeholder-image"
-          >
-
-            <span>
-              FOTO
-            </span>
-
-          </div>
-
-
-          <div
-            class="profile-card__shine"
-          ></div>
-
-
-          <div
-            class="profile-card__overlay"
-          >
-
-            <span>
-              Mira el perfil
-            </span>
-
-            <b>
-              →
-            </b>
-
-          </div>
-
-
-          <div class="profile-card__info">
-
-
-            <div>
-
-              <h3>
-
-                Aselio de Jesús<br>
-                Silvera Sarmiento
-
-              </h3>
-
-
-              <span>
-                Integrante
-              </span>
-
-            </div>
-
-
-            <b class="profile-card__arrow">
-              ↗
-            </b>
-
-
-          </div>
-
-
-        </button>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
+<div class="profiles-grid"><article class="profile-card reveal reveal-bottom" data-description="Doctor en Ciencias Humanas del Patrimonio y de la Cultura por la Universidad de Girona, magíster en Estudios Sociales por la Universidad Pedagógica Nacional y administrador de Empresas Turísticas por la Universidad del Tolima. Se desempeña como asesor y consultor para empresas e instituciones del sector turístico. Investiga turismo y patrimonio cultural, con interés en las dinámicas sociales, culturales, geográficas y antropológicas del turismo y la cultura. También cuenta con experiencia en diseño curricular, coordinación de líneas y grupos de investigación. Actualmente es docente investigador y coordinador de investigaciones del programa de Gastronomía de la Fundación Universitaria San Mateo." data-hours="Turismo, patrimonio cultural, cultura y dinámicas sociales" data-image="assets/images/investigadores/alvelayis-nieto-mejia.jpg" data-name="Alvelayis Nieto Mejía" data-role="Líder del grupo · Coordinador de investigaciones de Gastronomía" data-since="Doctor en Ciencias Humanas del Patrimonio y de la Cultura" data-type="Líder del grupo de investigación"><button aria-label="Ver perfil de Alvelayis Nieto Mejía" class="profile-card__button" type="button"><div class="profile-card__image profile-card__photo"><img alt="Retrato de Alvelayis Nieto Mejía" decoding="async" loading="lazy" src="assets/images/investigadores/alvelayis-nieto-mejia.jpg"/></div><div aria-hidden="true" class="profile-card__shine"></div><div class="profile-card__overlay"><span>Ver perfil</span><b>→</b></div><div class="profile-card__info"><div><h3>Alvelayis Nieto Mejía</h3><span>Líder del grupo · Coordinador de investigaciones de Gastronomía</span></div><b class="profile-card__arrow">↗</b></div></button></article><article class="profile-card reveal reveal-bottom" data-description="Ingeniera de alimentos, doctora en Antropología, magíster en Estudios Interdisciplinarios del Desarrollo y especialista en proyectos. Sus campos de acción incluyen antropología alimentaria, patrimonio inmaterial, seguridad y soberanía alimentaria, gestión gastronómica e innovación educativa con enfoque intercultural, educación ambiental y perspectiva artística interdisciplinar. Cuenta con experiencia en formulación de proyectos y trabajo con comunidades, así como en educación superior y apropiación social del conocimiento con poblaciones diversas. Ha desempeñado roles de docencia e investigación, gestión académica, decanatura y aseguramiento de la calidad; además, ha desarrollado metodologías pedagógicas, plataformas digitales y proyectos multimedia con enfoque diferencial de género." data-hours="Antropología alimentaria, patrimonio inmaterial, seguridad y soberanía alimentaria" data-image="assets/images/investigadores/alejandra-maria-rodriguez-guarin.jpg" data-name="Alejandra María Rodríguez Guarín" data-role="Docente e investigadora" data-since="Ingeniera de alimentos, doctora en Antropología" data-type="Docente e investigadora"><button aria-label="Ver perfil de Alejandra María Rodríguez Guarín" class="profile-card__button" type="button"><div class="profile-card__image profile-card__photo"><img alt="Retrato de Alejandra María Rodríguez Guarín" decoding="async" loading="lazy" src="assets/images/investigadores/alejandra-maria-rodriguez-guarin.jpg"/></div><div aria-hidden="true" class="profile-card__shine"></div><div class="profile-card__overlay"><span>Ver perfil</span><b>→</b></div><div class="profile-card__info"><div><h3>Alejandra María Rodríguez Guarín</h3><span>Docente e investigadora</span></div><b class="profile-card__arrow">↗</b></div></button></article><article class="profile-card reveal reveal-bottom" data-description="Investigador presentado como integrante del equipo GastroPatrimonio. El documento de perfiles profesionales suministrado no incluye una reseña curricular de Orlando Rodríguez Argaes; por ello, su formación, trayectoria y líneas de trabajo ampliadas quedan pendientes de validación institucional." data-hours="Perfil de investigación pendiente de validación institucional" data-image="assets/images/investigadores/orlando-rodriguez-argaes.jpg" data-name="Orlando Rodríguez Argaes" data-role="Investigador del grupo" data-since="Información curricular por confirmar" data-type="Integrante del equipo"><button aria-label="Ver perfil de Orlando Rodríguez Argaes" class="profile-card__button" type="button"><div class="profile-card__image profile-card__photo"><img alt="Retrato de Orlando Rodríguez Argaes" decoding="async" loading="lazy" src="assets/images/investigadores/orlando-rodriguez-argaes.jpg"/></div><div aria-hidden="true" class="profile-card__shine"></div><div class="profile-card__overlay"><span>Ver perfil</span><b>→</b></div><div class="profile-card__info"><div><h3>Orlando Rodríguez Argaes</h3><span>Investigador del grupo</span></div><b class="profile-card__arrow">↗</b></div></button></article></div>
+</div>
 </section>
-
-
-
 <!-- =========================================
      BANNER FINAL
 ========================================= -->
-
 <section class="investigator-final-banner">
-
-  <img
-    src="assets/images/profesionales/Banner_final.png"
-    alt=""
-  >
-
+<img alt="" src="assets/images/profesionales/Banner_final.webp"/>
 </section>
-
-
 </main>
-
-
-
 <!-- =========================================
      FOOTER
 ========================================= -->
-
 <footer class="footer">
-
-
-  <div class="container footer__grid">
-
-
-    <div
-      class="footer__brand footer-reveal"
-    >
-
-      <img
-        src="assets/logos/logo-footer.png"
-        alt="Fundación Universitaria San Mateo"
-      >
-
-      <span>
+<div class="container footer__grid">
+<div class="footer__brand footer-reveal">
+<img alt="Fundación Universitaria San Mateo" src="assets/logos/logo-footer.webp"/>
+<span>
         EDUCACIÓN QUE TRANSFORMA
       </span>
-
-    </div>
-
-
-
-    <div
-      class="footer__column footer-reveal"
-    >
-
-      <h3>
-        Enlaces rápidos
-      </h3>
-
-
-      <a href="el-seminario.html">
-        El Seminario
-      </a>
-
-
-      <a href="linea-investigacion.html">
-        Línea de investigación
-      </a>
-
-
-      <a href="sublinea-investigacion.html">
-        Sub-línea de investigación
-      </a>
-
-
-      <a href="publicaciones.html">
-        Publicaciones
-      </a>
-
-
-      <a href="investigadores.html">
-        Investigadores
-      </a>
-
-    </div>
-
-
-
-    <div
-      class="footer__column footer-reveal"
-    >
-
-      <h3>
+</div>
+<div class="footer__column footer-reveal">
+<h3>Enlaces rápidos</h3>
+<a href="index.html">GastroPatrimonio</a>
+<a href="linea-investigacion.html">Línea de investigación</a>
+<a href="sublinea-investigacion.html">Sub-línea de investigación</a>
+<a href="publicaciones.html">Publicaciones</a>
+<a href="investigadores.html">Investigadores</a>
+<a href="opciones-de-grado.html">Opciones de grado</a>
+<div class="footer__resource-links">
+<span class="footer__subheading">Recursos editoriales</span>
+<a href="https://cipres.sanmateo.edu.co/ojs/index.php/sosquua/issue/view/232" target="_blank" rel="noopener noreferrer">Revista Sosquua <span aria-hidden="true">↗</span></a>
+<a href="https://cipres.sanmateo.edu.co/ojs/index.php/libros/issue/archive" target="_blank" rel="noopener noreferrer">Catálogo PALMA <span aria-hidden="true">↗</span></a>
+</div>
+</div>
+<div class="footer__column footer-reveal">
+<h3>
         Información
       </h3>
-
-
-      <div class="footer__info">
-
-        <svg viewBox="0 0 24 24">
-
-          <path
-            d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"
-          ></path>
-
-          <circle
-            cx="12"
-            cy="9"
-            r="2.4"
-          ></circle>
-
-        </svg>
-
-        <span>
+<div class="footer__info">
+<svg viewbox="0 0 24 24">
+<path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"></path>
+<circle cx="12" cy="9" r="2.4"></circle>
+</svg>
+<span>
           Bogotá, Colombia
         </span>
+</div>
+<div class="footer__info">
+<svg viewbox="0 0 64 64">
+<path d="M11 25H53"></path>
+<path d="M16 25V49"></path>
+<path d="M26 25V49"></path>
+<path d="M38 25V49"></path>
+<path d="M48 25V49"></path>
+<path d="M10 52H54"></path>
+<path d="M32 7L10 20H54L32 7Z"></path>
+</svg>
+<span>
 
-      </div>
-
-
-      <div class="footer__info">
-
-        <svg viewBox="0 0 64 64">
-
-          <path d="M11 25H53"></path>
-
-          <path d="M16 25V49"></path>
-
-          <path d="M26 25V49"></path>
-
-          <path d="M38 25V49"></path>
-
-          <path d="M48 25V49"></path>
-
-          <path d="M10 52H54"></path>
-
-          <path
-            d="M32 7L10 20H54L32 7Z"
-          ></path>
-
-        </svg>
-
-        <span>
-
-          Fundación Universitaria<br>
+          Fundación Universitaria<br/>
           San Mateo
 
         </span>
-
-      </div>
-
-    </div>
-
-
-  </div>
-
-
-
-  <div class="container footer__bottom">
-
-
-    <p>
+</div>
+</div>
+</div>
+<div class="container footer__bottom">
+<p>
 
       ©
       <span id="year">
@@ -1367,42 +385,20 @@
       Todos los derechos reservados.
 
     </p>
-
-
-    <div class="footer__legal">
-
-      <a href="#">
-        Términos y condiciones
-      </a>
-
-      <i></i>
-
-      <a href="#">
-        Política de privacidad
-      </a>
-
-    </div>
-
-  </div>
-
+<div class="footer__legal">
+<a href="https://www.sanmateo.edu.co/" target="_blank" rel="noopener noreferrer">Sitio institucional</a>
+<i></i>
+<a href="https://www.sanmateo.edu.co/docs/politica_proteccion.pdf" target="_blank" rel="noopener noreferrer">Política de protección de datos</a>
+</div>
+</div>
 </footer>
-
-
-
 <!-- VOLVER ARRIBA -->
-
-<button
-  class="back-to-top"
-  id="backToTop"
-  type="button"
-  aria-label="Volver arriba"
->
+<button aria-label="Volver arriba" class="back-to-top" id="backToTop" type="button">
   ↑
 </button>
-
-
-
 <script src="js/investigadores.js"></script>
-
+<script defer src="js/site-motion.js"></script>
+<script defer src="js/v6-interactions.js"></script>
+<script src="js/menu-sync.js"></script>
 </body>
 </html>

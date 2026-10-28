@@ -99,15 +99,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         if (entry.isIntersecting) {
 
-                            element.classList.add(
-                                "linea-visible"
-                            );
-
-                        } else {
-
-                            element.classList.remove(
-                                "linea-visible"
-                            );
+                            element.classList.add("linea-visible");
+                            // Reveal once and keep the section visible when it leaves
+                            // the viewport; otherwise the final banner can turn into
+                            // a large empty block above the footer.
+                            revealObserver.unobserve(element);
 
                         }
 

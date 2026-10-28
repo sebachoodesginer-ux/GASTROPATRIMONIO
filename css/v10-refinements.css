@@ -1,0 +1,151 @@
+/* =========================================================
+   GASTROPATRIMONIO V10 — autoplay y flujo continuo de Línea de investigación
+   Se carga al final para refinar sin alterar la identidad visual existente.
+========================================================= */
+:root {
+  --gp-v10-orange: #dc642f;
+  --gp-v10-rust: #b53a22;
+  --gp-v10-paper: #fbf5eb;
+}
+
+/* Carrusel: transición continua, centro editorial enfatizado y sin pausa al pasar el cursor. */
+.home-pub-carousel .gp-carousel__viewport {
+  scroll-behavior: smooth !important;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: x mandatory;
+}
+.home-pub-carousel .gp-carousel__track {
+  align-items: center !important;
+  padding-block: 1.35rem 1.8rem !important;
+}
+.home-pub-carousel .home-publications__card {
+  transform-origin: center center;
+  transition:
+    transform .72s cubic-bezier(.22,.72,.2,1),
+    opacity .62s ease,
+    filter .62s ease,
+    border-color .62s ease,
+    box-shadow .72s cubic-bezier(.22,.72,.2,1) !important;
+}
+.home-pub-carousel .home-publications__card.is-active,
+.home-pub-carousel .home-publications__card[aria-current="true"] {
+  animation: gpV10ActivePublication 5s ease-in-out infinite;
+  border-color: rgba(220,100,47,.88) !important;
+}
+@keyframes gpV10ActivePublication {
+  0%, 100% {
+    box-shadow: 0 0 0 1px rgba(220,100,47,.20), 0 0 20px rgba(220,100,47,.22), 0 0 39px rgba(220,100,47,.12), 0 24px 46px rgba(83,46,24,.17);
+  }
+  50% {
+    box-shadow: 0 0 0 1px rgba(220,100,47,.32), 0 0 28px rgba(220,100,47,.34), 0 0 50px rgba(220,100,47,.17), 0 28px 50px rgba(83,46,24,.20);
+  }
+}
+.home-pub-carousel .gp-carousel__dot[aria-current="true"] {
+  background: var(--gp-v10-orange) !important;
+  box-shadow: 0 0 12px rgba(220,100,47,.26);
+}
+
+/* Línea de investigación: que el final de las sub-líneas fluya hasta el banner y footer. */
+.linea-main > .linea-sublines {
+  margin: 0 !important;
+  padding-top: clamp(2rem, 3.6vw, 3.7rem) !important;
+  padding-bottom: clamp(.8rem, 1.4vw, 1.25rem) !important;
+}
+.linea-sublines__grid {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+.linea-main > .linea-final-banner,
+.linea-main > .linea-final-banner.linea-reveal {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+  clip-path: none !important;
+  line-height: 0 !important;
+  background: #542a1e;
+}
+.linea-main > .linea-final-banner img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  object-fit: contain !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+.linea-main + .linea-footer {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  border-top: 1px solid rgba(139,93,62,.12);
+}
+
+/* Entrada amable del banner superior y construcción progresiva al desplazarse. */
+.linea-hero__background {
+  will-change: transform, opacity, filter;
+}
+html.js:not(.linea-ready) .linea-hero__background {
+  opacity: .78;
+  transform: scale(1.035);
+  filter: saturate(.9);
+}
+html.js.linea-ready .linea-hero__background {
+  opacity: 1;
+  transform: scale(1);
+  filter: saturate(1.02);
+  transition: opacity 1.15s ease, transform 1.55s cubic-bezier(.2,.7,.2,1), filter 1.2s ease;
+}
+.linea-main .linea-reveal,
+.linea-main [data-linea-reveal] {
+  transition:
+    opacity .72s cubic-bezier(.22,.68,.24,1),
+    transform .84s cubic-bezier(.22,.68,.24,1),
+    filter .72s ease,
+    clip-path .9s cubic-bezier(.22,.68,.24,1) !important;
+  transition-delay: 0ms !important;
+}
+.linea-main .linea-reveal:not(.linea-visible),
+.linea-main [data-linea-reveal]:not(.linea-visible) {
+  filter: blur(1.5px) !important;
+}
+.linea-main .linea-reveal.linea-visible,
+.linea-main [data-linea-reveal].linea-visible {
+  opacity: 1 !important;
+  filter: blur(0) !important;
+  transform: translate3d(0,0,0) rotate(0) scale(1) !important;
+}
+
+@media (max-width: 650px) {
+  .home-pub-carousel .home-publications__card.is-active,
+  .home-pub-carousel .home-publications__card[aria-current="true"] {
+    animation-duration: 5s;
+  }
+  .linea-main > .linea-sublines {
+    padding-bottom: .8rem !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-pub-carousel .home-publications__card.is-active,
+  .home-pub-carousel .home-publications__card[aria-current="true"] {
+    animation: none !important;
+  }
+  .linea-hero__background,
+  .linea-main .linea-reveal,
+  .linea-main [data-linea-reveal] {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+    filter: none !important;
+    clip-path: none !important;
+    opacity: 1 !important;
+  }
+}

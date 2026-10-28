@@ -1,0 +1,85 @@
+/* GastroPatrimonio V16 — correcciones finales de navegación, visibilidad y responsive. */
+:root { --gp-v16-orange:#d9572b; --gp-v16-rust:#a93621; --gp-v16-cream:#fbf5ec; --gp-v16-ink:#29231f; }
+
+/* Cursor del navegador siempre visible; los efectos decorativos no interceptan el puntero. */
+html, body, body * { cursor:auto !important; }
+a[href], button, [role="button"], summary, label[for], input[type="button"], input[type="submit"] { cursor:pointer !important; }
+input[type="text"], input[type="search"], input[type="email"], input[type="url"], textarea, [contenteditable="true"] { cursor:text !important; }
+#particles, .particles, .particles *, .particle, .particle::before, .particle::after { pointer-events:none !important; cursor:auto !important; }
+
+/* Home: tres perfiles visibles y bien distribuidos. Un direction clip completo podía dejar el perfil central oculto. */
+.home-team__grid { display:grid !important; grid-template-columns:repeat(3,minmax(0,1fr)) !important; align-items:stretch; }
+.home-team__grid > .home-team__card { display:flex !important; flex-direction:column; min-width:0; grid-column:auto !important; visibility:visible; clip-path:none; }
+.home-team__card img { width:100%; object-fit:cover; }
+@media (max-width: 800px) { .home-team__grid { grid-template-columns:repeat(2,minmax(0,1fr)) !important; } }
+@media (max-width: 560px) { .home-team__grid { grid-template-columns:minmax(0,1fr) !important; } }
+
+/* Investigadores: fondo claro y contraste correcto en el perfil abierto. */
+.profile-viewer { background:#fffaf2 !important; border:1px solid rgba(217,87,43,.48) !important; }
+.profile-viewer__content { background:#fff !important; color:#29231f !important; border-left:2px solid var(--gp-v16-orange) !important; }
+.profile-viewer__content h2 { color:#29231f !important; }
+.profile-description { display:block; background:#fff !important; color:#514841 !important; border:1px solid rgba(217,87,43,.68) !important; border-radius:14px; padding:1.05rem 1.2rem; line-height:1.72; box-shadow:0 8px 20px rgba(71,43,25,.045); }
+.profile-data { border-top-color:rgba(217,87,43,.28) !important; }
+@media (max-width:760px) {
+  .profile-viewer__content { border-left:0 !important; border-top:2px solid var(--gp-v16-orange) !important; }
+  .profile-description { padding:.9rem 1rem; }
+}
+
+/* Sub-líneas: el encabezado se adapta al ancho útil de la zona clara del banner sin recortarse. */
+.sublinea-hero__content { max-width:min(58vw,760px) !important; min-width:0 !important; }
+.sublinea-hero__title { max-width:100% !important; min-width:0 !important; overflow:visible !important; }
+.sublinea-hero__title .title-black,
+.sublinea-hero__title .title-red { display:block; max-width:100% !important; white-space:normal !important; overflow-wrap:normal; word-break:normal; text-wrap:balance; }
+.sublinea-hero__title .title-red { font-size:clamp(2rem,3.35vw,3.65rem) !important; line-height:1.03 !important; letter-spacing:-.045em !important; }
+@media (max-width:1100px) {
+  .sublinea-hero__content { width:min(61vw,650px) !important; max-width:61vw !important; margin-left:clamp(1.5rem,5vw,4rem) !important; }
+  .sublinea-hero__title .title-red { font-size:clamp(1.8rem,4.1vw,3rem) !important; }
+}
+@media (max-width:760px) {
+  .sublinea-hero__content { width:calc(100% - 2rem) !important; max-width:calc(100% - 2rem) !important; margin:0 1rem !important; padding:1rem !important; }
+  .sublinea-hero__title .title-black { font-size:clamp(1.85rem,8vw,2.8rem) !important; letter-spacing:-.05em !important; }
+  .sublinea-hero__title .title-red { font-size:clamp(1.65rem,7.2vw,2.45rem) !important; }
+  .sublinea-hero__subtitle { max-width:36ch !important; font-size:clamp(.85rem,3.4vw,1rem) !important; }
+}
+
+/* Opciones de grado: texto sobre un lado izquierdo limpio, sin panel rectangular opaco. */
+.degree-page .degree-hero__veil { background:linear-gradient(90deg,rgba(250,245,236,.99) 0%,rgba(250,245,236,.96) 28%,rgba(250,245,236,.84) 46%,rgba(250,245,236,.45) 66%,rgba(250,245,236,.08) 100%) !important; }
+.degree-page .degree-hero__content.container {
+  position:relative; z-index:1; width:min(calc(100% - (var(--degree-v15-gutter,5vw) * 2)),1640px) !important; max-width:1640px !important;
+  margin-inline:auto !important; padding:clamp(1.4rem,3vw,2.8rem) 0 !important;
+  border:0 !important; border-left:0 !important; border-radius:0 !important; background:transparent !important; box-shadow:none !important;
+}
+.degree-page .degree-hero h1, .degree-page .degree-hero__content > p { text-shadow:0 1px 0 rgba(255,250,243,.35); }
+@media (max-width:680px) {
+  .degree-page .degree-hero__veil { background:linear-gradient(180deg,rgba(250,245,236,.99) 0%,rgba(250,245,236,.96) 50%,rgba(250,245,236,.58) 78%,rgba(250,245,236,.08) 100%) !important; }
+  .degree-page .degree-hero__content.container { width:calc(100% - 2rem) !important; padding:1.25rem 0 !important; margin:0 auto !important; border:0 !important; background:transparent !important; box-shadow:none !important; }
+}
+
+/* Reveal: nunca recortar el elemento completo, porque un clip-path vacío puede impedir la intersección. */
+html.gp-motion-ready body.gp-motion-individual .gp-motion-reveal[data-gp-direction="clip"]:not(.gp-motion-visible) { clip-path:inset(0 0 12% 0) !important; }
+html.gp-motion-ready body.gp-motion-individual .gp-motion-reveal.gp-motion-visible { clip-path:none !important; }
+
+/* Menú compartido: misma jerarquía, hover y subrayado del Home en todas las páginas. */
+@media (min-width: 801px) {
+  .navigation { height:100%; margin-left:auto; display:flex; align-items:center; gap:7px; }
+  .navigation__link {
+    position:relative; padding:14px 16px; border-radius:12px; color:#504c48;
+    font-size:clamp(13px,.88vw,16px); font-weight:500; white-space:nowrap;
+    transition:color .3s ease,transform .3s ease; text-decoration:none;
+  }
+  .navigation__link span { position:relative; z-index:2; }
+  .navigation__link::before {
+    content:""; position:absolute; inset:0; border-radius:inherit; opacity:0;
+    background:linear-gradient(135deg,rgba(239,133,74,.17),rgba(181,58,34,.06));
+    transform:scale(.84) translateY(5px); transition:opacity .3s ease,transform .4s ease;
+  }
+  .navigation__link::after {
+    content:""; position:absolute; left:18px; right:18px; bottom:5px; height:3px;
+    border-radius:10px; opacity:0; transform:scaleX(.25);
+    background:linear-gradient(90deg,#d9572b,#a93621); transition:opacity .3s ease,transform .35s ease;
+  }
+  .navigation__link:hover, .navigation__link:focus-visible { color:#a93621; transform:translateY(-3px); }
+  .navigation__link:hover::before, .navigation__link:focus-visible::before { opacity:1; transform:scale(1); }
+  .navigation__link:hover::after, .navigation__link:focus-visible::after, .navigation__link.active::after { opacity:1; transform:scaleX(1); }
+  .navigation__link.active { color:#a93621; font-weight:700; }
+}

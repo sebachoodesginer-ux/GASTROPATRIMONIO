@@ -204,7 +204,7 @@ html.js.linea-ready .linea-hero__description {
     z-index: 5;
 
     background-color: #faf4ea;
-    background-image: url("../assets/images/Linea_Investigacion/Fondo_seccion_2.png");
+    background-image: url("../assets/images/Linea_Investigacion/Fondo_seccion_2.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -939,7 +939,7 @@ body.lightbox-open {
 
 .projection-card--challenge {
     background-color: rgba(247, 239, 227, .88);
-    background-image: url("../assets/images/Linea_Investigacion/Fondo_Iglesia.png");
+    background-image: url("../assets/images/Linea_Investigacion/Fondo_Iglesia.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1013,7 +1013,7 @@ body.lightbox-open {
 
     background-color: #faf5ec;
 
-    background-image: url("../assets/images/Linea_Investigacion/Fondo_seccion_hsata_banner.png");
+    background-image: url("../assets/images/Linea_Investigacion/Fondo_seccion_hsata_banner.webp");
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;

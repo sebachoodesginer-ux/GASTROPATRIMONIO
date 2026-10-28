@@ -374,7 +374,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     'resize',
     ()=>{
 
-      if(innerWidth>800){
+      if(innerWidth>1450){
 
         closeMenu();
 
@@ -687,11 +687,32 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 
     /*
-      Foto temporal.
+      Retrato asociado a la tarjeta seleccionada.
+      Si no existe una imagen, conservamos un marcador accesible.
     */
 
-    profileImage.innerHTML=
-      '<span>FOTO DEL INVESTIGADOR</span>';
+    profileImage.innerHTML = '';
+    const imageSource = card.dataset.image;
+
+    if (imageSource) {
+      const portrait = document.createElement('img');
+      portrait.src = imageSource;
+      portrait.alt = `Retrato de ${card.dataset.name || 'investigador'}`;
+      portrait.loading = 'lazy';
+      portrait.decoding = 'async';
+      portrait.addEventListener('error', () => {
+        profileImage.textContent = 'Imagen no disponible';
+      }, { once: true });
+      profileImage.appendChild(portrait);
+      profileImage.classList.remove('placeholder-image');
+      profileImage.classList.add('has-photo');
+    } else {
+      const placeholder = document.createElement('span');
+      placeholder.textContent = 'FOTO DEL INVESTIGADOR';
+      profileImage.appendChild(placeholder);
+      profileImage.classList.add('placeholder-image');
+      profileImage.classList.remove('has-photo');
+    }
 
 
 

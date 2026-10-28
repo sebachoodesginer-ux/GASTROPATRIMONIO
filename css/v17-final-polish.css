@@ -1,0 +1,54 @@
+/* GastroPatrimonio V17 — ajustes finales de navegación, legibilidad y cursor. */
+
+/* La etiqueta de navegación móvil nunca debe aparecer junto al menú de escritorio. */
+.navigation__mobile-title { display: none !important; }
+@media (max-width: 1320px) {
+  .navigation__mobile-title { display: none !important; }
+  .navigation.open .navigation__mobile-title { display: flex !important; }
+}
+
+/* Elimina la palabra decorativa de la sección visual de Línea de investigación. */
+.linea-about__note { display: none !important; }
+
+/* Desplaza apenas el título de Publicaciones hacia la derecha sin cambiar su escala. */
+.pub-hero__content { padding-left: calc(max(7vw, 50px) + clamp(8px, 1.15vw, 20px)) !important; }
+@media (max-width: 760px) {
+  .pub-hero__content { padding-left: max(1.25rem, 5vw) !important; }
+}
+
+/* Banner de Opciones de grado: imagen limpia y nítida, con degradado crema detrás del texto. */
+.degree-page .degree-hero__background {
+  image-rendering: auto !important;
+  filter: none !important;
+  opacity: 1 !important;
+  object-fit: cover !important;
+  object-position: center 52% !important;
+}
+.degree-page .degree-hero__veil {
+  display: block !important;
+  background: linear-gradient(90deg,
+    rgba(250,245,236,.97) 0%,
+    rgba(250,245,236,.91) 29%,
+    rgba(250,245,236,.74) 45%,
+    rgba(250,245,236,.30) 65%,
+    rgba(250,245,236,0) 82%) !important;
+}
+.degree-page .degree-hero h1 {
+  text-shadow: 0 1px 0 rgba(255,250,243,.5), 0 3px 18px rgba(250,245,236,.22) !important;
+}
+@media (max-width: 680px) {
+  .degree-page .degree-hero__veil {
+    background: linear-gradient(180deg,
+      rgba(250,245,236,.97) 0%,
+      rgba(250,245,236,.92) 48%,
+      rgba(250,245,236,.42) 75%,
+      rgba(250,245,236,.05) 100%) !important;
+  }
+}
+
+/* Evita que partículas o capas decorativas intercepten el puntero. */
+html, body, body * { cursor: auto; }
+a[href], button, [role="button"], summary, label[for], input[type="button"], input[type="submit"], .degree-option-card { cursor: pointer !important; }
+input[type="text"], input[type="search"], input[type="email"], input[type="url"], textarea, [contenteditable="true"] { cursor: text !important; }
+#particles, .particles, .particles *, .particle, .particle::before, .particle::after,
+.decorative-particles, .decorative-particles *, .ambient-particle { pointer-events: none !important; }

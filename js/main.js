@@ -803,14 +803,6 @@ document.addEventListener(
 
                                 }
 
-                                else {
-
-                                    entry.target.classList.remove(
-                                        "in-view"
-                                    );
-
-                                }
-
                             }
                         );
 
@@ -861,14 +853,6 @@ document.addEventListener(
                             ) {
 
                                 entry.target.classList.add(
-                                    "in-view"
-                                );
-
-                            }
-
-                            else {
-
-                                entry.target.classList.remove(
                                     "in-view"
                                 );
 
