@@ -1032,10 +1032,6 @@ document.addEventListener(
             if (event.key === 'Escape' && modal?.classList.contains('open')) closePublication();
         });
 
-        document.addEventListener('keydown', event => {
-            if (event.key === 'Escape' && modal?.classList.contains('open')) closePublication();
-        });
-
 
         /* =====================================================
            VOLVER ARRIBA

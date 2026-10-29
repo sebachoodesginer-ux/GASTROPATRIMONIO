@@ -9,7 +9,7 @@
   const useIndividualEntrances = true;
   document.body.classList.add('gp-motion-individual');
   /* Evitar clip como dirección de salida completa: con clip-path al 100%, algunos navegadores no notifican intersección. */
-  const independentDirections = ['up', 'left', 'right', 'diagonal', 'scale', 'rotate-left', 'rotate-right', 'blur', 'drop'];
+  const independentDirections = ['up', 'left', 'right', 'diagonal', 'scale', 'rotate-left', 'rotate-right', 'drop'];
   const legacyDirections = ['up', 'left', 'right', 'diagonal'];
 
   // Shared floating rhythm used across the site; Home and Sub-line pages get individually varied entrances.
@@ -64,12 +64,12 @@
   };
 
   document.querySelectorAll(cardSelectors).forEach((el, i) => {
-    if (el.closest('header, nav, .footer, .search-overlay, .degree-modal, .profile-viewer')) return;
+    if (el.closest('header, nav, footer, .footer, .search-overlay, .degree-modal, .profile-viewer')) return;
     el.classList.add('gp-motion-card');
     assignDirection(el, i);
   });
   document.querySelectorAll(ctaSelectors).forEach((el, i) => {
-    if (el.closest('header, nav, .footer, .search-overlay, .profile-card, .degree-option-card, .home-team__card, .home-publications__card, .home-journal-mini')) return;
+    if (el.closest('header, nav, footer, .footer, .search-overlay, .profile-card, .degree-option-card, .home-team__card, .home-publications__card, .home-journal-mini')) return;
     el.classList.add('gp-motion-cta');
     assignDirection(el, i + 1);
   });
@@ -93,7 +93,7 @@
     '.seminario-hero__content > *', '.seminario-intro > *', '.footer__brand', '.footer__column'
   ].join(',');
   document.querySelectorAll(sharedIndividualSelectors).forEach(el => revealTargets.add(el));
-  document.querySelectorAll('.reveal, .footer-reveal').forEach(el => {
+  document.querySelectorAll('.reveal').forEach(el => {
     // Sub-line page reveals the actual content fragments instead of hiding a wrapper around them.
     if (isSubline && el.matches('.sublinea-intro__text, .sublinea-values, .sublinea-card')) return;
     // The Home's About copy is revealed piece by piece, not as one large block.
@@ -111,7 +111,7 @@
       '.home-team .section-heading p', '.home-team__card', '.home-team__all',
       '.home-publications__heading .eyebrow', '.home-publications__heading h2',
       '.home-publications__heading p', '.home-publications__all', '.home-journal-mini',
-      '.home-publications__card', '.final-banner', '.footer__brand', '.footer__column'
+      '.home-publications__card', '.final-banner'
     ];
     homeTargets.forEach(selector => document.querySelectorAll(selector).forEach(el => revealTargets.add(el)));
   }
@@ -122,10 +122,32 @@
       '.sublinea-intro__text > .section-eyebrow', '.sublinea-intro__text h2', '.sublinea-intro__text p',
       '.sublinea-value__icon', '.sublinea-value > span', '.sublinea-card__image', '.sublinea-card__number',
       '.sublinea-card__eyebrow', '.sublinea-card__content h3', '.sublinea-card__content p',
-      '.sublinea-page .final-banner', '.sublinea-page .footer__brand', '.sublinea-page .footer__column'
+      '.sublinea-page .final-banner'
     ];
     sublineTargets.forEach(selector => document.querySelectorAll(selector).forEach(el => revealTargets.add(el)));
   }
+
+  // Animate visible content pieces independently while keeping the global menu and footer static.
+  const granularSelectors = [
+    'main h1', 'main h2', 'main h3', 'main h4', 'main p', 'main li',
+    'main blockquote', 'main figure', 'main .section-label', 'main .eyebrow',
+    'main .degree-eyebrow', 'main .degree-kicker', 'main .hero-eyebrow',
+    'main .section-link', 'main .card-button', 'main .degree-button',
+    'main .home-editorial-highlight', 'main .editorial-picks__card',
+    'main .publication-card', 'main .chapter-card', 'main .profile-card',
+    'main .degree-option-card', 'main .degree-resource-link', 'main .quick-card',
+    'main .pillar', 'main .linea-pillar', 'main .sublinea-card', 'main .method-card',
+    'main .goal-card', 'main .projection-card', 'main .value-item'
+  ].join(',');
+  document.querySelectorAll(granularSelectors).forEach(el => revealTargets.add(el));
+  document.querySelectorAll('main img').forEach(el => {
+    // Preserve the original banner crops and let banner copy animate separately.
+    if (el.closest('.hero, .linea-hero, .sublinea-hero, .pub-hero, .investigator-hero, .degree-hero, .seminario-hero, .final-banner, .pub-final-banner, .investigator-final-banner, .linea-final-banner')) return;
+    revealTargets.add(el);
+  });
+  [...revealTargets].forEach(el => {
+    if (el.closest('header, nav, footer, .footer, .search-overlay, .menu-backdrop')) revealTargets.delete(el);
+  });
 
   // The older generic section-heading auto-reveal stays on other pages; Home/Sub-lines use their own staged targets.
   if (!useIndividualEntrances) {
